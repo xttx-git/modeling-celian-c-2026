@@ -7,6 +7,7 @@
 \usepackage[framemethod=TikZ]{mdframed}
 \usepackage[section]{placeins}
 \usepackage{needspace}
+\usepackage{tabularx}
 
 % === 参考文献引用（数字型，配合 gbt7714-numerical.bst）===
 %  不要额外加载 cite 宏包，以免和 natbib 冲突。
@@ -99,6 +100,7 @@
 \input{sections/6_problem2}
 \input{sections/7_problem3}
 \input{sections/8_problem4}
+\input{sections/9_sensitivity}
 \input{sections/10_evaluation}
 
 % === 参考文献 ===
@@ -110,11 +112,9 @@
 \bibliography{references}
 \endgroup
 
-% === 附录（格式规范规定页数不限）===
+% === 附录（完整代码不计入正文页数）===
 \clearpage
 \appendix
-\input{sections/9_sensitivity}
-\input{sections/A_supplementary}
 \input{sections/A_code}
 
 \end{document}
