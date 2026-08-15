@@ -1,0 +1,301 @@
+{
+  "p2_weight_surface": [
+    {
+      "commercial_multiplier": 0.9,
+      "penalty_multiplier": 0.9,
+      "fixed_schedule_Z2": 0.48623816647829177
+    },
+    {
+      "commercial_multiplier": 0.9,
+      "penalty_multiplier": 0.9500000000000001,
+      "fixed_schedule_Z2": 0.4756365605984856
+    },
+    {
+      "commercial_multiplier": 0.9,
+      "penalty_multiplier": 1.0,
+      "fixed_schedule_Z2": 0.4653139443470954
+    },
+    {
+      "commercial_multiplier": 0.9,
+      "penalty_multiplier": 1.05,
+      "fixed_schedule_Z2": 0.4552594479983386
+    },
+    {
+      "commercial_multiplier": 0.9,
+      "penalty_multiplier": 1.1,
+      "fixed_schedule_Z2": 0.44546275924826817
+    },
+    {
+      "commercial_multiplier": 0.9500000000000001,
+      "penalty_multiplier": 0.9,
+      "fixed_schedule_Z2": 0.4960204099322988
+    },
+    {
+      "commercial_multiplier": 0.9500000000000001,
+      "penalty_multiplier": 0.9500000000000001,
+      "fixed_schedule_Z2": 0.4855671283162018
+    },
+    {
+      "commercial_multiplier": 0.9500000000000001,
+      "penalty_multiplier": 1.0,
+      "fixed_schedule_Z2": 0.475381879562056
+    },
+    {
+      "commercial_multiplier": 0.9500000000000001,
+      "penalty_multiplier": 1.05,
+      "fixed_schedule_Z2": 0.4654544852067493
+    },
+    {
+      "commercial_multiplier": 0.9500000000000001,
+      "penalty_multiplier": 1.1,
+      "fixed_schedule_Z2": 0.4557752757103255
+    },
+    {
+      "commercial_multiplier": 1.0,
+      "penalty_multiplier": 0.9,
+      "fixed_schedule_Z2": 0.5053009998758442
+    },
+    {
+      "commercial_multiplier": 1.0,
+      "penalty_multiplier": 0.9500000000000001,
+      "fixed_schedule_Z2": 0.49499488247859064
+    },
+    {
+      "commercial_multiplier": 1.0,
+      "penalty_multiplier": 1.0,
+      "fixed_schedule_Z2": 0.48494641801626875
+    },
+    {
+      "commercial_multiplier": 1.0,
+      "penalty_multiplier": 1.05,
+      "fixed_schedule_Z2": 0.4751460637875843
+    },
+    {
+      "commercial_multiplier": 1.0,
+      "penalty_multiplier": 1.1,
+      "fixed_schedule_Z2": 0.465584742588868
+    },
+    {
+      "commercial_multiplier": 1.05,
+      "penalty_multiplier": 0.9,
+      "fixed_schedule_Z2": 0.5141175603222122
+    },
+    {
+      "commercial_multiplier": 1.05,
+      "penalty_multiplier": 0.9500000000000001,
+      "fixed_schedule_Z2": 0.5039570685341952
+    },
+    {
+      "commercial_multiplier": 1.05,
+      "penalty_multiplier": 1.0,
+      "fixed_schedule_Z2": 0.49404439361905655
+    },
+    {
+      "commercial_multiplier": 1.05,
+      "penalty_multiplier": 1.05,
+      "fixed_schedule_Z2": 0.4843705783404273
+    },
+    {
+      "commercial_multiplier": 1.05,
+      "penalty_multiplier": 1.1,
+      "fixed_schedule_Z2": 0.47492709199700356
+    },
+    {
+      "commercial_multiplier": 1.1,
+      "penalty_multiplier": 0.9,
+      "fixed_schedule_Z2": 0.522504044649245
+    },
+    {
+      "commercial_multiplier": 1.1,
+      "penalty_multiplier": 0.9500000000000001,
+      "fixed_schedule_Z2": 0.5124873420088065
+    },
+    {
+      "commercial_multiplier": 1.1,
+      "penalty_multiplier": 1.0,
+      "fixed_schedule_Z2": 0.5027091322883781
+    },
+    {
+      "commercial_multiplier": 1.1,
+      "penalty_multiplier": 1.05,
+      "fixed_schedule_Z2": 0.4931609980907836
+    },
+    {
+      "commercial_multiplier": 1.1,
+      "penalty_multiplier": 1.1,
+      "fixed_schedule_Z2": 0.48383491352569097
+    }
+  ],
+  "p2_note": "固定主赛程重评，不冒充逐格重优化",
+  "p3_state_injury_surface": [
+    {
+      "state_coefficient_multiplier": 0.9,
+      "injury_coefficient_multiplier": 0.9,
+      "Z3": 6.657085940049481,
+      "mean_advancement_probability": 0.6666666666666666
+    },
+    {
+      "state_coefficient_multiplier": 0.9,
+      "injury_coefficient_multiplier": 1.0,
+      "Z3": 6.656894910987287,
+      "mean_advancement_probability": 0.6666666666666666
+    },
+    {
+      "state_coefficient_multiplier": 0.9,
+      "injury_coefficient_multiplier": 1.1,
+      "Z3": 6.663519193090472,
+      "mean_advancement_probability": 0.6666666666666666
+    },
+    {
+      "state_coefficient_multiplier": 1.0,
+      "injury_coefficient_multiplier": 0.9,
+      "Z3": 6.713490945307537,
+      "mean_advancement_probability": 0.6666666666666666
+    },
+    {
+      "state_coefficient_multiplier": 1.0,
+      "injury_coefficient_multiplier": 1.0,
+      "Z3": 6.6374839247177055,
+      "mean_advancement_probability": 0.6666666666666666
+    },
+    {
+      "state_coefficient_multiplier": 1.0,
+      "injury_coefficient_multiplier": 1.1,
+      "Z3": 6.635101102440469,
+      "mean_advancement_probability": 0.6666666666666666
+    },
+    {
+      "state_coefficient_multiplier": 1.1,
+      "injury_coefficient_multiplier": 0.9,
+      "Z3": 6.661416062501414,
+      "mean_advancement_probability": 0.6666666666666666
+    },
+    {
+      "state_coefficient_multiplier": 1.1,
+      "injury_coefficient_multiplier": 1.0,
+      "Z3": 6.623008582982583,
+      "mean_advancement_probability": 0.6666666666666666
+    },
+    {
+      "state_coefficient_multiplier": 1.1,
+      "injury_coefficient_multiplier": 1.1,
+      "Z3": 6.63851060450094,
+      "mean_advancement_probability": 0.6666666666666666
+    }
+  ],
+  "p4_weight_robustness": [
+    {
+      "perturbed": "T",
+      "factor": 0.9,
+      "actual": 0.2735616178311834,
+      "optimized": 0.4695604774213673,
+      "direction": 1
+    },
+    {
+      "perturbed": "T",
+      "factor": 1.1,
+      "actual": 0.28038461004815507,
+      "optimized": 0.49144929266812126,
+      "direction": 1
+    },
+    {
+      "perturbed": "B",
+      "factor": 0.9,
+      "actual": 0.26790790208626936,
+      "optimized": 0.4726536965110728,
+      "direction": 1
+    },
+    {
+      "perturbed": "B",
+      "factor": 1.1,
+      "actual": 0.2857625347811221,
+      "optimized": 0.4885069623144989,
+      "direction": 1
+    },
+    {
+      "perturbed": "U",
+      "factor": 0.9,
+      "actual": 0.2745576456325783,
+      "optimized": 0.4810730493082863,
+      "direction": 1
+    },
+    {
+      "perturbed": "U",
+      "factor": 1.1,
+      "actual": 0.27948524309031836,
+      "optimized": 0.48049264719408413,
+      "direction": 1
+    },
+    {
+      "perturbed": "H",
+      "factor": 0.9,
+      "actual": 0.2733002160024055,
+      "optimized": 0.4791732415396137,
+      "direction": 1
+    },
+    {
+      "perturbed": "H",
+      "factor": 1.1,
+      "actual": 0.2807421671706747,
+      "optimized": 0.4823519617291483,
+      "direction": 1
+    },
+    {
+      "perturbed": "C",
+      "factor": 0.9,
+      "actual": 0.2836019389974214,
+      "optimized": 0.48773997617324133,
+      "direction": 1
+    },
+    {
+      "perturbed": "C",
+      "factor": 1.1,
+      "actual": 0.2706187293644054,
+      "optimized": 0.47392751399484334,
+      "direction": 1
+    },
+    {
+      "perturbed": "D",
+      "factor": 0.9,
+      "actual": 0.2805131445185887,
+      "optimized": 0.4855902022903963,
+      "direction": 1
+    },
+    {
+      "perturbed": "D",
+      "factor": 1.1,
+      "actual": 0.2736516883592892,
+      "optimized": 0.4760336838096265,
+      "direction": 1
+    },
+    {
+      "perturbed": "F",
+      "factor": 0.9,
+      "actual": 0.282754930927949,
+      "optimized": 0.4856926511421818,
+      "direction": 1
+    },
+    {
+      "perturbed": "F",
+      "factor": 1.1,
+      "actual": 0.27142982240793373,
+      "optimized": 0.47592295749038643,
+      "direction": 1
+    },
+    {
+      "perturbed": "R",
+      "factor": 0.9,
+      "actual": 0.280001020642614,
+      "optimized": 0.4843827385627916,
+      "direction": 1
+    },
+    {
+      "perturbed": "R",
+      "factor": 1.1,
+      "actual": 0.27413922920788764,
+      "optimized": 0.47720297097820424,
+      "direction": 1
+    }
+  ],
+  "seed": 20260813
+}

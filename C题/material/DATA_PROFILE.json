@@ -1,0 +1,427 @@
+{
+  "_meta": {
+    "n_files": 7,
+    "n_error": 0
+  },
+  "files": {
+    "C题_数据附件.xlsx": {
+      "sheets": {
+        "README": {
+          "rows": 9,
+          "cols": [
+            "项目",
+            "说明"
+          ],
+          "null_rate": {}
+        },
+        "historical_matches": {
+          "rows": 700,
+          "cols": [
+            "match_id",
+            "date",
+            "competition",
+            "stage",
+            "team_a",
+            "team_b",
+            "neutral",
+            "goals_a",
+            "goals_b",
+            "xg_a",
+            "xg_b",
+            "shots_a",
+            "shots_b",
+            "possession_a",
+            "possession_b",
+            "strength_rank_a",
+            "strength_rank_b",
+            "elo_a",
+            "elo_b",
+            "odds_a",
+            "odds_draw",
+            "odds_b",
+            "attendance",
+            "tv_viewers",
+            "dataset_split"
+          ],
+          "null_rate": {
+            "tv_viewers": 0.2
+          }
+        },
+        "teams": {
+          "rows": 48,
+          "cols": [
+            "team_id",
+            "team_name",
+            "confederation",
+            "strength_rank",
+            "elo_rating",
+            "market_value_musd",
+            "avg_age",
+            "star_index",
+            "fan_base_index",
+            "style_attack",
+            "style_defense",
+            "home_timezone_region",
+            "host_flag",
+            "strength_score",
+            "home_latitude",
+            "home_longitude"
+          ],
+          "null_rate": {}
+        },
+        "groups_matches": {
+          "rows": 72,
+          "cols": [
+            "match_id",
+            "group_id",
+            "round_in_group",
+            "team_a_id",
+            "team_a",
+            "team_b_id",
+            "team_b"
+          ],
+          "null_rate": {}
+        },
+        "group_membership": {
+          "rows": 48,
+          "cols": [
+            "group_id",
+            "team_id",
+            "team_name",
+            "pot"
+          ],
+          "null_rate": {}
+        },
+        "venues": {
+          "rows": 16,
+          "cols": [
+            "venue_id",
+            "city",
+            "country",
+            "capacity",
+            "latitude",
+            "longitude",
+            "timezone",
+            "max_matches_per_day",
+            "min_total_matches",
+            "max_total_matches",
+            "setup_cost_musd",
+            "operation_cost_musd_per_match",
+            "security_level",
+            "security_cost_index",
+            "climate_risk",
+            "transport_index"
+          ],
+          "null_rate": {}
+        },
+        "time_slots": {
+          "rows": 80,
+          "cols": [
+            "slot_id",
+            "date",
+            "reference_kickoff_time",
+            "reference_utc_time",
+            "reference_timezone",
+            "weekday",
+            "america_prime",
+            "europe_prime",
+            "asia_prime",
+            "global_prime_score",
+            "broadcast_capacity"
+          ],
+          "null_rate": {}
+        },
+        "distance_matrix": {
+          "rows": 1024,
+          "cols": [
+            "origin_id",
+            "origin_name",
+            "destination_id",
+            "destination_name",
+            "distance_km",
+            "travel_time_hour",
+            "timezone_diff",
+            "relation_type"
+          ],
+          "null_rate": {}
+        },
+        "ticket_broadcast": {
+          "rows": 9,
+          "cols": [
+            "match_stage",
+            "base_ticket_price_usd",
+            "price_elasticity",
+            "broadcast_unit_value_usd",
+            "sponsor_weight",
+            "local_interest_weight"
+          ],
+          "null_rate": {}
+        },
+        "base_predictions": {
+          "rows": 72,
+          "cols": [
+            "match_id",
+            "group_id",
+            "round_in_group",
+            "team_a",
+            "team_b",
+            "expected_goals_a",
+            "expected_goals_b",
+            "p_a_win",
+            "p_draw",
+            "p_b_win",
+            "uncertainty_index",
+            "attractiveness_index",
+            "expected_attendance_base",
+            "commercial_value_index"
+          ],
+          "null_rate": {}
+        },
+        "security_requirements": {
+          "rows": 72,
+          "cols": [
+            "match_id",
+            "group_id",
+            "team_a",
+            "team_b",
+            "crowd_risk",
+            "attention_risk",
+            "security_demand_score",
+            "required_security_level",
+            "security_reason"
+          ],
+          "null_rate": {}
+        },
+        "live_group_results": {
+          "rows": 48,
+          "cols": [
+            "match_id",
+            "group_id",
+            "round_in_group",
+            "team_a",
+            "team_b",
+            "goals_a",
+            "goals_b",
+            "xg_a",
+            "xg_b",
+            "red_cards_a",
+            "red_cards_b",
+            "injury_update",
+            "injury_update_description",
+            "injury_impact_level",
+            "attendance",
+            "tv_viewers"
+          ],
+          "null_rate": {}
+        },
+        "dynamic_resource_limits": {
+          "rows": 20,
+          "cols": [
+            "reference_date",
+            "high_broadcast_capacity",
+            "high_security_capacity",
+            "enhanced_transport_capacity",
+            "daily_resource_budget_index",
+            "max_ticket_increase_rate",
+            "max_ticket_discount_rate"
+          ],
+          "null_rate": {}
+        },
+        "dynamic_resource_costs": {
+          "rows": 10,
+          "cols": [
+            "resource_type",
+            "resource_level",
+            "unit_cost_index",
+            "demand_multiplier",
+            "risk_multiplier",
+            "description"
+          ],
+          "null_rate": {}
+        },
+        "objective_weights": {
+          "rows": 13,
+          "cols": [
+            "problem_id",
+            "indicator_name",
+            "direction",
+            "weight",
+            "normalization_method",
+            "data_source",
+            "explanation"
+          ],
+          "null_rate": {}
+        }
+      },
+      "total_rows": 2241,
+      "n_sheets": 15,
+      "sha256": "23eecb09565bb064da8e4753933b88fe9d882d3b92f0c23574bb2aebdc530907",
+      "bytes": 216154
+    },
+    "actual_schedule_template.csv": {
+      "encoding": "utf-8",
+      "sheets": {
+        "__csv__": {
+          "rows": 0,
+          "cols": [
+            "match_id",
+            "competition",
+            "stage",
+            "group_id",
+            "round_in_group",
+            "team_a",
+            "team_b",
+            "venue",
+            "city",
+            "country",
+            "date",
+            "local_kickoff_time",
+            "utc_datetime",
+            "goals_a",
+            "goals_b",
+            "source_url",
+            "retrieval_date"
+          ],
+          "null_rate": {}
+        }
+      },
+      "total_rows": 0,
+      "n_sheets": 1,
+      "sha256": "bb817bcf8fc7d7136cd66160db4dd0526cf16cb29d3bb1b0d4ff1cb932da57d2",
+      "bytes": 165
+    },
+    "result_1_match_prediction_template.csv": {
+      "encoding": "utf-8",
+      "sheets": {
+        "__csv__": {
+          "rows": 0,
+          "cols": [
+            "match_id",
+            "team_a",
+            "team_b",
+            "predicted_tv_viewers"
+          ],
+          "null_rate": {}
+        }
+      },
+      "total_rows": 0,
+      "n_sheets": 1,
+      "sha256": "20ce5449a0c49144aee0b2e22fe469bbfe3e8d703477d5773250982f0996f4fc",
+      "bytes": 46
+    },
+    "result_1_test_prediction_template.csv": {
+      "encoding": "utf-8",
+      "sheets": {
+        "__csv__": {
+          "rows": 0,
+          "cols": [
+            "match_id_test",
+            "predicted_test_tv_viewers"
+          ],
+          "null_rate": {}
+        }
+      },
+      "total_rows": 0,
+      "n_sheets": 1,
+      "sha256": "fc57a543e02c9b73ec3464117926216a1d5c1e79ec19c4328b5b25512ed7ba72",
+      "bytes": 41
+    },
+    "result_2_template.csv": {
+      "encoding": "utf-8",
+      "sheets": {
+        "__csv__": {
+          "rows": 0,
+          "cols": [
+            "match_id",
+            "group_id",
+            "round_in_group",
+            "team_a",
+            "team_b",
+            "venue_id",
+            "slot_id",
+            "city",
+            "country",
+            "reference_date",
+            "reference_kickoff_time",
+            "local_datetime",
+            "utc_datetime",
+            "required_security_level",
+            "expected_attendance",
+            "expected_tv_viewers",
+            "ticket_revenue_usd",
+            "broadcast_value_usd",
+            "travel_cost_index",
+            "fairness_penalty",
+            "risk_index",
+            "total_objective_value"
+          ],
+          "null_rate": {}
+        }
+      },
+      "total_rows": 0,
+      "n_sheets": 1,
+      "sha256": "d1c53c9192377e0b35c0fc202a0d70c8745e99c9d1bb812983c98346e46a3c2e",
+      "bytes": 313
+    },
+    "result_3_template.csv": {
+      "encoding": "utf-8",
+      "sheets": {
+        "__csv__": {
+          "rows": 0,
+          "cols": [
+            "match_id",
+            "group_id",
+            "team_a",
+            "team_b",
+            "updated_p_team_a_advance",
+            "updated_p_team_b_advance",
+            "updated_expected_attendance",
+            "updated_expected_tv_viewers",
+            "stakeless_risk",
+            "collusion_risk",
+            "updated_attractiveness",
+            "recommended_broadcast_priority",
+            "recommended_security_level",
+            "recommended_transport_level",
+            "recommended_ticket_adjustment",
+            "updated_ticket_revenue_usd",
+            "updated_broadcast_value_usd",
+            "resource_cost_index",
+            "risk_exposure_index",
+            "static_net_value",
+            "dynamic_net_value",
+            "improvement_rate"
+          ],
+          "null_rate": {}
+        }
+      },
+      "total_rows": 0,
+      "n_sheets": 1,
+      "sha256": "8533c76668c5031dce0b803d1858f8e8aad14eff49aa55bdfbe839942a994ca4",
+      "bytes": 456
+    },
+    "result_4_template.csv": {
+      "encoding": "utf-8",
+      "sheets": {
+        "__csv__": {
+          "rows": 0,
+          "cols": [
+            "indicator_name",
+            "indicator_category",
+            "actual_schedule_value",
+            "optimized_schedule_value",
+            "absolute_difference",
+            "relative_improvement",
+            "preferred_direction",
+            "evaluation_result"
+          ],
+          "null_rate": {}
+        }
+      },
+      "total_rows": 0,
+      "n_sheets": 1,
+      "sha256": "325dd891787ee0830186cc1d60c54d7a590ab5d704488b70632a0bd00fa09ce6",
+      "bytes": 162
+    }
+  }
+}

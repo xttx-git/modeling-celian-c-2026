@@ -1,0 +1,68 @@
+\section{支撑材料清单与完整源程序}
+
+\subsection{支撑材料文件列表}
+
+支撑材料压缩包采用如下目录结构；赛题提供的原始 Excel 不重复打包，复现时按 \texttt{README.md} 放入 \texttt{user\_data/} 即可。
+
+\begin{longtable}{p{0.34\textwidth}p{0.60\textwidth}}
+\toprule
+路径 & 内容与用途 \\
+\midrule
+\endfirsthead
+\toprule
+路径 & 内容与用途 \\
+\midrule
+\endhead
+\texttt{README.md} & 从空环境开始的安装、运行、输出和论文编译说明 \\
+\texttt{requirements-lock.txt} & Python 3.12 的直接依赖精确版本 \\
+\texttt{reproduce.py} & 四问、灵敏度、约束复核和图表的一键入口 \\
+\texttt{code/} & 问题一至问题四、参数、工具、数据检查、灵敏度和约束复核的完整 Python 源码 \\
+\texttt{figures/*.py}、\texttt{\_utils/} & 图表数据整理、统一绘图和 LaTeX 表格生成程序 \\
+\texttt{paper/} & 论文 LaTeX 源文件、模板、字体、参考文献和已生成图表 \\
+\texttt{output/} & 正式 CSV 及问题四可选比较输出的同内容副本 \\
+\texttt{figures/problem\_*.json} & 四问完整机器结果、求解器状态、边界、审计和敏感性记录 \\
+\path{user_data/worldcup_2022_openfootball.json} & 问题四真实赛程的机器读取快照 \\
+\path{user_data/worldcup_2022_pre_tournament_elo.csv} & 问题四完整赛前 Elo 快照 \\
+\texttt{actual\_schedule\_2022.csv} & 真实赛程逐场整理表、来源 URL 与访问日期 \\
+\texttt{AI 工具使用详情.pdf} & 工具、用途、提示方式、采纳和核验记录 \\
+\bottomrule
+\end{longtable}
+
+\subsection{完整结果附表}
+
+以下附表由正式 JSON/CSV 直接生成，用于复核正文汇总值。
+
+\input{../figures/TABLE_q1_data_dictionary.tex}
+
+\begingroup
+\let\oldsmall\small
+\renewcommand{\small}{\scriptsize}
+\renewcommand{\arraystretch}{0.78}
+\input{../figures/TABLE_q1_model_metrics.tex}
+\endgroup
+
+\input{../figures/TABLE_q2_schedule_summary.tex}
+
+\input{../figures/TABLE_q3_probability_risk.tex}
+
+\input{../figures/TABLE_q4_metric_definition.tex}
+
+\subsection{完整可运行源程序}
+
+下列清单给出模型与正式复核链所使用的完整源程序，不省略函数或执行入口。图表生成程序的完整文件同时保存在支撑材料中。
+
+\lstinputlisting[caption={一键复现入口},basicstyle=\tiny\ttfamily]{../reproduce.py}
+\lstinputlisting[caption={四问总入口},basicstyle=\tiny\ttfamily]{../code/main.py}
+\lstinputlisting[caption={官方附件摄入检查},basicstyle=\tiny\ttfamily]{../code/data_check.py}
+\lstinputlisting[caption={统一参数定义},basicstyle=\tiny\ttfamily]{../code/params.py}
+\lstinputlisting[caption={共享数据与运行工具},basicstyle=\tiny\ttfamily]{../code/utils.py}
+\lstinputlisting[caption={问题一完整程序},basicstyle=\tiny\ttfamily]{../code/problem1.py}
+\lstinputlisting[caption={问题二完整程序},basicstyle=\tiny\ttfamily]{../code/problem2.py}
+\lstinputlisting[caption={问题三完整程序},basicstyle=\tiny\ttfamily]{../code/problem3.py}
+\lstinputlisting[caption={问题四完整程序},basicstyle=\tiny\ttfamily]{../code/problem4.py}
+\lstinputlisting[caption={灵敏度分析完整程序},basicstyle=\tiny\ttfamily]{../code/sensitivity_analysis.py}
+\lstinputlisting[caption={正式输出约束复核程序},basicstyle=\tiny\ttfamily]{../code/constraint_audit.py}
+\lstinputlisting[caption={图表统一生成入口},basicstyle=\tiny\ttfamily]{../figures/generate_all.py}
+\lstinputlisting[caption={图表数据整理程序},basicstyle=\tiny\ttfamily]{../figures/prep_plot_data.py}
+\lstinputlisting[caption={统一绘图实现},basicstyle=\tiny\ttfamily]{../figures/plot_common.py}
+\lstinputlisting[caption={论文表格生成程序},basicstyle=\tiny\ttfamily]{../figures/generate_tables.py}

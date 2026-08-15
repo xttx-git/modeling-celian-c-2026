@@ -1,0 +1,65 @@
+\section{AI 工具使用详情}
+
+\subsection*{所用 AI 工具名称和版本}
+\begin{table}[H]
+\centering
+\caption{AI 工具基本信息}
+\begin{tabular}{clp{0.32\textwidth}lc}
+\toprule
+序号 & 名称 & 版本型号 & 开发机构 & 使用日期 \\
+\midrule
+1 & 通义千问 & Qwen3.8-Max（工作区原使用记录） & 阿里巴巴 & 2026-08-14 \\
+2 & OpenAI Codex & GPT-5 系列；桌面端未显示精确后端版本 & OpenAI & 2026-08-14--15 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection*{具体使用目的和环节}
+\begin{table}[H]
+\centering
+\caption{AI 工具的辅助用途}
+\begin{tabularx}{\textwidth}{cp{0.17\textwidth}Xp{0.12\textwidth}}
+\toprule
+序号 & 使用环节 & 使用目的 & 所用工具 \\
+\midrule
+1 & 论文表达与排版 & 检查中文表达、交叉引用、公式和 LaTeX 格式 & 通义千问、Codex \\
+2 & 独立技术审阅 & 按题面逐项比对论文、代码、正式 CSV 与原始附件，登记未验证项和严重度 & Codex \\
+3 & 代码调试 & 定位问题二 CP-SAT 大表达式崩溃和归一化边界复现失败，并在副本中修正 & Codex \\
+4 & 模型口径同步 & 按共同信息截面、静态基线独立优化和共同归一化口径修订问题三正文 & Codex \\
+5 & 复现与交付检查 & 在隔离环境运行四问、生成图表、编译 PDF，并用独立脚本复算约束和指标 & Codex \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\subsection*{关键交互记录}
+\begin{table}[H]
+\centering
+\caption{AI 工具关键交互记录}
+\begin{tabular}{cp{0.42\textwidth}p{0.42\textwidth}}
+\toprule
+序号 & 提示词（Prompt） & AI 回复摘要 \\
+\midrule
+1 & “作为第三方独立技术审阅人，逐项核查题面、论文、代码、CSV、硬约束、单位、静态动态可比性和复现材料；不得默认作者结论正确。” & 形成文件清点、追踪矩阵、问题登记、独立校验脚本和带证据的审阅报告。 \\
+2 & “以最新修改版本为主，继续尝试复现问题二；问题三按昨日对话中的解法修正，完成后再次审阅并整理提交目录。” & 在隔离环境重复运行问题二，修正确定性归一化和求解表达式；重算问题三、问题四与敏感性结果，并同步论文和交付文件。 \\
+3 & “列出问题三正文与题面、代码和正式 CSV 的差异，供判断。” & 对共同信息截面、晋级规则、反馈公式、价格约束、资源预算、静态基线和共同归一化逐项建立差异清单，再按已验证实现修正文稿。 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection*{采纳和人工修改情况}
+\begin{table}[H]
+\centering
+\caption{AI 建议采纳与人工复核情况}
+\begin{tabularx}{\textwidth}{cp{0.26\textwidth}p{0.13\textwidth}X}
+\toprule
+序号 & AI 生成内容概述 & 是否采纳 & 人工修改说明 \\
+\midrule
+1 & 代码缺陷定位与补丁建议 & 核验后采纳 & 仅在复制出的最终工作目录修改；通过两个独立进程、正式输出字节比较和独立约束复算验证。 \\
+2 & 问题三公式与正文重写建议 & 核验后采纳 & 以官方题面、实际代码和新生成 CSV 为优先证据，逐项登记参数、截断区间和数值抽查。 \\
+3 & 论文数值、图表和交付结构建议 & 核验后采纳 & 所有核心数字由正式 JSON/CSV 重算；PDF 经本地编译、文本检查和逐页渲染检查。 \\
+4 & 表达与排版建议 & 部分采纳 & 删除无证据的最优性和因果表述，保留题面歧义、代理边界和未验证事项。 \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+AI 工具对技术审阅、调试和文稿同步提供了实质辅助，但不替代参赛队的责任判断。采纳内容均以官方题面和原始附件为准，并通过可运行程序、隔离复现、正式 CSV 复算和 PDF 检查留存证据；提交前参赛队应再次确认本说明与实际使用记录一致。

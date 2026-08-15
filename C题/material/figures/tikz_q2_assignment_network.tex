@@ -1,0 +1,59 @@
+\documentclass[tikz,border=8pt]{standalone}
+\usepackage[UTF8]{ctex}
+\usetikzlibrary{arrows.meta,positioning,calc,shadows}
+\definecolor{mainc}{RGB}{151,122,48}
+\begin{document}
+\adjustbox{max width=\textwidth}{%
+\begin{tikzpicture}[
+  node distance=.62cm and 1.65cm,
+  item/.style={draw={rgb,255:red,171;green,174;blue,178},fill={rgb,255:red,248;green,248;blue,248},
+    rounded corners=3pt,line width=.7pt,minimum width=2.35cm,minimum height=.72cm,
+    align=center,font=\small,text=black},
+  active/.style={draw={rgb,255:red,151;green,122;blue,48},fill={rgb,255:red,250;green,248;blue,242},
+    rounded corners=3pt,line width=1.1pt,minimum width=2.35cm,minimum height=.72cm,
+    align=center,font=\small,text=black,
+    drop shadow={opacity=.15,shadow xshift=.5pt,shadow yshift=-.5pt}},
+  rule/.style={draw={rgb,255:red,151;green,122;blue,48},fill={rgb,255:red,250;green,248;blue,242},
+    rounded corners=3pt,line width=.7pt,minimum width=3.05cm,minimum height=1.25cm,
+    text width=2.75cm,align=center,font=\scriptsize,text=black,
+    drop shadow={opacity=.15,shadow xshift=.5pt,shadow yshift=-.5pt}},
+  edge/.style={-{Stealth[length=4pt,width=4pt]},draw=black!55,line width=.55pt},
+  bigarrow/.style={-{Stealth[length=5pt,width=5pt]},draw=mainc,line width=1.4pt},
+  govern/.style={-{Stealth[length=4pt,width=4pt]},draw=black!60,dashed,line width=.7pt}
+]
+\node[item] (m1) {$i_1$\quad 第一轮比赛};
+\node[active,below=of m1] (mi) {$i$\quad 候选比赛};
+\node[item,below=of mi] (m72) {$i_{72}$\quad 第三轮比赛};
+
+\node[item,right=of m1] (v1) {$v_1$\quad 场馆};
+\node[active,below=of v1] (vi) {$v$\quad 合格场馆};
+\node[item,below=of vi] (v16) {$v_{16}$\quad 场馆};
+
+\node[item,right=of v1] (s1) {$s_1$\quad UTC 时段};
+\node[active,below=of s1] (si) {$s$\quad 候选时段};
+\node[item,below=of si] (s80) {$s_{80}$\quad UTC 时段};
+
+\node[font=\bfseries\small,text=black] at ($(m1.north)+(0,.58)$) {比赛层 $\mathcal I$};
+\node[font=\bfseries\small,text=black] at ($(v1.north)+(0,.58)$) {场馆层 $\mathcal V$};
+\node[font=\bfseries\small,text=black] at ($(s1.north)+(0,.58)$) {时段层 $\mathcal S$};
+
+\draw[edge] (m1) -- (v1);
+\draw[edge] (m1) -- (vi);
+\draw[edge] (mi) -- (v16);
+\draw[edge] (m72) -- (v16);
+\draw[edge] (v1) -- (s1);
+\draw[edge] (v1) -- (si);
+\draw[edge] (v16) -- (s80);
+\draw[bigarrow] (mi) -- node[above,fill=white,inner sep=1.5pt,font=\scriptsize,text=black] {$x_{ivs}=1$} (vi);
+\draw[bigarrow] (vi) -- node[above,fill=white,inner sep=1.5pt,font=\scriptsize,text=black] {同一三元指派} (si);
+
+\node[rule,below=.95cm of m72] (c1) {比赛唯一指派\\$\displaystyle\sum_{v,s}x_{ivs}=1$};
+\node[rule,below=.95cm of v16] (c2) {场馆资格与冲突\\$L_v^{sec}\ge L_i^{req}$，$\sum_i x_{ivs}\le1$};
+\node[rule,below=.95cm of s80] (c3) {时段与球队耦合\\转播并发，休息 $\ge60\,\mathrm h$，公平极差};
+
+\draw[govern] (c1) -- (m72);
+\draw[govern] (c2) -- (v16);
+\draw[govern] (c3) -- (s80);
+\end{tikzpicture}
+}%
+\end{document}
