@@ -1,0 +1,8 @@
+﻿date,high_broadcast_used,high_broadcast_capacity,high_security_used,high_security_capacity,enhanced_transport_used,enhanced_transport_capacity,budget_used,budget_capacity,high_broadcast_binding,high_security_binding,enhanced_transport_binding,budget_ratio,budget_near_binding
+2026-06-20,3,4,3,3,3,4,57.0,120.0,False,True,False,0.475,False
+2026-06-22,1,3,1,3,1,3,19.0,100.0,False,False,False,0.19,False
+2026-06-23,3,3,3,3,3,3,86.0,100.0,True,True,True,0.86,False
+2026-06-24,3,3,0,2,1,3,40.0,100.0,True,False,False,0.4,False
+2026-06-27,3,4,1,3,3,4,51.0,120.0,False,False,False,0.425,False
+2026-06-28,4,4,2,3,3,4,72.0,120.0,True,False,False,0.6,False
+2026-06-29,3,3,2,2,3,3,54.0,100.0,True,True,True,0.54,False

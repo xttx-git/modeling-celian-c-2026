@@ -1,0 +1,143 @@
+{
+  "team_aliases": {
+    "Argentina": "Argentina",
+    "Australia": "Australia",
+    "Belgium": "Belgium",
+    "Brazil": "Brazil",
+    "Cameroon": "Cameroon",
+    "Canada": "Canada",
+    "Costa Rica": "Costa Rica",
+    "Croatia": "Croatia",
+    "Denmark": "Denmark",
+    "Ecuador": "Ecuador",
+    "England": "England",
+    "France": "France",
+    "Germany": "Germany",
+    "Ghana": "Ghana",
+    "Iran": "Iran",
+    "Japan": "Japan",
+    "Mexico": "Mexico",
+    "Morocco": "Morocco",
+    "Netherlands": "Netherlands",
+    "Poland": "Poland",
+    "Portugal": "Portugal",
+    "Qatar": "Qatar",
+    "Saudi Arabia": "Saudi Arabia",
+    "Senegal": "Senegal",
+    "Serbia": "Serbia",
+    "South Korea": "South Korea",
+    "Spain": "Spain",
+    "Switzerland": "Switzerland",
+    "Tunisia": "Tunisia",
+    "USA": "United States",
+    "Uruguay": "Uruguay",
+    "Wales": "Wales"
+  },
+  "stadium_aliases": {
+    "Ahmad bin Ali Stadium": "Ahmad bin Ali Stadium",
+    "Al Bayt Stadium": "Al Bayt Stadium",
+    "Al Janoub Stadium": "Al Janoub Stadium",
+    "Al Thumama Stadium": "Al Thumama Stadium",
+    "Education City Stadium": "Education City Stadium",
+    "Khalifa International Stadium": "Khalifa International Stadium",
+    "Lusail Iconic Stadium": "Lusail Stadium",
+    "Stadium 974": "Stadium 974"
+  },
+  "stadiums": {
+    "Ahmad bin Ali Stadium": {
+      "name": "Ahmad bin Ali Stadium",
+      "city": "Al Rayyan",
+      "capacity": 45032,
+      "latitude": 25.3295,
+      "longitude": 51.3423,
+      "timezone": "Asia/Qatar",
+      "capacity_source_url": "https://legal.fifa.com/tournament-organisation/world-cup-2022-in-numbers/fifa-world-cup-qatar-2022-at-a-glance",
+      "geodata_source_url": "https://en.wikipedia.org/wiki/Ahmad_bin_Ali_Stadium",
+      "retrieval_date": "2026-08-16"
+    },
+    "Al Bayt Stadium": {
+      "name": "Al Bayt Stadium",
+      "city": "Al Khor",
+      "capacity": 68895,
+      "latitude": 25.6523,
+      "longitude": 51.4879,
+      "timezone": "Asia/Qatar",
+      "capacity_source_url": "https://legal.fifa.com/tournament-organisation/world-cup-2022-in-numbers/fifa-world-cup-qatar-2022-at-a-glance",
+      "geodata_source_url": "https://en.wikipedia.org/wiki/Al_Bayt_Stadium",
+      "retrieval_date": "2026-08-16"
+    },
+    "Al Janoub Stadium": {
+      "name": "Al Janoub Stadium",
+      "city": "Al Wakrah",
+      "capacity": 44325,
+      "latitude": 25.1599,
+      "longitude": 51.5745,
+      "timezone": "Asia/Qatar",
+      "capacity_source_url": "https://legal.fifa.com/tournament-organisation/world-cup-2022-in-numbers/fifa-world-cup-qatar-2022-at-a-glance",
+      "geodata_source_url": "https://en.wikipedia.org/wiki/Al_Janoub_Stadium",
+      "retrieval_date": "2026-08-16"
+    },
+    "Al Thumama Stadium": {
+      "name": "Al Thumama Stadium",
+      "city": "Doha",
+      "capacity": 44400,
+      "latitude": 25.2354,
+      "longitude": 51.5321,
+      "timezone": "Asia/Qatar",
+      "capacity_source_url": "https://legal.fifa.com/tournament-organisation/world-cup-2022-in-numbers/fifa-world-cup-qatar-2022-at-a-glance",
+      "geodata_source_url": "https://en.wikipedia.org/wiki/Al_Thumama_Stadium",
+      "retrieval_date": "2026-08-16"
+    },
+    "Education City Stadium": {
+      "name": "Education City Stadium",
+      "city": "Al Rayyan",
+      "capacity": 44667,
+      "latitude": 25.3108,
+      "longitude": 51.4244,
+      "timezone": "Asia/Qatar",
+      "capacity_source_url": "https://legal.fifa.com/tournament-organisation/world-cup-2022-in-numbers/fifa-world-cup-qatar-2022-at-a-glance",
+      "geodata_source_url": "https://en.wikipedia.org/wiki/Education_City_Stadium",
+      "retrieval_date": "2026-08-16"
+    },
+    "Khalifa International Stadium": {
+      "name": "Khalifa International Stadium",
+      "city": "Al Rayyan",
+      "capacity": 45857,
+      "latitude": 25.2637,
+      "longitude": 51.4481,
+      "timezone": "Asia/Qatar",
+      "capacity_source_url": "https://legal.fifa.com/tournament-organisation/world-cup-2022-in-numbers/fifa-world-cup-qatar-2022-at-a-glance",
+      "geodata_source_url": "https://en.wikipedia.org/wiki/Khalifa_International_Stadium",
+      "retrieval_date": "2026-08-16"
+    },
+    "Lusail Stadium": {
+      "name": "Lusail Stadium",
+      "city": "Lusail",
+      "capacity": 88966,
+      "latitude": 25.4209,
+      "longitude": 51.4903,
+      "timezone": "Asia/Qatar",
+      "capacity_source_url": "https://legal.fifa.com/tournament-organisation/world-cup-2022-in-numbers/fifa-world-cup-qatar-2022-at-a-glance",
+      "geodata_source_url": "https://en.wikipedia.org/wiki/Lusail_Stadium",
+      "retrieval_date": "2026-08-16"
+    },
+    "Stadium 974": {
+      "name": "Stadium 974",
+      "city": "Doha",
+      "capacity": 44089,
+      "latitude": 25.2892,
+      "longitude": 51.5665,
+      "timezone": "Asia/Qatar",
+      "capacity_source_url": "https://legal.fifa.com/tournament-organisation/world-cup-2022-in-numbers/fifa-world-cup-qatar-2022-at-a-glance",
+      "geodata_source_url": "https://en.wikipedia.org/wiki/Stadium_974",
+      "retrieval_date": "2026-08-16"
+    }
+  },
+  "sources": {
+    "openfootball_commit": "516d3825c3bd23fdc298c4014e84bde78f2d4965",
+    "openfootball_file": "https://github.com/openfootball/worldcup.json/blob/516d3825c3bd23fdc298c4014e84bde78f2d4965/2022/worldcup.json",
+    "fifa_verification": "https://www.fifa.com/tournaments/mens/worldcup/qatar2022/match-center",
+    "fifa_stadium_capacities": "https://legal.fifa.com/tournament-organisation/world-cup-2022-in-numbers/fifa-world-cup-qatar-2022-at-a-glance"
+  },
+  "retrieval_date": "2026-08-16"
+}

@@ -1,0 +1,164 @@
+\documentclass[UTF8,a4paper,11pt,fontset=none]{ctexart}
+
+\usepackage[a4paper,top=2.3cm,bottom=2.3cm,left=2.4cm,right=2.4cm]{geometry}
+\usepackage{amsmath,amssymb,mathtools}
+\usepackage{booktabs,longtable,array,tabularx,multirow}
+\usepackage{graphicx,float,placeins}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{listings}
+\usepackage{caption}
+\usepackage[hidelinks]{hyperref}
+\usepackage{setspace}
+
+\ctexset{
+  section={format=\zihao{3}\bfseries\centering,beforeskip=1.2ex,afterskip=0.8ex},
+  subsection={format=\zihao{4}\bfseries,beforeskip=0.9ex,afterskip=0.5ex}
+}
+\setmainfont{Times New Roman}
+\setCJKmainfont[AutoFakeBold=2.5]{SimSun}
+\setCJKsansfont{SimHei}
+\setCJKmonofont{FangSong}
+\setstretch{1.18}
+\setlength{\parindent}{2em}
+\setlength{\parskip}{0pt}
+\setlength{\emergencystretch}{2em}
+\Urlmuskip=0mu plus 1mu
+\setlength{\LTpre}{0.4em}
+\setlength{\LTpost}{0.4em}
+\renewcommand{\arraystretch}{1.12}
+\graphicspath{{generated/figures/}}
+\pagestyle{plain}
+\setcounter{secnumdepth}{2}
+\setcounter{tocdepth}{2}
+
+\captionsetup{font=small,labelfont=bf,labelsep=space}
+\hypersetup{
+  pdftitle={信息时序约束下的世界杯收视预测、赛程协同与动态资源优化},
+  pdfauthor={},
+  pdfsubject={2026年度策联杯数学建模精英联赛C题}
+}
+
+\definecolor{codegray}{RGB}{70,70,70}
+\definecolor{codebg}{RGB}{248,248,248}
+\lstset{
+  basicstyle=\ttfamily\scriptsize,
+  keywordstyle=\color{blue!60!black},
+  commentstyle=\color{green!40!black},
+  stringstyle=\color{red!55!black},
+  backgroundcolor=\color{codebg},
+  frame=single,
+  breaklines=true,
+  breakatwhitespace=false,
+  showstringspaces=false,
+  numbers=left,
+  numberstyle=\tiny\color{codegray},
+  numbersep=6pt,
+  tabsize=4,
+  columns=fullflexible,
+  keepspaces=true
+}
+
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+\begin{document}
+\pagenumbering{arabic}
+\setcounter{page}{1}
+
+\begin{center}
+  {\zihao{2}\bfseries 信息时序约束下的世界杯收视预测、赛程协同与动态资源优化\par}
+\end{center}
+\vspace{0.8em}
+
+\begin{center}
+  {\zihao{3}\bfseries 摘\quad 要}
+\end{center}
+
+针对大型足球赛事中收视预测、赛程安排、动态资源配置和实际赛程评价相互依赖的问题，本文建立遵守信息时点的顺序决策链。首先，仅使用赛前可得信息构造交换球队顺序后不变的对称特征，并在统一特征函数中规范化赛事名称。扩窗时间验证显示，Elastic Net 的 MSE、RMSE 和 MAE 分别为 188.9787、13.7268 和 10.6345，优于均值基线和 Extra Trees；规范化后 72 场未来比赛的未见赛事类别计数为 0。其次，将 72 场收视预测输入时段 MILP 和固定时段后的场馆 MILP，得到综合目标值 0.272453；所有球队均获得 2 场黄金时段和 1 场大容量场馆比赛，同组相邻轮次最小间隔为 63 小时。再次，固定第三轮赛程，在第三轮开始前的统一信息截面上同时模拟 24 场比赛 20000 次，对完全同分情形分配等比例晋级权重。动态总净值为 6.583849，较静态方案的 6.578368 提高 0.083318\%；五个随机种子下的改善率位于 0.080406\% 至 0.084923\%，说明该边际改善对 Monte Carlo 随机种子稳定。最后，以 2022 年世界杯为参照，分层比较直接结构事实、映射辅助指标和完整题内代理指标。最近邻和第二近邻映射下实际赛程代理综合值分别为 0.196995 和 0.210331，均低于优化赛程的 0.272453，但举办区域尺度和赛事规模会显著影响旅行、休息与场馆利用等结构指标，代理综合值不能替代对真实赛事的全面评价。
+
+\vspace{0.8em}
+\noindent\textbf{关键词：}收视预测；混合整数规划；联合泊松模拟；动态资源配置；赛程评价
+
+\newpage
+
+\input{body.tex}
+
+\section*{AI 工具使用声明}
+\addcontentsline{toc}{section}{AI 工具使用声明}
+本参赛队在竞赛过程中使用了 AI 工具，主要用于建模方案讨论、程序调试、结果复核与语言表达整理，详细使用情况见支撑材料。
+
+\begingroup
+\raggedright
+\sloppy
+\begin{thebibliography}{99}
+\bibitem{problem2026} 2026年度“策联杯”数学建模精英联赛 C 题及数据附件，2026。
+\bibitem{zou2005} Zou H, Hastie T. Regularization and Variable Selection via the Elastic Net. \textit{Journal of the Royal Statistical Society: Series B}, 2005, 67(2): 301--320.
+\bibitem{geurts2006} Geurts P, Ernst D, Wehenkel L. Extremely Randomized Trees. \textit{Machine Learning}, 2006, 63: 3--42.
+\bibitem{maher1982} Maher M J. Modelling Association Football Scores. \textit{Statistica Neerlandica}, 1982, 36(3): 109--118.
+\bibitem{huangfu2018} Huangfu Q, Hall J A J. Parallelizing the Dual Revised Simplex Method. \textit{Mathematical Programming Computation}, 2018, 10: 119--142.
+\bibitem{scipymilp} SciPy Developers. \texttt{scipy.optimize.milp}---SciPy Reference Guide. \url{https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.milp.html}, accessed 2026-08-16.
+\bibitem{highs} HiGHS Development Team. HiGHS: High-performance software for linear optimization. \url{https://highs.dev/}, accessed 2026-08-16.
+\bibitem{openfootball2022} Openfootball. World Cup 2022 JSON, commit 516d3825c3bd23fdc298c4014e84bde78f2d4965. \url{https://github.com/openfootball/worldcup.json/blob/516d3825c3bd23fdc298c4014e84bde78f2d4965/2022/worldcup.json}.
+\bibitem{fifa2022} FIFA. FIFA World Cup Qatar 2022 Match Centre. \url{https://www.fifa.com/tournaments/mens/worldcup/qatar2022/match-center}.
+\bibitem{elo2022} International Football. World Football Elo Ratings Table, 2022-11-12. \url{https://www.international-football.net/elo-ratings-table?confed=&day=12&month=11&old-team=&year=2022}.
+\end{thebibliography}
+\endgroup
+
+\typeout{MAIN-TEXT-END-PAGE=\thepage}
+\clearpage
+\appendix
+\section{支撑材料文件列表}
+
+支撑材料与论文采用相同的最终计算版本，主要文件如下：
+\begin{enumerate}[leftmargin=3em]
+  \item \texttt{code/run\_all.py}：四问计算流水线入口；
+  \item \texttt{code/pipeline\_core.py}：特征、预测、MILP、联合模拟和比较指标；
+  \item \texttt{code/check\_outputs.py}：公式、约束、输出和可复现性验收；
+  \item \texttt{code/paper\_analysis.py}：论文专用的扩窗、系数、敏感性、收敛与映射质量分析；
+  \item \texttt{requirements.txt}：固定 Python 依赖版本；
+  \item \texttt{requirements-paper.txt}：论文作图与 PDF 质检的附加依赖；
+  \item \texttt{output/}：四问最终 CSV 与 \texttt{diagnostics.json}；
+  \item \texttt{paper/generated/}：由论文分析脚本自动生成的图、表和可追溯结果；
+  \item \texttt{material/user\_data/worldcup\_2022\_openfootball.json}：2022 年赛程原始数据；
+  \item \texttt{material/user\_data/worldcup\_2022\_pre\_tournament\_elo.csv}：2022 年赛前 Elo；
+  \item \texttt{material/user\_data/entity\_mappings.json}：球队与场馆实体映射；
+  \item \texttt{AI 工具使用详情.pdf}：AI 工具、用途、交互与人工核验说明。
+\end{enumerate}
+
+\section{复现命令与算法摘要}
+
+完整源程序作为独立支撑材料提交，不在论文附录重复排印。在项目根目录执行：
+
+\begin{lstlisting}[language=bash,numbers=none]
+python -m venv .venv
+source .venv/bin/activate
+python -m pip install -r requirements.txt
+python code/run_all.py --output-dir output
+python code/check_outputs.py --output-dir output
+python code/paper_analysis.py --output-dir output --generated-dir paper/generated
+\end{lstlisting}
+
+问题一使用单一特征函数完成赛事名称规范化、对称特征构造、时间扩窗与全量重训练。问题二先解时段 MILP，再在时段固定后解场馆 MILP；问题三先生成 20000 次联合比分并计算浮点晋级权重，再枚举合法动作并解多重选择 MILP。问题四在固定实体映射上计算结构层与题内代理层指标。
+
+\section{输出校验摘要}
+
+自动验收重新训练问题一并逐值比对预测，复算问题二的全部指标、UTC 容量、同组轮次边界和场馆约束，验证问题三晋级权重总和、票价边界、静态动作固定复算和五种子结果，并检查问题四的三份来源材料、赛程结构与 30 项比较指标。正式结果的最终状态为 \texttt{CHECK PASSED}。
+
+\section{完整源程序}
+
+根据论文格式规范第三条，附录给出全部完整、可运行源程序；附录页数不计入正文 30 页限制。
+
+\subsection{流水线入口}
+\lstinputlisting[language=Python]{../code/run_all.py}
+
+\subsection{模型与计算核心}
+\lstinputlisting[language=Python]{../code/pipeline_core.py}
+
+\subsection{自动验收程序}
+\lstinputlisting[language=Python]{../code/check_outputs.py}
+
+\subsection{论文分析与作图程序}
+\lstinputlisting[language=Python]{../code/paper_analysis.py}
+
+\end{document}

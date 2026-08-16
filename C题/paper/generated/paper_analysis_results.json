@@ -1,0 +1,1097 @@
+{
+  "random_seeds": {
+    "problem1_random_models": 20260816,
+    "problem3_primary_simulation": 20260816,
+    "problem3_five_seed_stability": [
+      20260816,
+      20260817,
+      20260818,
+      20260819,
+      20260820
+    ],
+    "problem3_convergence": 20260816,
+    "problem4_weight_perturbation": 20260816
+  },
+  "problem1": {
+    "fold_metrics": [
+      {
+        "model": "mean",
+        "fold": 1,
+        "train_n": 336,
+        "valid_n": 56,
+        "train_start": "2018-01-12",
+        "train_end": "2022-01-13",
+        "valid_start": "2022-01-18",
+        "valid_end": "2022-09-22",
+        "mse": 430.82220307908887,
+        "rmse": 20.75625696215695,
+        "mae": 17.181383946129817
+      },
+      {
+        "model": "mean",
+        "fold": 2,
+        "train_n": 392,
+        "valid_n": 56,
+        "train_start": "2018-01-12",
+        "train_end": "2022-09-22",
+        "valid_start": "2022-09-24",
+        "valid_end": "2023-04-29",
+        "mse": 588.6999583214632,
+        "rmse": 24.26313991060232,
+        "mae": 18.941359310826954
+      },
+      {
+        "model": "mean",
+        "fold": 3,
+        "train_n": 448,
+        "valid_n": 56,
+        "train_start": "2018-01-12",
+        "train_end": "2023-04-29",
+        "valid_start": "2023-04-30",
+        "valid_end": "2024-01-07",
+        "mse": 574.6120627816362,
+        "rmse": 23.97106720155855,
+        "mae": 19.0740416488678
+      },
+      {
+        "model": "elastic_net",
+        "fold": 1,
+        "train_n": 336,
+        "valid_n": 56,
+        "train_start": "2018-01-12",
+        "train_end": "2022-01-13",
+        "valid_start": "2022-01-18",
+        "valid_end": "2022-09-22",
+        "mse": 201.08614946344832,
+        "rmse": 14.180484810592631,
+        "mae": 11.290191887155334
+      },
+      {
+        "model": "elastic_net",
+        "fold": 2,
+        "train_n": 392,
+        "valid_n": 56,
+        "train_start": "2018-01-12",
+        "train_end": "2022-09-22",
+        "valid_start": "2022-09-24",
+        "valid_end": "2023-04-29",
+        "mse": 205.11823042837548,
+        "rmse": 14.321949253798364,
+        "mae": 10.981587493115805
+      },
+      {
+        "model": "elastic_net",
+        "fold": 3,
+        "train_n": 448,
+        "valid_n": 56,
+        "train_start": "2018-01-12",
+        "train_end": "2023-04-29",
+        "valid_start": "2023-04-30",
+        "valid_end": "2024-01-07",
+        "mse": 160.73166931030178,
+        "rmse": 12.677999420661834,
+        "mae": 9.631753368345828
+      },
+      {
+        "model": "extra_trees",
+        "fold": 1,
+        "train_n": 336,
+        "valid_n": 56,
+        "train_start": "2018-01-12",
+        "train_end": "2022-01-13",
+        "valid_start": "2022-01-18",
+        "valid_end": "2022-09-22",
+        "mse": 242.08155880295635,
+        "rmse": 15.558970364486088,
+        "mae": 12.502709466234645
+      },
+      {
+        "model": "extra_trees",
+        "fold": 2,
+        "train_n": 392,
+        "valid_n": 56,
+        "train_start": "2018-01-12",
+        "train_end": "2022-09-22",
+        "valid_start": "2022-09-24",
+        "valid_end": "2023-04-29",
+        "mse": 253.37313229917638,
+        "rmse": 15.917698712413689,
+        "mae": 12.902223243707692
+      },
+      {
+        "model": "extra_trees",
+        "fold": 3,
+        "train_n": 448,
+        "valid_n": 56,
+        "train_start": "2018-01-12",
+        "train_end": "2023-04-29",
+        "valid_start": "2023-04-30",
+        "valid_end": "2024-01-07",
+        "mse": 185.61400078184144,
+        "rmse": 13.624022929437599,
+        "mae": 10.879299621041522
+      }
+    ],
+    "elastic_fold_summary": {
+      "mse": {
+        "mean": 188.9786830673752,
+        "std": 24.545564953187633,
+        "min": 160.73166931030178,
+        "max": 205.11823042837548
+      },
+      "rmse": {
+        "mean": 13.726811161684276,
+        "std": 0.9110475279878497,
+        "min": 12.677999420661834,
+        "max": 14.321949253798364
+      },
+      "mae": {
+        "mean": 10.634510916205656,
+        "std": 0.8820154153117263,
+        "min": 9.631753368345828,
+        "max": 11.290191887155334
+      }
+    },
+    "top_coefficients": [
+      {
+        "feature_raw": "categorical__competition_World Cup",
+        "feature": "赛事=World Cup",
+        "coefficient": 0.1283384558651727,
+        "absolute_coefficient": 0.1283384558651727
+      },
+      {
+        "feature_raw": "numeric__fan_base_index_mean",
+        "feature": "球迷基础均值",
+        "coefficient": 0.04976165454801822,
+        "absolute_coefficient": 0.04976165454801822
+      },
+      {
+        "feature_raw": "numeric__fan_base_index_min",
+        "feature": "球迷基础最小",
+        "coefficient": 0.03887235691731178,
+        "absolute_coefficient": 0.03887235691731178
+      },
+      {
+        "feature_raw": "numeric__strength_score_absdiff",
+        "feature": "综合实力绝对差",
+        "coefficient": -0.018811876191803693,
+        "absolute_coefficient": 0.018811876191803693
+      },
+      {
+        "feature_raw": "numeric__fan_base_index_max",
+        "feature": "球迷基础最大",
+        "coefficient": 0.014968165296499886,
+        "absolute_coefficient": 0.014968165296499886
+      },
+      {
+        "feature_raw": "numeric__market_value_musd_absdiff",
+        "feature": "市值绝对差",
+        "coefficient": -0.009679940749866825,
+        "absolute_coefficient": 0.009679940749866825
+      },
+      {
+        "feature_raw": "numeric__style_attack_min",
+        "feature": "进攻风格最小",
+        "coefficient": 0.0041627510628678924,
+        "absolute_coefficient": 0.0041627510628678924
+      },
+      {
+        "feature_raw": "numeric__avg_age_absdiff",
+        "feature": "平均年龄绝对差",
+        "coefficient": 0.0038246388569427017,
+        "absolute_coefficient": 0.0038246388569427017
+      },
+      {
+        "feature_raw": "categorical__competition_World Cup Qualifier",
+        "feature": "赛事=World Cup Qualifier",
+        "coefficient": -0.002332959015784897,
+        "absolute_coefficient": 0.002332959015784897
+      },
+      {
+        "feature_raw": "numeric__style_attack_mean",
+        "feature": "进攻风格均值",
+        "coefficient": 0.001520689637136389,
+        "absolute_coefficient": 0.001520689637136389
+      },
+      {
+        "feature_raw": "categorical__competition_Continental Cup",
+        "feature": "赛事=Continental Cup",
+        "coefficient": -0.0013400379084514671,
+        "absolute_coefficient": 0.0013400379084514671
+      },
+      {
+        "feature_raw": "numeric__style_defense_max",
+        "feature": "防守风格最大",
+        "coefficient": 0.0013118406568797467,
+        "absolute_coefficient": 0.0013118406568797467
+      },
+      {
+        "feature_raw": "numeric__market_value_musd_min",
+        "feature": "市值最小",
+        "coefficient": 0.0009142032460424468,
+        "absolute_coefficient": 0.0009142032460424468
+      },
+      {
+        "feature_raw": "numeric__neutral",
+        "feature": "中立场",
+        "coefficient": -0.0002564216095514299,
+        "absolute_coefficient": 0.0002564216095514299
+      },
+      {
+        "feature_raw": "numeric__host_flag_mean",
+        "feature": "东道主标记均值",
+        "coefficient": 1.2955215826228361e-05,
+        "absolute_coefficient": 1.2955215826228361e-05
+      }
+    ],
+    "future_mean_shift_top": [
+      {
+        "feature": "赛事=World Cup",
+        "mean_log_prediction_shift": 0.12054647818764436,
+        "abs_shift": 0.12054647818764436
+      },
+      {
+        "feature": "综合实力绝对差",
+        "mean_log_prediction_shift": -0.005131276000279227,
+        "abs_shift": 0.005131276000279227
+      },
+      {
+        "feature": "球迷基础最小",
+        "mean_log_prediction_shift": -0.003976774320295617,
+        "abs_shift": 0.003976774320295617
+      },
+      {
+        "feature": "市值绝对差",
+        "mean_log_prediction_shift": -0.0019190362883179607,
+        "abs_shift": 0.0019190362883179607
+      },
+      {
+        "feature": "球迷基础最大",
+        "mean_log_prediction_shift": 0.001529224066158862,
+        "abs_shift": 0.001529224066158862
+      },
+      {
+        "feature": "赛事=World Cup Qualifier",
+        "mean_log_prediction_shift": 0.0007998716625548218,
+        "abs_shift": 0.0007998716625548218
+      },
+      {
+        "feature": "进攻风格最小",
+        "mean_log_prediction_shift": -0.0004583804993818841,
+        "abs_shift": 0.0004583804993818841
+      },
+      {
+        "feature": "中立场",
+        "mean_log_prediction_shift": -0.0003851290348236289,
+        "abs_shift": 0.0003851290348236289
+      },
+      {
+        "feature": "球迷基础均值",
+        "mean_log_prediction_shift": -0.0002782132490624527,
+        "abs_shift": 0.0002782132490624527
+      },
+      {
+        "feature": "赛事=Continental Cup",
+        "mean_log_prediction_shift": 0.0002488641829981296,
+        "abs_shift": 0.0002488641829981296
+      }
+    ],
+    "competition_categories": {
+      "train": [
+        "Continental Cup",
+        "Friendly",
+        "Nations League",
+        "World Cup",
+        "World Cup Qualifier"
+      ],
+      "future72": [
+        "World Cup"
+      ],
+      "future_unseen_in_train": []
+    },
+    "competition_normalization": {
+      "train": {
+        "before_categories": [
+          "Continental Cup",
+          "Friendly",
+          "Nations League",
+          "World Cup",
+          "World Cup Qualifier"
+        ],
+        "after_categories": [
+          "Continental Cup",
+          "Friendly",
+          "Nations League",
+          "World Cup",
+          "World Cup Qualifier"
+        ],
+        "before_counts": {
+          "Continental Cup": 104,
+          "Friendly": 187,
+          "Nations League": 43,
+          "World Cup": 34,
+          "World Cup Qualifier": 192
+        },
+        "after_counts": {
+          "Continental Cup": 104,
+          "Friendly": 187,
+          "Nations League": 43,
+          "World Cup": 34,
+          "World Cup Qualifier": 192
+        }
+      },
+      "test": {
+        "before_categories": [
+          "Continental Cup",
+          "Friendly",
+          "Nations League",
+          "World Cup",
+          "World Cup Qualifier"
+        ],
+        "after_categories": [
+          "Continental Cup",
+          "Friendly",
+          "Nations League",
+          "World Cup",
+          "World Cup Qualifier"
+        ],
+        "before_counts": {
+          "Continental Cup": 22,
+          "Friendly": 41,
+          "Nations League": 13,
+          "World Cup": 6,
+          "World Cup Qualifier": 58
+        },
+        "after_counts": {
+          "Continental Cup": 22,
+          "Friendly": 41,
+          "Nations League": 13,
+          "World Cup": 6,
+          "World Cup Qualifier": 58
+        },
+        "unseen_categories": [],
+        "unseen_unique_count": 0,
+        "unseen_row_count": 0
+      },
+      "future72": {
+        "before_categories": [
+          "FIFA World Cup"
+        ],
+        "after_categories": [
+          "World Cup"
+        ],
+        "before_counts": {
+          "FIFA World Cup": 72
+        },
+        "after_counts": {
+          "World Cup": 72
+        },
+        "unseen_categories": [],
+        "unseen_unique_count": 0,
+        "unseen_row_count": 0
+      },
+      "normalizer": "normalize_competition_name_v1",
+      "world_cup_canonical_category": "World Cup"
+    },
+    "model_seed": 20260816,
+    "oof_summary": {
+      "correlation": 0.8011529828835344,
+      "mean_residual_million": 0.2927056042147864,
+      "residual_std_million": 13.78492300826964,
+      "lowest_actual_decile_mean_residual": -16.852850205752425,
+      "highest_actual_decile_mean_residual": 17.624262564630314
+    },
+    "oof_n": 168
+  },
+  "problem2": {
+    "model_sizes": {
+      "slot": {
+        "variables": 5762,
+        "constraints": 461
+      },
+      "venue": {
+        "variables": 1073,
+        "constraints": 888
+      }
+    },
+    "solver": [
+      {
+        "subproblem": "时段 MILP",
+        "variables": 5762,
+        "constraints": 461,
+        "runtime_seconds": 23.216251491001458,
+        "mip_gap": 0.0004784431388885584,
+        "status": "在设定 MIP 容差内求得最优解"
+      },
+      {
+        "subproblem": "条件场馆 MILP",
+        "variables": 1073,
+        "constraints": 888,
+        "runtime_seconds": 0.4907522390021768,
+        "mip_gap": 0.00035708842636867727,
+        "status": "在设定 MIP 容差内求得最优解"
+      }
+    ],
+    "venue_match_counts": {
+      "V07": 2,
+      "V15": 2,
+      "V14": 2,
+      "V13": 2,
+      "V12": 2,
+      "V11": 2,
+      "V10": 2,
+      "V09": 2,
+      "V16": 2,
+      "V06": 6,
+      "V08": 8,
+      "V05": 8,
+      "V02": 8,
+      "V01": 8,
+      "V03": 8,
+      "V04": 8
+    },
+    "team_rest_hours": {
+      "mean": 128.5625,
+      "std": 63.90697392139197,
+      "min": 63.0,
+      "max": 312.0
+    },
+    "sensitivity": [
+      {
+        "scenario": "baseline",
+        "indicator": "baseline",
+        "factor": 1.0,
+        "Z2_scenario": 0.27245335427844,
+        "Z2_original_weights": 0.27245335427844,
+        "slot_change_rate": 0.0,
+        "venue_change_rate": 0.0,
+        "assignment_change_rate": 0.0,
+        "T": 285910470.0,
+        "B": 326546865.536447,
+        "C": 53.05500000000001,
+        "D": 0.18924710028406608,
+        "F": 0.0,
+        "R": 0.4103640767798951,
+        "all_constraints_passed": true
+      },
+      {
+        "scenario": "T_0.8",
+        "indicator": "T",
+        "factor": 0.8,
+        "Z2_scenario": 0.26710658581282287,
+        "Z2_original_weights": 0.2724818287017982,
+        "slot_change_rate": 0.5972222222222222,
+        "venue_change_rate": 0.4305555555555556,
+        "assignment_change_rate": 0.7638888888888888,
+        "T": 285910470.0,
+        "B": 326532314.29737556,
+        "C": 53.230000000000004,
+        "D": 0.18787878857768736,
+        "F": 0.0,
+        "R": 0.4069612581573334,
+        "all_constraints_passed": true,
+        "slot_runtime_seconds": 19.590256956998928,
+        "venue_runtime_seconds": 0.13223401499999454
+      },
+      {
+        "scenario": "T_1.2",
+        "indicator": "T",
+        "factor": 1.2,
+        "Z2_scenario": 0.27730425231445577,
+        "Z2_original_weights": 0.27243889275056216,
+        "slot_change_rate": 0.5972222222222222,
+        "venue_change_rate": 0.4166666666666667,
+        "assignment_change_rate": 0.75,
+        "T": 285910470.0,
+        "B": 326553744.927496,
+        "C": 53.2,
+        "D": 0.18978700939009402,
+        "F": 0.0,
+        "R": 0.4068859966131862,
+        "all_constraints_passed": true,
+        "slot_runtime_seconds": 29.923178293996898,
+        "venue_runtime_seconds": 1.0976123260006716
+      },
+      {
+        "scenario": "B_0.8",
+        "indicator": "B",
+        "factor": 0.8,
+        "Z2_scenario": 0.2628679470412348,
+        "Z2_original_weights": 0.27249463797920936,
+        "slot_change_rate": 0.6944444444444444,
+        "venue_change_rate": 0.4722222222222222,
+        "assignment_change_rate": 0.8194444444444444,
+        "T": 285910470.0,
+        "B": 326529498.5054075,
+        "C": 53.03,
+        "D": 0.18891200807414835,
+        "F": 0.0,
+        "R": 0.41068645469384435,
+        "all_constraints_passed": true,
+        "slot_runtime_seconds": 22.971233276999556,
+        "venue_runtime_seconds": 0.16821035500106518
+      },
+      {
+        "scenario": "B_1.2",
+        "indicator": "B",
+        "factor": 1.2,
+        "Z2_scenario": 0.2811475625107746,
+        "Z2_original_weights": 0.27243459217186294,
+        "slot_change_rate": 0.6388888888888888,
+        "venue_change_rate": 0.4305555555555556,
+        "assignment_change_rate": 0.8472222222222222,
+        "T": 285910470.0,
+        "B": 326532241.74105,
+        "C": 53.035000000000004,
+        "D": 0.19001060299966888,
+        "F": 0.0,
+        "R": 0.41042692387060176,
+        "all_constraints_passed": true,
+        "slot_runtime_seconds": 23.459863724998286,
+        "venue_runtime_seconds": 0.24395952499980922
+      },
+      {
+        "scenario": "C_0.8",
+        "indicator": "C",
+        "factor": 0.8,
+        "Z2_scenario": 0.2840984082275479,
+        "Z2_original_weights": 0.2723233650968733,
+        "slot_change_rate": 0.75,
+        "venue_change_rate": 0.5416666666666666,
+        "assignment_change_rate": 0.8472222222222222,
+        "T": 285910470.0,
+        "B": 326531523.067651,
+        "C": 53.435,
+        "D": 0.18861779207412177,
+        "F": 0.0,
+        "R": 0.40330942435950257,
+        "all_constraints_passed": true,
+        "slot_runtime_seconds": 28.443698889001098,
+        "venue_runtime_seconds": 0.2257958839982166
+      },
+      {
+        "scenario": "C_1.2",
+        "indicator": "C",
+        "factor": 1.2,
+        "Z2_scenario": 0.2612451094969375,
+        "Z2_original_weights": 0.27245160129719775,
+        "slot_change_rate": 0.6388888888888888,
+        "venue_change_rate": 0.4166666666666667,
+        "assignment_change_rate": 0.7361111111111112,
+        "T": 285910470.0,
+        "B": 326567332.518783,
+        "C": 53.015,
+        "D": 0.18881324758740867,
+        "F": 0.0,
+        "R": 0.4116644113874516,
+        "all_constraints_passed": true,
+        "slot_runtime_seconds": 27.40049249799995,
+        "venue_runtime_seconds": 0.10163958300108789
+      },
+      {
+        "scenario": "D_0.8",
+        "indicator": "D",
+        "factor": 0.8,
+        "Z2_scenario": 0.27892208886131653,
+        "Z2_original_weights": 0.27234931240506605,
+        "slot_change_rate": 0.7638888888888888,
+        "venue_change_rate": 0.4305555555555556,
+        "assignment_change_rate": 0.8611111111111112,
+        "T": 285910470.0,
+        "B": 326513160.0498455,
+        "C": 53.035,
+        "D": 0.19056194372800261,
+        "F": 0.0,
+        "R": 0.41078042394507297,
+        "all_constraints_passed": true,
+        "slot_runtime_seconds": 16.199771273997612,
+        "venue_runtime_seconds": 0.14750651399663184
+      },
+      {
+        "scenario": "D_1.2",
+        "indicator": "D",
+        "factor": 1.2,
+        "Z2_scenario": 0.26609175795355816,
+        "Z2_original_weights": 0.27246205088026404,
+        "slot_change_rate": 0.5833333333333334,
+        "venue_change_rate": 0.4305555555555556,
+        "assignment_change_rate": 0.7777777777777778,
+        "T": 285910470.0,
+        "B": 326536579.767068,
+        "C": 53.02000000000001,
+        "D": 0.18892916538257673,
+        "F": 0.0,
+        "R": 0.41123964957869025,
+        "all_constraints_passed": true,
+        "slot_runtime_seconds": 25.145163708999462,
+        "venue_runtime_seconds": 0.49042192900014925
+      },
+      {
+        "scenario": "F_0.8",
+        "indicator": "F",
+        "factor": 0.8,
+        "Z2_scenario": 0.2757126947056858,
+        "Z2_original_weights": 0.27240414236921756,
+        "slot_change_rate": 0.5972222222222222,
+        "venue_change_rate": 0.4722222222222222,
+        "assignment_change_rate": 0.7777777777777778,
+        "T": 285910470.0,
+        "B": 326583729.2255225,
+        "C": 53.05000000000001,
+        "D": 0.1894405704674723,
+        "F": 0.0,
+        "R": 0.4109767133960862,
+        "all_constraints_passed": true,
+        "slot_runtime_seconds": 27.179299900999467,
+        "venue_runtime_seconds": 0.5002529580015107
+      },
+      {
+        "scenario": "F_1.2",
+        "indicator": "F",
+        "factor": 1.2,
+        "Z2_scenario": 0.2692395140090776,
+        "Z2_original_weights": 0.27247038817718655,
+        "slot_change_rate": 0.6388888888888888,
+        "venue_change_rate": 0.4722222222222222,
+        "assignment_change_rate": 0.8194444444444444,
+        "T": 285910470.0,
+        "B": 326522234.6145935,
+        "C": 53.075,
+        "D": 0.1880411541645043,
+        "F": 0.0,
+        "R": 0.4104335132149846,
+        "all_constraints_passed": true,
+        "slot_runtime_seconds": 22.87737805299912,
+        "venue_runtime_seconds": 0.45840557900010026
+      },
+      {
+        "scenario": "R_0.8",
+        "indicator": "R",
+        "factor": 0.8,
+        "Z2_scenario": 0.27871367955643106,
+        "Z2_original_weights": 0.2725032949696576,
+        "slot_change_rate": 0.75,
+        "venue_change_rate": 0.5,
+        "assignment_change_rate": 0.875,
+        "T": 285910470.0,
+        "B": 326594829.9253576,
+        "C": 53.02000000000001,
+        "D": 0.18811375336995967,
+        "F": 0.0,
+        "R": 0.4116478170145878,
+        "all_constraints_passed": true,
+        "slot_runtime_seconds": 22.276672490002966,
+        "venue_runtime_seconds": 0.8992118220012344
+      },
+      {
+        "scenario": "R_1.2",
+        "indicator": "R",
+        "factor": 1.2,
+        "Z2_scenario": 0.26641206569168596,
+        "Z2_original_weights": 0.2724276104861676,
+        "slot_change_rate": 0.6388888888888888,
+        "venue_change_rate": 0.4722222222222222,
+        "assignment_change_rate": 0.8194444444444444,
+        "T": 285910470.0,
+        "B": 326562275.50503147,
+        "C": 53.23500000000001,
+        "D": 0.18844314708340987,
+        "F": 0.0,
+        "R": 0.40711945996819654,
+        "all_constraints_passed": true,
+        "slot_runtime_seconds": 41.57614990699949,
+        "venue_runtime_seconds": 1.0412580039992463
+      }
+    ]
+  },
+  "problem3": {
+    "convergence_seed": 20260816,
+    "convergence_sequence_relation": "same_seed_reinitialized_for_each_sample_size; not strict prefixes because home/away Poisson arrays are generated in separate calls",
+    "changed_case_ids": [
+      "GA05",
+      "GF05",
+      "GG05",
+      "GJ05",
+      "GL05"
+    ],
+    "convergence": [
+      {
+        "simulations": 2000,
+        "dynamic_total_net": 6.629478834442844,
+        "static_total_net": 6.62425427930782,
+        "improvement_rate": 0.0007887008732959164,
+        "advancement_max_abs_diff_vs_20000": 0.027516666666666745,
+        "advancement_mean_abs_diff_vs_20000": 0.0049170486111111186,
+        "decision_match_rate_vs_20000": 1.0
+      },
+      {
+        "simulations": 5000,
+        "dynamic_total_net": 6.621664119705646,
+        "static_total_net": 6.61626241650585,
+        "improvement_rate": 0.000816428197636224,
+        "advancement_max_abs_diff_vs_20000": 0.007748333333333135,
+        "advancement_mean_abs_diff_vs_20000": 0.0016696180555555381,
+        "decision_match_rate_vs_20000": 1.0
+      },
+      {
+        "simulations": 10000,
+        "dynamic_total_net": 6.605047915489084,
+        "static_total_net": 6.599617484698593,
+        "improvement_rate": 0.0008228402332532731,
+        "advancement_max_abs_diff_vs_20000": 0.011833333333333362,
+        "advancement_mean_abs_diff_vs_20000": 0.0019938888888888693,
+        "decision_match_rate_vs_20000": 1.0
+      },
+      {
+        "simulations": 20000,
+        "dynamic_total_net": 6.583848598592548,
+        "static_total_net": 6.5783676577377355,
+        "improvement_rate": 0.0008331764261253036,
+        "advancement_max_abs_diff_vs_20000": 0.0,
+        "advancement_mean_abs_diff_vs_20000": 0.0,
+        "decision_match_rate_vs_20000": 1.0
+      }
+    ],
+    "changed_cases": [
+      {
+        "match_id": "GA05",
+        "match": "Mexico-Czechia",
+        "p_a": 1.0,
+        "p_b": 1.0,
+        "importance": 0.0,
+        "stakeless": 1.0,
+        "collusion": 0.65,
+        "attendance_dynamic": 28534.328198924362,
+        "viewers_dynamic": 99469053.00093554,
+        "static_action": "B3/S2/T3/18.583%",
+        "dynamic_action": "B2/S2/T2/18.583%",
+        "static_net": 0.01121510370024692,
+        "dynamic_net": 0.00025734165285867805,
+        "improvement_rate": -0.9770540104
+      },
+      {
+        "match_id": "GF05",
+        "match": "Netherlands-Tunisia",
+        "p_a": 1.0,
+        "p_b": 0.0665875,
+        "importance": 0.12430720968749999,
+        "stakeless": 0.8756927903125,
+        "collusion": 0.00020680544172428094,
+        "attendance_dynamic": 24563.418266885856,
+        "viewers_dynamic": 107779212.67140019,
+        "static_action": "B2/S2/T2/18.583%",
+        "dynamic_action": "B2/S2/T1/18.583%",
+        "static_net": 0.04887186660180565,
+        "dynamic_net": 0.04946648101327139,
+        "improvement_rate": 0.0121668038
+      },
+      {
+        "match_id": "GG05",
+        "match": "Belgium-New Zealand",
+        "p_a": 1.0,
+        "p_b": 0.7863916666666667,
+        "importance": 0.3359596265277777,
+        "stakeless": 0.6640403734722222,
+        "collusion": 0.7675858692847223,
+        "attendance_dynamic": 30135.170860850092,
+        "viewers_dynamic": 118279308.77109808,
+        "static_action": "B3/S2/T3/18.583%",
+        "dynamic_action": "B3/S2/T2/18.583%",
+        "static_net": 0.11820199965572958,
+        "dynamic_net": 0.11826501374178972,
+        "improvement_rate": 0.0005331051
+      },
+      {
+        "match_id": "GJ05",
+        "match": "Argentina-Jordan",
+        "p_a": 1.0,
+        "p_b": 1.0,
+        "importance": 0.0,
+        "stakeless": 1.0,
+        "collusion": 0.65,
+        "attendance_dynamic": 22854.89215961628,
+        "viewers_dynamic": 98402244.84847839,
+        "static_action": "B2/S1/T2/18.583%",
+        "dynamic_action": "B2/S1/T1/18.583%",
+        "static_net": -0.07370479535276542,
+        "dynamic_net": -0.07245598262686509,
+        "improvement_rate": 0.0169434393
+      },
+      {
+        "match_id": "GL05",
+        "match": "England-Panama",
+        "p_a": 1.0,
+        "p_b": 0.5856833333333332,
+        "importance": 0.4853167327777778,
+        "stakeless": 0.5146832672222221,
+        "collusion": 0.8198608564722223,
+        "attendance_dynamic": 24205.307587740557,
+        "viewers_dynamic": 115164839.73011392,
+        "static_action": "B2/S1/T1/18.583%",
+        "dynamic_action": "B3/S1/T1/18.583%",
+        "static_net": 0.040657822531370846,
+        "dynamic_net": 0.0551900842101449,
+        "improvement_rate": 0.3574284301
+      }
+    ],
+    "daily_resources": [
+      {
+        "date": "2026-06-20",
+        "high_broadcast_used": 3,
+        "high_broadcast_capacity": 4,
+        "high_security_used": 3,
+        "high_security_capacity": 3,
+        "enhanced_transport_used": 3,
+        "enhanced_transport_capacity": 4,
+        "budget_used": 57.0,
+        "budget_capacity": 120.0
+      },
+      {
+        "date": "2026-06-22",
+        "high_broadcast_used": 1,
+        "high_broadcast_capacity": 3,
+        "high_security_used": 1,
+        "high_security_capacity": 3,
+        "enhanced_transport_used": 1,
+        "enhanced_transport_capacity": 3,
+        "budget_used": 19.0,
+        "budget_capacity": 100.0
+      },
+      {
+        "date": "2026-06-23",
+        "high_broadcast_used": 3,
+        "high_broadcast_capacity": 3,
+        "high_security_used": 3,
+        "high_security_capacity": 3,
+        "enhanced_transport_used": 3,
+        "enhanced_transport_capacity": 3,
+        "budget_used": 86.0,
+        "budget_capacity": 100.0
+      },
+      {
+        "date": "2026-06-24",
+        "high_broadcast_used": 3,
+        "high_broadcast_capacity": 3,
+        "high_security_used": 0,
+        "high_security_capacity": 2,
+        "enhanced_transport_used": 1,
+        "enhanced_transport_capacity": 3,
+        "budget_used": 40.0,
+        "budget_capacity": 100.0
+      },
+      {
+        "date": "2026-06-27",
+        "high_broadcast_used": 3,
+        "high_broadcast_capacity": 4,
+        "high_security_used": 1,
+        "high_security_capacity": 3,
+        "enhanced_transport_used": 3,
+        "enhanced_transport_capacity": 4,
+        "budget_used": 51.0,
+        "budget_capacity": 120.0
+      },
+      {
+        "date": "2026-06-28",
+        "high_broadcast_used": 4,
+        "high_broadcast_capacity": 4,
+        "high_security_used": 2,
+        "high_security_capacity": 3,
+        "enhanced_transport_used": 3,
+        "enhanced_transport_capacity": 4,
+        "budget_used": 72.0,
+        "budget_capacity": 120.0
+      },
+      {
+        "date": "2026-06-29",
+        "high_broadcast_used": 3,
+        "high_broadcast_capacity": 3,
+        "high_security_used": 2,
+        "high_security_capacity": 2,
+        "enhanced_transport_used": 3,
+        "enhanced_transport_capacity": 3,
+        "budget_used": 54.0,
+        "budget_capacity": 100.0
+      }
+    ],
+    "binding_dates": {
+      "high_broadcast": [
+        "2026-06-23",
+        "2026-06-24",
+        "2026-06-28",
+        "2026-06-29"
+      ],
+      "high_security": [
+        "2026-06-20",
+        "2026-06-23",
+        "2026-06-29"
+      ],
+      "enhanced_transport": [
+        "2026-06-23",
+        "2026-06-29"
+      ]
+    },
+    "budget_near_binding_dates": []
+  },
+  "problem4": {
+    "weight_sensitivity_seed": 20260816,
+    "weight_sensitivity_scope": "fixed schedules, mappings and indicators; re-evaluation only",
+    "mapping_quality": [
+      {
+        "mapping": "nearest",
+        "metric": "match_mapping_distance",
+        "unit": "标准化 Elo 距离",
+        "mean": 0.3915104166666667,
+        "median": 0.355,
+        "p75": 0.47687499999999994,
+        "p90": 0.7572500000000008,
+        "p95": 0.91425,
+        "max": 0.9750000000000001
+      },
+      {
+        "mapping": "nearest",
+        "metric": "venue_capacity_difference",
+        "unit": "人",
+        "mean": 2479.7916666666665,
+        "median": 1100.0,
+        "p75": 1411.0,
+        "p90": 1443.0,
+        "p95": 19972.25,
+        "max": 20442.0
+      },
+      {
+        "mapping": "nearest",
+        "metric": "slot_hour_difference",
+        "unit": "小时",
+        "mean": 1.5416666666666667,
+        "median": 0.0,
+        "p75": 3.0,
+        "p90": 6.0,
+        "p95": 6.0,
+        "max": 6.0
+      },
+      {
+        "mapping": "second_nearest",
+        "metric": "match_mapping_distance",
+        "unit": "标准化 Elo 距离",
+        "mean": 0.5444270833333333,
+        "median": 0.49125,
+        "p75": 0.593125,
+        "p90": 0.9895,
+        "p95": 1.0608749999999998,
+        "max": 1.23
+      },
+      {
+        "mapping": "second_nearest",
+        "metric": "venue_capacity_difference",
+        "unit": "人",
+        "mean": 5144.770833333333,
+        "median": 3671.0,
+        "p75": 4018.5,
+        "p90": 5034.0,
+        "p95": 25208.0,
+        "max": 26151.0
+      },
+      {
+        "mapping": "second_nearest",
+        "metric": "slot_hour_difference",
+        "unit": "小时",
+        "mean": 1.5416666666666667,
+        "median": 0.0,
+        "p75": 3.0,
+        "p90": 6.0,
+        "p95": 6.0,
+        "max": 6.0
+      }
+    ],
+    "nearest_second_change_counts": {
+      "match": 48,
+      "venue": 48,
+      "slot": 48
+    },
+    "weight_sensitivity": {
+      "runs": 2000.0,
+      "nearest_gap_min": 0.056024524899985384,
+      "nearest_gap_median": 0.07550493962384823,
+      "nearest_gap_max": 0.0972213124183538,
+      "nearest_reversal_count": 0.0,
+      "second_gap_min": 0.04676605718816507,
+      "second_gap_median": 0.06229729483364922,
+      "second_gap_max": 0.07941134624307924,
+      "second_reversal_count": 0.0
+    }
+  },
+  "traceability": {
+    "formal_output_directory": "/mnt/d/projects/mathematical modeling/策联杯 c 题/C题/output",
+    "formal_diagnostics_sha256": "f083b26990564f1d90dd7a982f3b2d82b3c6605f1ba961b6cbb5ee8b2f70f3f2",
+    "formal_csv_sha256": {
+      "actual_schedule_2022.csv": "280345a3cb39432ef64497ec3495dfe8e0988ae718edc1c9a0ad25b93249fc8b",
+      "result_1_match_prediction.csv": "fbe1b5698d76c47c130c7c244e02f24860120a1a1d3eb690cf6809f6b8511210",
+      "result_1_test_prediction.csv": "c18859830878f5abf1f4eb7f575323ad96474193f2b0356e2d6bf0015b21d41f",
+      "result_2_group_schedule.csv": "169064cb389f5c228211477e6a5749422d520a6a28f2532a4289805bbb4f5473",
+      "result_3_dynamic_strategy.csv": "afac96fa3c781d7a45649dfed447df7b255df229968d5bc929f5cf0b26427b34",
+      "result_4_schedule_comparison.csv": "5892635888e232603c8f98aebd9540f3e756fb838f050401e33bae05e6b658d3"
+    },
+    "script": "code/paper_analysis.py",
+    "generated_files": [
+      "paper/generated/figures/fig_information_flow.pdf",
+      "paper/generated/figures/fig_information_flow.png",
+      "paper/generated/figures/fig_information_flow.svg",
+      "paper/generated/figures/fig_q1_validation_coefficients_residuals.pdf",
+      "paper/generated/figures/fig_q1_validation_coefficients_residuals.png",
+      "paper/generated/figures/fig_q1_validation_coefficients_residuals.svg",
+      "paper/generated/figures/fig_q2_load_rest_contributions_gaps.pdf",
+      "paper/generated/figures/fig_q2_load_rest_contributions_gaps.png",
+      "paper/generated/figures/fig_q2_load_rest_contributions_gaps.svg",
+      "paper/generated/figures/fig_q2_schedule_heatmap.pdf",
+      "paper/generated/figures/fig_q2_schedule_heatmap.png",
+      "paper/generated/figures/fig_q2_schedule_heatmap.svg",
+      "paper/generated/figures/fig_q2_weight_sensitivity.pdf",
+      "paper/generated/figures/fig_q2_weight_sensitivity.png",
+      "paper/generated/figures/fig_q2_weight_sensitivity.svg",
+      "paper/generated/figures/fig_q3_advancement_and_risk.pdf",
+      "paper/generated/figures/fig_q3_advancement_and_risk.png",
+      "paper/generated/figures/fig_q3_advancement_and_risk.svg",
+      "paper/generated/figures/fig_q3_daily_resources_and_convergence.pdf",
+      "paper/generated/figures/fig_q3_daily_resources_and_convergence.png",
+      "paper/generated/figures/fig_q3_daily_resources_and_convergence.svg",
+      "paper/generated/figures/fig_q4_mapping_quality_and_contributions.pdf",
+      "paper/generated/figures/fig_q4_mapping_quality_and_contributions.png",
+      "paper/generated/figures/fig_q4_mapping_quality_and_contributions.svg",
+      "paper/generated/figures/fig_q4_three_layer_comparison.pdf",
+      "paper/generated/figures/fig_q4_three_layer_comparison.png",
+      "paper/generated/figures/fig_q4_three_layer_comparison.svg",
+      "paper/generated/figures/fig_q4_weight_sensitivity.pdf",
+      "paper/generated/figures/fig_q4_weight_sensitivity.png",
+      "paper/generated/figures/fig_q4_weight_sensitivity.svg",
+      "paper/generated/paper_analysis_results.json",
+      "paper/generated/tables/q1_expanding_folds.csv",
+      "paper/generated/tables/q1_expanding_folds.tex",
+      "paper/generated/tables/q1_future_mean_shift.csv",
+      "paper/generated/tables/q1_future_mean_shift.tex",
+      "paper/generated/tables/q1_top_coefficients.csv",
+      "paper/generated/tables/q1_top_coefficients.tex",
+      "paper/generated/tables/q2_solver_scale.csv",
+      "paper/generated/tables/q2_solver_scale.tex",
+      "paper/generated/tables/q2_weight_sensitivity.csv",
+      "paper/generated/tables/q2_weight_sensitivity.tex",
+      "paper/generated/tables/q3_changed_cases.csv",
+      "paper/generated/tables/q3_changed_cases.tex",
+      "paper/generated/tables/q3_changed_cases_actions.csv",
+      "paper/generated/tables/q3_changed_cases_actions.tex",
+      "paper/generated/tables/q3_changed_cases_risk.csv",
+      "paper/generated/tables/q3_changed_cases_risk.tex",
+      "paper/generated/tables/q3_daily_resources.csv",
+      "paper/generated/tables/q3_daily_resources.tex",
+      "paper/generated/tables/q3_daily_resources_compact.csv",
+      "paper/generated/tables/q3_daily_resources_compact.tex",
+      "paper/generated/tables/q3_monte_carlo_convergence.csv",
+      "paper/generated/tables/q3_monte_carlo_convergence.tex",
+      "paper/generated/tables/q3_monte_carlo_convergence_compact.csv",
+      "paper/generated/tables/q3_monte_carlo_convergence_compact.tex",
+      "paper/generated/tables/q4_mapping_quality.csv",
+      "paper/generated/tables/q4_mapping_quality.tex",
+      "paper/generated/tables/q4_weight_sensitivity.csv",
+      "paper/generated/tables/q4_weight_sensitivity.tex"
+    ]
+  }
+}

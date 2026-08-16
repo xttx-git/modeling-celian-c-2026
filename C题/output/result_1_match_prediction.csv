@@ -1,0 +1,73 @@
+﻿match_id,team_a,team_b,predicted_tv_viewers
+GA01,Mexico,South Africa,139403864
+GA02,South Korea,Czechia,157275906
+GA03,Mexico,South Korea,164692654
+GA04,South Africa,Czechia,140768678
+GA05,Mexico,Czechia,150362390
+GA06,South Africa,South Korea,145816846
+GB01,Canada,Bosnia and Herzegovina,160372777
+GB02,Qatar,Switzerland,150242716
+GB03,Canada,Qatar,155230293
+GB04,Bosnia and Herzegovina,Switzerland,156650445
+GB05,Canada,Switzerland,176453668
+GB06,Bosnia and Herzegovina,Qatar,148414164
+GC01,Brazil,Morocco,199686375
+GC02,Haiti,Scotland,138642808
+GC03,Brazil,Haiti,145694866
+GC04,Morocco,Scotland,170876605
+GC05,Brazil,Scotland,169298298
+GC06,Morocco,Haiti,146176314
+GD01,United States,Paraguay,171753276
+GD02,Australia,Turkey,174155057
+GD03,United States,Australia,169419273
+GD04,Paraguay,Turkey,177633983
+GD05,United States,Turkey,182248340
+GD06,Paraguay,Australia,169509847
+GE01,Germany,Curacao,144816741
+GE02,Ivory Coast,Ecuador,181743485
+GE03,Germany,Ivory Coast,181618275
+GE04,Curacao,Ecuador,145781837
+GE05,Germany,Ecuador,189499277
+GE06,Curacao,Ivory Coast,145511097
+GF01,Netherlands,Japan,199363544
+GF02,Sweden,Tunisia,153500368
+GF03,Netherlands,Sweden,179231545
+GF04,Japan,Tunisia,164699019
+GF05,Netherlands,Tunisia,157116077
+GF06,Japan,Sweden,186556559
+GG01,Belgium,Egypt,165210179
+GG02,Iran,New Zealand,144534910
+GG03,Belgium,Iran,170497573
+GG04,Egypt,New Zealand,144297829
+GG05,Belgium,New Zealand,147585048
+GG06,Egypt,Iran,161798234
+GH01,Spain,Cape Verde,153190741
+GH02,Saudi Arabia,Uruguay,157730362
+GH03,Spain,Saudi Arabia,155144219
+GH04,Cape Verde,Uruguay,157190031
+GH05,Spain,Uruguay,204108108
+GH06,Cape Verde,Saudi Arabia,144066804
+GI01,France,Senegal,177062810
+GI02,Iraq,Norway,148396671
+GI03,France,Iraq,149112253
+GI04,Senegal,Norway,172420914
+GI05,France,Norway,170615232
+GI06,Senegal,Iraq,152098005
+GJ01,Argentina,Algeria,169632520
+GJ02,Austria,Jordan,159105500
+GJ03,Argentina,Austria,190857412
+GJ04,Algeria,Jordan,156698215
+GJ05,Argentina,Jordan,153702838
+GJ06,Algeria,Austria,173476607
+GK01,Portugal,DR Congo,143920034
+GK02,Uzbekistan,Colombia,161019500
+GK03,Portugal,Uzbekistan,150412747
+GK04,DR Congo,Colombia,154071960
+GK05,Portugal,Colombia,190548426
+GK06,DR Congo,Uzbekistan,143831535
+GL01,England,Croatia,192059697
+GL02,Ghana,Panama,134524563
+GL03,England,Ghana,161438471
+GL04,Croatia,Panama,136829610
+GL05,England,Panama,140081873
+GL06,Croatia,Ghana,157693889

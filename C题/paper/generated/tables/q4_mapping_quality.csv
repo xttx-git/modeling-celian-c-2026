@@ -1,0 +1,7 @@
+﻿mapping,metric,unit,mean,median,p75,p90,p95,max
+nearest,match_mapping_distance,标准化 Elo 距离,0.3915104166666667,0.355,0.47687499999999994,0.7572500000000008,0.91425,0.9750000000000001
+nearest,venue_capacity_difference,人,2479.7916666666665,1100.0,1411.0,1443.0,19972.25,20442.0
+nearest,slot_hour_difference,小时,1.5416666666666667,0.0,3.0,6.0,6.0,6.0
+second_nearest,match_mapping_distance,标准化 Elo 距离,0.5444270833333333,0.49125,0.593125,0.9895,1.0608749999999998,1.23
+second_nearest,venue_capacity_difference,人,5144.770833333333,3671.0,4018.5,5034.0,25208.0,26151.0
+second_nearest,slot_hour_difference,小时,1.5416666666666667,0.0,3.0,6.0,6.0,6.0

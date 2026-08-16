@@ -1,0 +1,3 @@
+﻿subproblem,variables,constraints,runtime_seconds,mip_gap,status
+时段 MILP,5762,461,23.216251491001458,0.0004784431388885584,在设定 MIP 容差内求得最优解
+条件场馆 MILP,1073,888,0.4907522390021768,0.00035708842636867727,在设定 MIP 容差内求得最优解

@@ -1,0 +1,53 @@
+\documentclass[UTF8,a4paper,11pt,fontset=none]{ctexart}
+\usepackage[a4paper,top=2.4cm,bottom=2.4cm,left=2.6cm,right=2.6cm]{geometry}
+\usepackage{enumitem,hyperref}
+\setmainfont{Times New Roman}
+\setCJKmainfont[AutoFakeBold=2.5]{SimSun}
+\setCJKsansfont{SimHei}
+\setCJKmonofont{FangSong}
+\setlength{\parindent}{2em}
+\setlength{\parskip}{0.35em}
+\setlength{\emergencystretch}{2em}
+\hypersetup{hidelinks}
+
+\begin{document}
+
+\begin{center}
+{\zihao{2}\bfseries AI 工具使用详情}
+\end{center}
+
+\section*{一、使用的 AI 工具}
+
+\noindent\textbf{OpenAI Codex（GPT-5 系列 Codex 编程智能体）}\quad
+用于赛题和附件检查、建模方案整理、Python 实现和调试、LaTeX 写作、程序验收、图表生成和一致性复核。
+
+\noindent\textbf{ChatGPT（交互时具体模型版本未单独记录）}\quad
+队员将建模计划和论文计划提供给 ChatGPT 进行独立建议和审读；建议由参赛队人工判断后再交由 Codex 落实。
+
+\section*{二、具体使用环节}
+
+\begin{enumerate}[leftmargin=3em]
+\item 建模阶段：协助将四个问题整理为“收视预测--赛程优化--动态资源--实际比较”的顺序决策链，列出信息时点、模型动机、公式和输出对应关系。
+\item 编程阶段：协助编写四问流水线、混合整数规划、联合泊松模拟、完全同分权重处理、实体映射、自动作图和验收脚本。
+\item 复核阶段：根据队员及 ChatGPT 的审读意见，检查并修正转播价值、旅行负担、安保需求、静态动作复算、同分处理和赛事类别规范化等口径。
+\item 论文阶段：协助编写 LaTeX，从正式 CSV 与诊断 JSON 生成图表，检查数值、结论、引用、页数、字体和附录要求。
+\end{enumerate}
+
+\section*{三、主要提示方式和交互示例}
+
+交互以明确角色和可验收任务为主。典型提示方式包括：
+
+\begin{itemize}[leftmargin=3em]
+\item “作为建模手，先根据题目四问建立模型，说明问题需求、模型构造及选择理由，人工审查后再编程。”
+\item “不得手工修改结果 CSV；修改计算代码后从问题一开始完整重跑，并通过增强自动验收。”
+\item “检查训练数据的 \texttt{World Cup} 与未来数据的 \texttt{FIFA World Cup} 口径，必须在统一特征函数中修正并重跑四问。”
+\item “论文的每项新分析必须从正式输出、\texttt{diagnostics.json} 或分析脚本生成，不编造实验与数值。”
+\end{itemize}
+
+\section*{四、采纳、人工修改和核验}
+
+AI 输出未被直接作为最终结论。参赛队对模型选择、信息时点、公式和文字表述进行人工审查；对不符题面或代码的建议予以删除或修正。最终程序采用固定环境重跑，并由自动验收独立复算训练预测、目标指标、排程硬约束、晋级权重、资源上限和实际赛程结构。正式输出、论文分析和 LaTeX 图表以 SHA-256 进行追溯比对。
+
+本参赛队对最终模型、程序、数据、图表和论文结论负责。
+
+\end{document}

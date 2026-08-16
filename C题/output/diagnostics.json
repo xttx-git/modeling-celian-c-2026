@@ -1,0 +1,6058 @@
+{
+  "pipeline_version": "2026-08-16-v3-competition-normalized",
+  "output_directory": "/mnt/d/projects/mathematical modeling/策联杯 c 题/C题/output",
+  "environment": {
+    "python": "3.12.3",
+    "python_implementation": "CPython",
+    "platform": "Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.39",
+    "packages": {
+      "numpy": "2.5.2",
+      "pandas": "3.0.5",
+      "scipy": "1.18.0",
+      "scikit-learn": "1.9.0",
+      "openpyxl": "3.1.5",
+      "joblib": "1.5.3",
+      "threadpoolctl": "3.6.0"
+    },
+    "requirements_sha256": "16c424e575ded0d9c3d5ce8bb24a1815faf38a35333fbe3c2dcc1d25dc5566de"
+  },
+  "random_seeds": {
+    "problem1_random_models": 20260816,
+    "problem3_primary_simulation": 20260816,
+    "problem3_five_seed_stability": [
+      20260816,
+      20260817,
+      20260818,
+      20260819,
+      20260820
+    ],
+    "problem3_convergence": 20260816,
+    "problem4_weight_perturbation": 20260816
+  },
+  "problem1_model_metrics": [
+    {
+      "model": "elastic_net",
+      "mse": 188.9786830673752,
+      "rmse": 13.726811161684276,
+      "mae": 10.634510916205656
+    },
+    {
+      "model": "extra_trees",
+      "mse": 227.02289729465778,
+      "rmse": 15.033564002112447,
+      "mae": 12.094744110327943
+    },
+    {
+      "model": "mean",
+      "mse": 531.378074727396,
+      "rmse": 22.996821358105944,
+      "mae": 18.398928301941524
+    }
+  ],
+  "problem1_selected_model": "elastic_net",
+  "problem1_feature_columns": {
+    "numeric": [
+      "neutral",
+      "rank_mean",
+      "rank_min",
+      "rank_max",
+      "rank_absdiff",
+      "elo_mean",
+      "elo_min",
+      "elo_max",
+      "elo_absdiff",
+      "p_draw",
+      "win_prob_min",
+      "win_prob_max",
+      "win_prob_absdiff",
+      "prob_entropy",
+      "market_value_musd_mean",
+      "market_value_musd_min",
+      "market_value_musd_max",
+      "market_value_musd_absdiff",
+      "avg_age_mean",
+      "avg_age_min",
+      "avg_age_max",
+      "avg_age_absdiff",
+      "star_index_mean",
+      "star_index_min",
+      "star_index_max",
+      "star_index_absdiff",
+      "fan_base_index_mean",
+      "fan_base_index_min",
+      "fan_base_index_max",
+      "fan_base_index_absdiff",
+      "style_attack_mean",
+      "style_attack_min",
+      "style_attack_max",
+      "style_attack_absdiff",
+      "style_defense_mean",
+      "style_defense_min",
+      "style_defense_max",
+      "style_defense_absdiff",
+      "host_flag_mean",
+      "host_flag_min",
+      "host_flag_max",
+      "host_flag_absdiff",
+      "strength_score_mean",
+      "strength_score_min",
+      "strength_score_max",
+      "strength_score_absdiff",
+      "month",
+      "weekday_num"
+    ],
+    "categorical": [
+      "competition",
+      "stage_group"
+    ]
+  },
+  "problem1_feature_builder": "build_prediction_features_v3_symmetric_competition_normalized",
+  "problem1_model_seed": 20260816,
+  "problem1_competition_normalization": {
+    "train": {
+      "before_categories": [
+        "Continental Cup",
+        "Friendly",
+        "Nations League",
+        "World Cup",
+        "World Cup Qualifier"
+      ],
+      "after_categories": [
+        "Continental Cup",
+        "Friendly",
+        "Nations League",
+        "World Cup",
+        "World Cup Qualifier"
+      ],
+      "before_counts": {
+        "Continental Cup": 104,
+        "Friendly": 187,
+        "Nations League": 43,
+        "World Cup": 34,
+        "World Cup Qualifier": 192
+      },
+      "after_counts": {
+        "Continental Cup": 104,
+        "Friendly": 187,
+        "Nations League": 43,
+        "World Cup": 34,
+        "World Cup Qualifier": 192
+      }
+    },
+    "test": {
+      "before_categories": [
+        "Continental Cup",
+        "Friendly",
+        "Nations League",
+        "World Cup",
+        "World Cup Qualifier"
+      ],
+      "after_categories": [
+        "Continental Cup",
+        "Friendly",
+        "Nations League",
+        "World Cup",
+        "World Cup Qualifier"
+      ],
+      "before_counts": {
+        "Continental Cup": 22,
+        "Friendly": 41,
+        "Nations League": 13,
+        "World Cup": 6,
+        "World Cup Qualifier": 58
+      },
+      "after_counts": {
+        "Continental Cup": 22,
+        "Friendly": 41,
+        "Nations League": 13,
+        "World Cup": 6,
+        "World Cup Qualifier": 58
+      },
+      "unseen_categories": [],
+      "unseen_unique_count": 0,
+      "unseen_row_count": 0
+    },
+    "future72": {
+      "before_categories": [
+        "FIFA World Cup"
+      ],
+      "after_categories": [
+        "World Cup"
+      ],
+      "before_counts": {
+        "FIFA World Cup": 72
+      },
+      "after_counts": {
+        "World Cup": 72
+      },
+      "unseen_categories": [],
+      "unseen_unique_count": 0,
+      "unseen_row_count": 0
+    },
+    "normalizer": "normalize_competition_name_v1",
+    "world_cup_canonical_category": "World Cup"
+  },
+  "problem1_prediction_distributions": {
+    "train_fitted_million": {
+      "mean": 144.8118683456854,
+      "std": 17.522964962089382,
+      "min": 114.22292260262799,
+      "max": 201.9074003639112
+    },
+    "test_prediction_million": {
+      "mean": 144.55853056080272,
+      "std": 15.800762672957678,
+      "min": 114.04460606077292,
+      "max": 180.3523707072966
+    },
+    "future72_prediction_million": {
+      "mean": 161.59975808333346,
+      "std": 16.77797911043421,
+      "min": 134.52456271551327,
+      "max": 204.10810792410106
+    }
+  },
+  "problem1_swap_invariance_max_abs_error_million": 0.0,
+  "problem1_feature_distributions": {
+    "neutral": {
+      "train": {
+        "mean": 0.30714285714285716,
+        "std": 0.4617215753967029,
+        "min": 0.0,
+        "max": 1.0
+      },
+      "test": {
+        "mean": 0.34285714285714286,
+        "std": 0.4763685860809124,
+        "min": 0.0,
+        "max": 1.0
+      },
+      "future72": {
+        "mean": 1.0,
+        "std": 0.0,
+        "min": 1.0,
+        "max": 1.0
+      },
+      "train_mean_minus_4sd": -1.5397434444439544,
+      "train_mean_plus_4sd": 2.154029158729669,
+      "test_outside_4sd_count": 0,
+      "future72_outside_4sd_count": 0
+    },
+    "rank_mean": {
+      "train": {
+        "mean": 24.295535714285716,
+        "std": 9.968495887898962,
+        "min": 2.5,
+        "max": 47.5
+      },
+      "test": {
+        "mean": 24.557142857142857,
+        "std": 9.738318165826657,
+        "min": 1.5,
+        "max": 47.5
+      },
+      "future72": {
+        "mean": 24.5,
+        "std": 8.397266490176566,
+        "min": 7.0,
+        "max": 41.5
+      },
+      "train_mean_minus_4sd": -15.578447837310133,
+      "train_mean_plus_4sd": 64.16951926588156,
+      "test_outside_4sd_count": 0,
+      "future72_outside_4sd_count": 0
+    },
+    "rank_min": {
+      "train": {
+        "mean": 16.3125,
+        "std": 11.41557738253936,
+        "min": 1.0,
+        "max": 47.0
+      },
+      "test": {
+        "mean": 17.214285714285715,
+        "std": 10.975961775452634,
+        "min": 1.0,
+        "max": 47.0
+      },
+      "future72": {
+        "mean": 15.041666666666666,
+        "std": 10.191735812570863,
+        "min": 1.0,
+        "max": 39.0
+      },
+      "train_mean_minus_4sd": -29.349809530157437,
+      "train_mean_plus_4sd": 61.97480953015744,
+      "test_outside_4sd_count": 0,
+      "future72_outside_4sd_count": 0
+    },
+    "rank_max": {
+      "train": {
+        "mean": 32.27857142857143,
+        "std": 11.519800396515933,
+        "min": 3.0,
+        "max": 48.0
+      },
+      "test": {
+        "mean": 31.9,
+        "std": 11.193716120017497,
+        "min": 2.0,
+        "max": 48.0
+      },
+      "future72": {
+        "mean": 33.958333333333336,
+        "std": 10.194499345304234,
+        "min": 10.0,
+        "max": 48.0
+      },
+      "train_mean_minus_4sd": -13.8006301574923,
+      "train_mean_plus_4sd": 78.35777301463517,
+      "test_outside_4sd_count": 0,
+      "future72_outside_4sd_count": 0
+    },
+    "rank_absdiff": {
+      "train": {
+        "mean": 15.966071428571428,
+        "std": 11.338376216918872,
+        "min": 1.0,
+        "max": 46.0
+      },
+      "test": {
+        "mean": 14.685714285714285,
+        "std": 10.592576275297521,
+        "min": 1.0,
+        "max": 43.0
+      },
+      "future72": {
+        "mean": 18.916666666666668,
+        "std": 11.556048352318657,
+        "min": 1.0,
+        "max": 42.0
+      },
+      "train_mean_minus_4sd": -29.38743343910406,
+      "train_mean_plus_4sd": 61.31957629624692,
+      "test_outside_4sd_count": 0,
+      "future72_outside_4sd_count": 0
+    },
+    "elo_mean": {
+      "train": {
+        "mean": 1756.85625,
+        "std": 120.57950915825688,
+        "min": 1472.5,
+        "max": 2025.5
+      },
+      "test": {
+        "mean": 1754.6892857142857,
+        "std": 116.28627642940958,
+        "min": 1472.5,
+        "max": 2025.5
+      },
+      "future72": {
+        "mean": 1753.6041666666667,
+        "std": 100.98287881309525,
+        "min": 1570.0,
+        "max": 1977.0
+      },
+      "train_mean_minus_4sd": 1274.5382133669725,
+      "train_mean_plus_4sd": 2239.174286633028,
+      "test_outside_4sd_count": 0,
+      "future72_outside_4sd_count": 0
+    },
+    "elo_min": {
+      "train": {
+        "mean": 1661.2464285714286,
+        "std": 140.00088162805167,
+        "min": 1462.0,
+        "max": 2018.0
+      },
+      "test": {
+        "mean": 1667.0714285714287,
+        "std": 134.31470844408412,
+        "min": 1462.0,
+        "max": 2018.0
+      },
+      "future72": {
+        "mean": 1640.1944444444443,
+        "std": 124.48356856204168,
+        "min": 1462.0,
+        "max": 1925.0
+      },
+      "train_mean_minus_4sd": 1101.242902059222,
+      "train_mean_plus_4sd": 2221.2499550836355,
+      "test_outside_4sd_count": 0,
+      "future72_outside_4sd_count": 0
+    },
+    "elo_max": {
+      "train": {
+        "mean": 1852.4660714285715,
+        "std": 136.15868199352232,
+        "min": 1483.0,
+        "max": 2033.0
+      },
+      "test": {
+        "mean": 1842.307142857143,
+        "std": 131.2636917930656,
+        "min": 1483.0,
+        "max": 2033.0
+      },
+      "future72": {
+        "mean": 1867.013888888889,
+        "std": 120.6314948546221,
+        "min": 1608.0,
+        "max": 2033.0
+      },
+      "train_mean_minus_4sd": 1307.831343454482,
+      "train_mean_plus_4sd": 2397.100799402661,
+      "test_outside_4sd_count": 0,
+      "future72_outside_4sd_count": 0
+    },
+    "elo_absdiff": {
+      "train": {
+        "mean": 191.21964285714284,
+        "std": 134.6149878813839,
+        "min": 3.0,
+        "max": 550.0
+      },
+      "test": {
+        "mean": 175.2357142857143,
+        "std": 128.26224320453866,
+        "min": 2.0,
+        "max": 550.0
+      },
+      "future72": {
+        "mean": 226.81944444444446,
+        "std": 138.94626850722324,
+        "min": 6.0,
+        "max": 529.0
+      },
+      "train_mean_minus_4sd": -347.2403086683928,
+      "train_mean_plus_4sd": 729.6795943826785,
+      "test_outside_4sd_count": 0,
+      "future72_outside_4sd_count": 0
+    },
+    "p_draw": {
+      "train": {
+        "mean": 0.2617646428160445,
+        "std": 0.02692019915546993,
+        "min": 0.19009461377950126,
+        "max": 0.29969411972095367
+      },
+      "test": {
+        "mean": 0.2649618751210558,
+        "std": 0.02563332973921783,
+        "min": 0.19009461377950126,
+        "max": 0.29969411972095367
+      },
+      "future72": {
+        "mean": 0.2546361111111111,
+        "std": 0.027789253701444645,
+        "min": 0.1942,
+        "max": 0.2988
+      },
+      "train_mean_minus_4sd": 0.15408384619416476,
+      "train_mean_plus_4sd": 0.36944543943792424,
+      "test_outside_4sd_count": 0,
+      "future72_outside_4sd_count": 0
+    },
+    "win_prob_min": {
+      "train": {
+        "mean": 0.2275809642766928,
+        "std": 0.07773277980319383,
+        "min": 0.06291387573485274,
+        "max": 0.3478416996105495
+      },
+      "test": {
+        "mean": 0.23643334734057636,
+        "std": 0.07689161116224359,
+        "min": 0.06291387573485274,
+        "max": 0.34858705679907354
+      },
+      "future72": {
+        "mean": 0.2068,
+        "std": 0.07770731290472757,
+        "min": 0.0682,
+        "max": 0.3459
+      },
+      "train_mean_minus_4sd": -0.08335015493608253,
+      "train_mean_plus_4sd": 0.5385120834894681,
+      "test_outside_4sd_count": 0,
+      "future72_outside_4sd_count": 0
+    },
+    "win_prob_max": {
+      "train": {
+        "mean": 0.5106543929072626,
+        "std": 0.10452330175114,
+        "min": 0.35246418066849694,
+        "max": 0.7469915104856459
+      },
+      "test": {
+        "mean": 0.4986047775383678,
+        "std": 0.10242230800446299,
+        "min": 0.3520613464017221,
+        "max": 0.7469915104856459
+      },
+      "future72": {
+        "mean": 0.538563888888889,
+        "std": 0.1053364633382344,
+        "min": 0.3553,
+        "max": 0.7376
+      },
+      "train_mean_minus_4sd": 0.09256118590270257,
+      "train_mean_plus_4sd": 0.9287475999118225,
+      "test_outside_4sd_count": 0,
+      "future72_outside_4sd_count": 0
+    },
+    "win_prob_absdiff": {
+      "train": {
+        "mean": 0.2830734286305699,
+        "std": 0.18223697266804342,
+        "min": 0.004622481057947492,
+        "max": 0.6840776347507932
+      },
+      "test": {
+        "mean": 0.26217143019779154,
+        "std": 0.1792992763361136,
+        "min": 0.0034742896026485615,
+        "max": 0.6840776347507932
+      },
+      "future72": {
+        "mean": 0.3317638888888889,
+        "std": 0.18301953817469221,
+        "min": 0.00940000000000002,
+        "max": 0.6694
+      },
+      "train_mean_minus_4sd": -0.4458744620416038,
+      "train_mean_plus_4sd": 1.0120213193027436,
+      "test_outside_4sd_count": 0,
+      "future72_outside_4sd_count": 0
+    },
+    "prob_entropy": {
+      "train": {
+        "mean": 0.9143829260233698,
+        "std": 0.08751815459591661,
+        "min": 0.6440115406057974,
+        "max": 0.9976264688310073
+      },
+      "test": {
+        "mean": 0.9238696963629212,
+        "std": 0.07843192681656425,
+        "min": 0.6440115406057974,
+        "max": 0.9976264688310073
+      },
+      "future72": {
+        "mean": 0.8925640439607516,
+        "std": 0.09469363192830504,
+        "min": 0.6607402230553827,
+        "max": 0.9974546248765668
+      },
+      "train_mean_minus_4sd": 0.5643103076397034,
+      "train_mean_plus_4sd": 1.2644555444070362,
+      "test_outside_4sd_count": 0,
+      "future72_outside_4sd_count": 0
+    },
+    "market_value_musd_mean": {
+      "train": {
+        "mean": 792.4384821428572,
+        "std": 229.78896016400677,
+        "min": 310.7,
+        "max": 1307.1
+      },
+      "test": {
+        "mean": 786.8939285714285,
+        "std": 220.4159569576976,
+        "min": 349.95,
+        "max": 1297.15
+      },
+      "future72": {
+        "mean": 787.7333333333333,
+        "std": 190.89311864621752,
+        "min": 385.7,
+        "max": 1220.2
+      },
+      "train_mean_minus_4sd": -126.71735851316987,
+      "train_mean_plus_4sd": 1711.5943227988841,
+      "test_outside_4sd_count": 0,
+      "future72_outside_4sd_count": 0
+    },
+    "market_value_musd_min": {
+      "train": {
+        "mean": 608.9598214285714,
+        "std": 249.8380700116767,
+        "min": 310.5,
+        "max": 1301.2
+      },
+      "test": {
+        "mean": 613.5864285714287,
+        "std": 240.2242451210695,
+        "min": 310.5,
+        "max": 1293.1
+      },
+      "future72": {
+        "mean": 578.4833333333333,
+        "std": 219.53260337285207,
+        "min": 310.5,
+        "max": 1203.4
+      },
+      "train_mean_minus_4sd": -390.3924586181354,
+      "train_mean_plus_4sd": 1608.3121014752783,
+      "test_outside_4sd_count": 0,
+      "future72_outside_4sd_count": 0
+    },
+    "market_value_musd_max": {
+      "train": {
+        "mean": 975.9171428571428,
+        "std": 277.5692862154251,
+        "min": 310.9,
+        "max": 1313.0
+      },
+      "test": {
+        "mean": 960.2014285714284,
+        "std": 259.3298061219887,
+        "min": 389.4,
+        "max": 1313.0
+      },
+      "future72": {
+        "mean": 996.9833333333331,
+        "std": 247.17839084638538,
+        "min": 423.5,
+        "max": 1313.0
+      },
+      "train_mean_minus_4sd": -134.3600020045576,
+      "train_mean_plus_4sd": 2086.194287718843,
+      "test_outside_4sd_count": 0,
+      "future72_outside_4sd_count": 0
+    },
+    "market_value_musd_absdiff": {
+      "train": {
+        "mean": 366.95732142857145,
+        "std": 260.22235665211025,
+        "min": 0.39999999999997726,
+        "max": 988.2
+      },
+      "test": {
+        "mean": 346.615,
+        "std": 235.76788638023086,
+        "min": 2.1000000000000227,
+        "max": 950.8000000000001
+      },
+      "future72": {
+        "mean": 418.5,
+        "std": 269.85683371785376,
+        "min": 19.200000000000045,
+        "max": 945.1999999999999
+      },
+      "train_mean_minus_4sd": -673.9321051798695,
+      "train_mean_plus_4sd": 1407.8467480370125,
+      "test_outside_4sd_count": 0,
+      "future72_outside_4sd_count": 0
+    },
+    "avg_age_mean": {
+      "train": {
+        "mean": 25.517857142857142,
+        "std": 1.0839547190103511,
+        "min": 22.8,
+        "max": 28.05
+      },
+      "test": {
+        "mean": 25.601071428571426,
+        "std": 1.0642399905337054,
+        "min": 23.4,
+        "max": 27.6
+      },
+      "future72": {
+        "mean": 25.5875,
+        "std": 1.1087281763417416,
+        "min": 22.950000000000003,
+        "max": 27.6
+      },
+      "train_mean_minus_4sd": 21.182038266815738,
+      "train_mean_plus_4sd": 29.853676018898547,
+      "test_outside_4sd_count": 0,
+      "future72_outside_4sd_count": 0
+    },
+    "avg_age_min": {
+      "train": {
+        "mean": 24.564821428571427,
+        "std": 1.319942660259765,
+        "min": 22.8,
+        "max": 28.0
+      },
+      "test": {
+        "mean": 24.715714285714284,
+        "std": 1.284678468217213,
+        "min": 22.8,
+        "max": 27.2
+      },
+      "future72": {
+        "mean": 24.64861111111111,
+        "std": 1.3197303454355878,
+        "min": 22.8,
+        "max": 27.2
+      },
+      "train_mean_minus_4sd": 19.285050787532366,
+      "train_mean_plus_4sd": 29.84459206961049,
+      "test_outside_4sd_count": 0,
+      "future72_outside_4sd_count": 0
+    },
+    "avg_age_max": {
+      "train": {
+        "mean": 26.470892857142854,
+        "std": 1.2239380074590112,
+        "min": 22.8,
+        "max": 28.1
+      },
+      "test": {
+        "mean": 26.48642857142857,
+        "std": 1.2114092343179288,
+        "min": 23.6,
+        "max": 28.1
+      },
+      "future72": {
+        "mean": 26.526388888888885,
+        "std": 1.21365390054057,
+        "min": 23.1,
+        "max": 28.1
+      },
+      "train_mean_minus_4sd": 21.57514082730681,
+      "train_mean_plus_4sd": 31.366644886978897,
+      "test_outside_4sd_count": 0,
+      "future72_outside_4sd_count": 0
+    },
+    "avg_age_absdiff": {
+      "train": {
+        "mean": 1.9060714285714286,
+        "std": 1.3344341173296952,
+        "min": 0.0,
+        "max": 5.300000000000001
+      },
+      "test": {
+        "mean": 1.7707142857142855,
+        "std": 1.3059077952055507,
+        "min": 0.0,
+        "max": 4.599999999999998
+      },
+      "future72": {
+        "mean": 1.8777777777777775,
+        "std": 1.2297053605906636,
+        "min": 0.0,
+        "max": 4.699999999999999
+      },
+      "train_mean_minus_4sd": -3.431665040747352,
+      "train_mean_plus_4sd": 7.24380789789021,
+      "test_outside_4sd_count": 0,
+      "future72_outside_4sd_count": 0
+    },
+    "star_index_mean": {
+      "train": {
+        "mean": 64.78607142857142,
+        "std": 14.352480189147172,
+        "min": 27.15,
+        "max": 100.6
+      },
+      "test": {
+        "mean": 64.31499999999998,
+        "std": 13.62587163075602,
+        "min": 27.15,
+        "max": 97.3
+      },
+      "future72": {
+        "mean": 64.69375,
+        "std": 12.097619185806302,
+        "min": 37.9,
+        "max": 91.4
+      },
+      "train_mean_minus_4sd": 7.376150671982728,
+      "train_mean_plus_4sd": 122.19599218516011,
+      "test_outside_4sd_count": 0,
+      "future72_outside_4sd_count": 0
+    },
+    "star_index_min": {
+      "train": {
+        "mean": 53.49517857142857,
+        "std": 16.41407926687167,
+        "min": 26.5,
+        "max": 98.0
+      },
+      "test": {
+        "mean": 53.964285714285715,
+        "std": 16.04088782517783,
+        "min": 26.5,
+        "max": 96.6
+      },
+      "future72": {
+        "mean": 51.705555555555556,
+        "std": 15.619010526530035,
+        "min": 26.5,
+        "max": 84.8
+      },
+      "train_mean_minus_4sd": -12.161138496058115,
+      "train_mean_plus_4sd": 119.15149563891525,
+      "test_outside_4sd_count": 0,
+      "future72_outside_4sd_count": 0
+    },
+    "star_index_max": {
+      "train": {
+        "mean": 76.0769642857143,
+        "std": 16.694498619275468,
+        "min": 27.8,
+        "max": 104.7
+      },
+      "test": {
+        "mean": 74.66571428571429,
+        "std": 15.395592994710768,
+        "min": 27.8,
+        "max": 104.7
+      },
+      "future72": {
+        "mean": 77.68194444444445,
+        "std": 14.85690740276505,
+        "min": 41.3,
+        "max": 104.7
+      },
+      "train_mean_minus_4sd": 9.298969808612426,
+      "train_mean_plus_4sd": 142.85495876281618,
+      "test_outside_4sd_count": 0,
+      "future72_outside_4sd_count": 0
+    },
+    "star_index_absdiff": {
+      "train": {
+        "mean": 22.58178571428571,
+        "std": 16.50096404264993,
+        "min": 0.0,
+        "max": 75.4
+      },
+      "test": {
+        "mean": 20.701428571428572,
+        "std": 15.684744848612752,
+        "min": 0.29999999999999716,
+        "max": 65.6
+      },
+      "future72": {
+        "mean": 25.976388888888888,
+        "std": 18.54596492354137,
+        "min": 0.5999999999999943,
+        "max": 76.9
+      },
+      "train_mean_minus_4sd": -43.422070456314,
+      "train_mean_plus_4sd": 88.58564188488543,
+      "test_outside_4sd_count": 0,
+      "future72_outside_4sd_count": 0
+    },
+    "fan_base_index_mean": {
+      "train": {
+        "mean": 73.40642857142856,
+        "std": 10.474887070332196,
+        "min": 46.3,
+        "max": 94.4
+      },
+      "test": {
+        "mean": 73.40071428571429,
+        "std": 10.08026597248572,
+        "min": 46.3,
+        "max": 94.2
+      },
+      "future72": {
+        "mean": 73.34791666666666,
+        "std": 9.1287906944049,
+        "min": 52.55,
+        "max": 93.30000000000001
+      },
+      "train_mean_minus_4sd": 31.50688029009978,
+      "train_mean_plus_4sd": 115.30597685275734,
+      "test_outside_4sd_count": 0,
+      "future72_outside_4sd_count": 0
+    },
+    "fan_base_index_min": {
+      "train": {
+        "mean": 65.19232142857142,
+        "std": 12.684301919056473,
+        "min": 43.4,
+        "max": 93.9
+      },
+      "test": {
+        "mean": 64.92571428571428,
+        "std": 12.384873411310386,
+        "min": 43.4,
+        "max": 93.5
+      },
+      "future72": {
+        "mean": 63.895833333333336,
+        "std": 11.85756355160206,
+        "min": 43.4,
+        "max": 92.7
+      },
+      "train_mean_minus_4sd": 14.455113752345525,
+      "train_mean_plus_4sd": 115.92952910479731,
+      "test_outside_4sd_count": 0,
+      "future72_outside_4sd_count": 0
+    },
+    "fan_base_index_max": {
+      "train": {
+        "mean": 81.62053571428571,
+        "std": 11.555010671852674,
+        "min": 49.2,
+        "max": 95.1
+      },
+      "test": {
+        "mean": 81.87571428571428,
+        "std": 11.28636964545709,
+        "min": 49.2,
+        "max": 95.1
+      },
+      "future72": {
+        "mean": 82.80000000000001,
+        "std": 10.200938923921537,
+        "min": 56.3,
+        "max": 95.1
+      },
+      "train_mean_minus_4sd": 35.40049302687501,
+      "train_mean_plus_4sd": 127.8405784016964,
+      "test_outside_4sd_count": 0,
+      "future72_outside_4sd_count": 0
+    },
+    "fan_base_index_absdiff": {
+      "train": {
+        "mean": 16.428214285714287,
+        "std": 12.244449234488552,
+        "min": 0.0,
+        "max": 51.699999999999996
+      },
+      "test": {
+        "mean": 16.95,
+        "std": 12.453409576174007,
+        "min": 0.09999999999999432,
+        "max": 45.60000000000001
+      },
+      "future72": {
+        "mean": 18.90416666666667,
+        "std": 12.48930175993455,
+        "min": 0.19999999999999574,
+        "max": 48.199999999999996
+      },
+      "train_mean_minus_4sd": -32.54958265223992,
+      "train_mean_plus_4sd": 65.4060112236685,
+      "test_outside_4sd_count": 0,
+      "future72_outside_4sd_count": 0
+    },
+    "style_attack_mean": {
+      "train": {
+        "mean": 73.4824107142857,
+        "std": 7.547661823910369,
+        "min": 52.099999999999994,
+        "max": 91.5
+      },
+      "test": {
+        "mean": 73.15321428571428,
+        "std": 7.365890205189213,
+        "min": 54.3,
+        "max": 90.05
+      },
+      "future72": {
+        "mean": 73.25416666666666,
+        "std": 6.875147885733385,
+        "min": 58.65,
+        "max": 88.0
+      },
+      "train_mean_minus_4sd": 43.29176341864423,
+      "train_mean_plus_4sd": 103.67305800992719,
+      "test_outside_4sd_count": 0,
+      "future72_outside_4sd_count": 0
+    },
+    "style_attack_min": {
+      "train": {
+        "mean": 67.31750000000001,
+        "std": 9.198120335709726,
+        "min": 48.9,
+        "max": 91.1
+      },
+      "test": {
+        "mean": 67.08928571428571,
+        "std": 8.998470664855738,
+        "min": 48.9,
+        "max": 89.0
+      },
+      "future72": {
+        "mean": 66.30555555555556,
+        "std": 8.327333051064366,
+        "min": 48.9,
+        "max": 84.9
+      },
+      "train_mean_minus_4sd": 30.525018657161105,
+      "train_mean_plus_4sd": 104.10998134283892,
+      "test_outside_4sd_count": 0,
+      "future72_outside_4sd_count": 0
+    },
+    "style_attack_max": {
+      "train": {
+        "mean": 79.64732142857143,
+        "std": 8.250463854487762,
+        "min": 55.3,
+        "max": 91.9
+      },
+      "test": {
+        "mean": 79.21714285714286,
+        "std": 7.648415859464047,
+        "min": 59.7,
+        "max": 91.9
+      },
+      "future72": {
+        "mean": 80.20277777777778,
+        "std": 7.740873267005297,
+        "min": 59.8,
+        "max": 91.9
+      },
+      "train_mean_minus_4sd": 46.64546601062038,
+      "train_mean_plus_4sd": 112.64917684652248,
+      "test_outside_4sd_count": 0,
+      "future72_outside_4sd_count": 0
+    },
+    "style_attack_absdiff": {
+      "train": {
+        "mean": 12.32982142857143,
+        "std": 8.802405751631525,
+        "min": 0.09999999999999432,
+        "max": 43.00000000000001
+      },
+      "test": {
+        "mean": 12.127857142857144,
+        "std": 7.868679995496789,
+        "min": 0.3999999999999915,
+        "max": 33.900000000000006
+      },
+      "future72": {
+        "mean": 13.897222222222222,
+        "std": 8.334299943939838,
+        "min": 1.2999999999999972,
+        "max": 35.1
+      },
+      "train_mean_minus_4sd": -22.879801577954673,
+      "train_mean_plus_4sd": 47.53944443509753,
+      "test_outside_4sd_count": 0,
+      "future72_outside_4sd_count": 0
+    },
+    "style_defense_mean": {
+      "train": {
+        "mean": 75.12508928571428,
+        "std": 8.181566609908618,
+        "min": 55.6,
+        "max": 93.9
+      },
+      "test": {
+        "mean": 75.1282142857143,
+        "std": 8.579876931238008,
+        "min": 56.0,
+        "max": 91.95
+      },
+      "future72": {
+        "mean": 75.20416666666667,
+        "std": 7.048357864889474,
+        "min": 58.7,
+        "max": 91.95
+      },
+      "train_mean_minus_4sd": 42.39882284607981,
+      "train_mean_plus_4sd": 107.85135572534875,
+      "test_outside_4sd_count": 0,
+      "future72_outside_4sd_count": 0
+    },
+    "style_defense_min": {
+      "train": {
+        "mean": 68.57035714285715,
+        "std": 9.817168336527226,
+        "min": 55.2,
+        "max": 91.7
+      },
+      "test": {
+        "mean": 68.645,
+        "std": 10.187891847078559,
+        "min": 55.2,
+        "max": 91.0
+      },
+      "future72": {
+        "mean": 67.86666666666666,
+        "std": 8.878031122930258,
+        "min": 55.2,
+        "max": 86.2
+      },
+      "train_mean_minus_4sd": 29.301683796748243,
+      "train_mean_plus_4sd": 107.83903048896605,
+      "test_outside_4sd_count": 0,
+      "future72_outside_4sd_count": 0
+    },
+    "style_defense_max": {
+      "train": {
+        "mean": 81.67982142857143,
+        "std": 9.055316190489252,
+        "min": 56.0,
+        "max": 99.0
+      },
+      "test": {
+        "mean": 81.61142857142859,
+        "std": 9.382833595978632,
+        "min": 56.2,
+        "max": 99.0
+      },
+      "future72": {
+        "mean": 82.54166666666667,
+        "std": 8.470325167943923,
+        "min": 61.1,
+        "max": 99.0
+      },
+      "train_mean_minus_4sd": 45.45855666661442,
+      "train_mean_plus_4sd": 117.90108619052845,
+      "test_outside_4sd_count": 0,
+      "future72_outside_4sd_count": 0
+    },
+    "style_defense_absdiff": {
+      "train": {
+        "mean": 13.109464285714287,
+        "std": 9.433926125713128,
+        "min": 0.09999999999999432,
+        "max": 43.8
+      },
+      "test": {
+        "mean": 12.966428571428573,
+        "std": 9.444800714384058,
+        "min": 0.19999999999998863,
+        "max": 43.8
+      },
+      "future72": {
+        "mean": 14.675000000000002,
+        "std": 10.119994850524773,
+        "min": 0.6999999999999886,
+        "max": 43.8
+      },
+      "train_mean_minus_4sd": -24.626240217138225,
+      "train_mean_plus_4sd": 50.8451687885668,
+      "test_outside_4sd_count": 0,
+      "future72_outside_4sd_count": 0
+    },
+    "host_flag_mean": {
+      "train": {
+        "mean": 0.059821428571428574,
+        "std": 0.16514742231214363,
+        "min": 0.0,
+        "max": 1.0
+      },
+      "test": {
+        "mean": 0.05,
+        "std": 0.15053860137385736,
+        "min": 0.0,
+        "max": 0.5
+      },
+      "future72": {
+        "mean": 0.0625,
+        "std": 0.1665198884200822,
+        "min": 0.0,
+        "max": 0.5
+      },
+      "train_mean_minus_4sd": -0.600768260677146,
+      "train_mean_plus_4sd": 0.7204111178200031,
+      "test_outside_4sd_count": 0,
+      "future72_outside_4sd_count": 0
+    },
+    "host_flag_min": {
+      "train": {
+        "mean": 0.0017857142857142857,
+        "std": 0.042257712736425826,
+        "min": 0.0,
+        "max": 1.0
+      },
+      "test": {
+        "mean": 0.0,
+        "std": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "future72": {
+        "mean": 0.0,
+        "std": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "train_mean_minus_4sd": -0.16724513665998902,
+      "train_mean_plus_4sd": 0.17081656523141758,
+      "test_outside_4sd_count": 0,
+      "future72_outside_4sd_count": 0
+    },
+    "host_flag_max": {
+      "train": {
+        "mean": 0.11785714285714285,
+        "std": 0.322727166380932,
+        "min": 0.0,
+        "max": 1.0
+      },
+      "test": {
+        "mean": 0.1,
+        "std": 0.3010772027477147,
+        "min": 0.0,
+        "max": 1.0
+      },
+      "future72": {
+        "mean": 0.125,
+        "std": 0.3330397768401644,
+        "min": 0.0,
+        "max": 1.0
+      },
+      "train_mean_minus_4sd": -1.1730515226665852,
+      "train_mean_plus_4sd": 1.408765808380871,
+      "test_outside_4sd_count": 0,
+      "future72_outside_4sd_count": 0
+    },
+    "host_flag_absdiff": {
+      "train": {
+        "mean": 0.11607142857142858,
+        "std": 0.32059693078159385,
+        "min": 0.0,
+        "max": 1.0
+      },
+      "test": {
+        "mean": 0.1,
+        "std": 0.3010772027477147,
+        "min": 0.0,
+        "max": 1.0
+      },
+      "future72": {
+        "mean": 0.125,
+        "std": 0.3330397768401644,
+        "min": 0.0,
+        "max": 1.0
+      },
+      "train_mean_minus_4sd": -1.1663162945549468,
+      "train_mean_plus_4sd": 1.398459151697804,
+      "test_outside_4sd_count": 0,
+      "future72_outside_4sd_count": 0
+    },
+    "strength_score_mean": {
+      "train": {
+        "mean": 69.96311607142857,
+        "std": 12.489319203367543,
+        "min": 39.585,
+        "max": 96.14
+      },
+      "test": {
+        "mean": 69.66339285714285,
+        "std": 12.236757521039861,
+        "min": 39.585,
+        "max": 98.515
+      },
+      "future72": {
+        "mean": 69.60416666666667,
+        "std": 10.567937058005779,
+        "min": 47.735,
+        "max": 90.22
+      },
+      "train_mean_minus_4sd": 20.0058392579584,
+      "train_mean_plus_4sd": 119.92039288489875,
+      "test_outside_4sd_count": 0,
+      "future72_outside_4sd_count": 0
+    },
+    "strength_score_min": {
+      "train": {
+        "mean": 59.970035714285714,
+        "std": 14.709345939210426,
+        "min": 38.93,
+        "max": 94.89
+      },
+      "test": {
+        "mean": 60.521285714285725,
+        "std": 14.215446753183674,
+        "min": 38.93,
+        "max": 97.39
+      },
+      "future72": {
+        "mean": 57.65402777777778,
+        "std": 13.02904465704504,
+        "min": 38.93,
+        "max": 86.89
+      },
+      "train_mean_minus_4sd": 1.1326519574440113,
+      "train_mean_plus_4sd": 118.80741947112742,
+      "test_outside_4sd_count": 0,
+      "future72_outside_4sd_count": 0
+    },
+    "strength_score_max": {
+      "train": {
+        "mean": 79.95619642857143,
+        "std": 14.09756630301719,
+        "min": 40.24,
+        "max": 99.64
+      },
+      "test": {
+        "mean": 78.80550000000001,
+        "std": 13.727029856056435,
+        "min": 40.24,
+        "max": 99.64
+      },
+      "future72": {
+        "mean": 81.55430555555556,
+        "std": 12.645090438071646,
+        "min": 53.35,
+        "max": 99.64
+      },
+      "train_mean_minus_4sd": 23.56593121650267,
+      "train_mean_plus_4sd": 136.3464616406402,
+      "test_outside_4sd_count": 0,
+      "future72_outside_4sd_count": 0
+    },
+    "strength_score_absdiff": {
+      "train": {
+        "mean": 19.986160714285713,
+        "std": 14.362454198368843,
+        "min": 0.4399999999999977,
+        "max": 59.4
+      },
+      "test": {
+        "mean": 18.284214285714285,
+        "std": 13.493243183476222,
+        "min": 0.4000000000000057,
+        "max": 55.96
+      },
+      "future72": {
+        "mean": 23.90027777777778,
+        "std": 14.580242078809334,
+        "min": 1.9699999999999989,
+        "max": 54.65
+      },
+      "train_mean_minus_4sd": -37.46365607918966,
+      "train_mean_plus_4sd": 77.43597750776108,
+      "test_outside_4sd_count": 0,
+      "future72_outside_4sd_count": 0
+    },
+    "month": {
+      "train": {
+        "mean": 6.255357142857143,
+        "std": 3.3492273235340995,
+        "min": 1.0,
+        "max": 12.0
+      },
+      "test": {
+        "mean": 7.65,
+        "std": 3.1598310673358343,
+        "min": 1.0,
+        "max": 12.0
+      },
+      "future72": {
+        "mean": 6.0,
+        "std": 0.0,
+        "min": 6.0,
+        "max": 6.0
+      },
+      "train_mean_minus_4sd": -7.141552151279255,
+      "train_mean_plus_4sd": 19.652266436993543,
+      "test_outside_4sd_count": 0,
+      "future72_outside_4sd_count": 0
+    },
+    "weekday_num": {
+      "train": {
+        "mean": 3.148214285714286,
+        "std": 1.9696708470177493,
+        "min": 0.0,
+        "max": 6.0
+      },
+      "test": {
+        "mean": 2.8285714285714287,
+        "std": 2.049540594752276,
+        "min": 0.0,
+        "max": 6.0
+      },
+      "future72": {
+        "mean": 0.0,
+        "std": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "train_mean_minus_4sd": -4.730469102356711,
+      "train_mean_plus_4sd": 11.026897673785284,
+      "test_outside_4sd_count": 0,
+      "future72_outside_4sd_count": 0
+    }
+  },
+  "problem1_forbidden_features": [
+    "attractiveness_index",
+    "commercial_value_index",
+    "expected_attendance_base",
+    "uncertainty_index"
+  ],
+  "problem2_total_objective": 0.27245335427844,
+  "problem2_indicator_details": {
+    "raw": {
+      "T": 285910470.0,
+      "B": 326546865.536447,
+      "U": 0.4614361111111111,
+      "H": 0.6396986111111111,
+      "C": 53.05500000000001,
+      "D": 0.18924710028406608,
+      "F": 0.0,
+      "R": 0.4103640767798951
+    },
+    "bounds": {
+      "T": [
+        180224640.0,
+        462345840.0
+      ],
+      "B": [
+        86445484.1838,
+        613637147.350656
+      ],
+      "U": [
+        0.0,
+        1.0
+      ],
+      "H": [
+        0.0,
+        1.0
+      ],
+      "C": [
+        38.470000000000006,
+        71.59
+      ],
+      "D": [
+        0.0,
+        1.0
+      ],
+      "F": [
+        0.0,
+        1.0
+      ],
+      "R": [
+        0.22470909090909091,
+        0.6004015934040483
+      ]
+    },
+    "normalized": {
+      "T": 0.3746114435923284,
+      "B": 0.455434708338047,
+      "U": 0.4614361111111111,
+      "H": 0.6396986111111111,
+      "C": 0.44036835748792275,
+      "D": 0.18924710028406608,
+      "F": 0.0,
+      "R": 0.49416739657533115
+    },
+    "weighted_contributions": {
+      "T": 0.0936528608980821,
+      "B": 0.11385867708451175,
+      "U": 0.06921541666666667,
+      "H": 0.06396986111111112,
+      "C": -0.03522946859903382,
+      "D": -0.013247297019884627,
+      "F": -0.0,
+      "R": -0.019766695863013245
+    },
+    "Z2": 0.27245335427844,
+    "fairness_detail": {
+      "prime_counts": {
+        "Algeria": 2,
+        "Argentina": 2,
+        "Australia": 2,
+        "Austria": 2,
+        "Belgium": 2,
+        "Bosnia and Herzegovina": 2,
+        "Brazil": 2,
+        "Canada": 2,
+        "Cape Verde": 2,
+        "Colombia": 2,
+        "Croatia": 2,
+        "Curacao": 2,
+        "Czechia": 2,
+        "DR Congo": 2,
+        "Ecuador": 2,
+        "Egypt": 2,
+        "England": 2,
+        "France": 2,
+        "Germany": 2,
+        "Ghana": 2,
+        "Haiti": 2,
+        "Iran": 2,
+        "Iraq": 2,
+        "Ivory Coast": 2,
+        "Japan": 2,
+        "Jordan": 2,
+        "Mexico": 2,
+        "Morocco": 2,
+        "Netherlands": 2,
+        "New Zealand": 2,
+        "Norway": 2,
+        "Panama": 2,
+        "Paraguay": 2,
+        "Portugal": 2,
+        "Qatar": 2,
+        "Saudi Arabia": 2,
+        "Scotland": 2,
+        "Senegal": 2,
+        "South Africa": 2,
+        "South Korea": 2,
+        "Spain": 2,
+        "Sweden": 2,
+        "Switzerland": 2,
+        "Tunisia": 2,
+        "Turkey": 2,
+        "United States": 2,
+        "Uruguay": 2,
+        "Uzbekistan": 2
+      },
+      "large_venue_counts": {
+        "Algeria": 1,
+        "Argentina": 1,
+        "Australia": 1,
+        "Austria": 1,
+        "Belgium": 1,
+        "Bosnia and Herzegovina": 1,
+        "Brazil": 1,
+        "Canada": 1,
+        "Cape Verde": 1,
+        "Colombia": 1,
+        "Croatia": 1,
+        "Curacao": 1,
+        "Czechia": 1,
+        "DR Congo": 1,
+        "Ecuador": 1,
+        "Egypt": 1,
+        "England": 1,
+        "France": 1,
+        "Germany": 1,
+        "Ghana": 1,
+        "Haiti": 1,
+        "Iran": 1,
+        "Iraq": 1,
+        "Ivory Coast": 1,
+        "Japan": 1,
+        "Jordan": 1,
+        "Mexico": 1,
+        "Morocco": 1,
+        "Netherlands": 1,
+        "New Zealand": 1,
+        "Norway": 1,
+        "Panama": 1,
+        "Paraguay": 1,
+        "Portugal": 1,
+        "Qatar": 1,
+        "Saudi Arabia": 1,
+        "Scotland": 1,
+        "Senegal": 1,
+        "South Africa": 1,
+        "South Korea": 1,
+        "Spain": 1,
+        "Sweden": 1,
+        "Switzerland": 1,
+        "Tunisia": 1,
+        "Turkey": 1,
+        "United States": 1,
+        "Uruguay": 1,
+        "Uzbekistan": 1
+      },
+      "prime_range": 0,
+      "large_venue_range": 0
+    },
+    "setup_cost_musd": 17.950000000000003
+  },
+  "problem2_candidate_normalization": {
+    "ticket_revenue_usd": [
+      2503120.0,
+      6421470.0
+    ],
+    "broadcast_value_usd": [
+      1200631.724775,
+      8522738.157648
+    ],
+    "match_cost_musd": [
+      0.28500000000000003,
+      0.745
+    ],
+    "travel_burden": [
+      0.0,
+      1.0
+    ],
+    "risk_index": [
+      0.22470909090909091,
+      0.6004015934040483
+    ],
+    "travel_components": {
+      "distance_km": [
+        1501.7599999999998,
+        12584.5
+      ],
+      "travel_time_hour": [
+        3.3600000000000003,
+        18.55
+      ],
+      "timezone_diff": [
+        0.65,
+        15.75
+      ]
+    }
+  },
+  "problem2_prime_slots": [
+    "S021",
+    "S024",
+    "S031",
+    "S034",
+    "S051",
+    "S064",
+    "S081",
+    "S094",
+    "S104",
+    "S114",
+    "S121",
+    "S131",
+    "S134",
+    "S141",
+    "S151",
+    "S164",
+    "S171",
+    "S184",
+    "S191",
+    "S204"
+  ],
+  "problem2_large_capacity_venues": [
+    "V03",
+    "V06",
+    "V08",
+    "V11"
+  ],
+  "problem2_solver": {
+    "method": "decomposed_slot_MILP_then_conditional_venue_MILP",
+    "global_optimality_claim": false,
+    "slot_subproblem": {
+      "status_code": 0,
+      "solver_status": "optimal",
+      "status": "optimal_within_mip_tolerance",
+      "interpretation": "在设定 MIP 容差内求得最优解",
+      "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "runtime_seconds": 23.216251491001458,
+      "best_bound": -0.11391315198736575,
+      "mip_gap": 0.0004784431388885584,
+      "node_count": 411,
+      "variable_count": 5762,
+      "constraint_count": 461
+    },
+    "venue_subproblem_given_slots": {
+      "status_code": 0,
+      "solver_status": "optimal",
+      "status": "optimal_within_mip_tolerance",
+      "interpretation": "在设定 MIP 容差内求得最优解",
+      "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "runtime_seconds": 0.4907522390021768,
+      "best_bound": -0.025418472818602888,
+      "mip_gap": 0.00035708842636867727,
+      "node_count": 1,
+      "variable_count": 1073,
+      "constraint_count": 888
+    }
+  },
+  "problem2_hard_constraint_audit": {
+    "unique_matches": true,
+    "venue_utc_conflicts": 0,
+    "team_round_order": true,
+    "minimum_rest_hours": 63.0,
+    "group_round_gaps_hours": {
+      "A:R1-R2": 63.0,
+      "A:R2-R3": 81.0,
+      "B:R1-R2": 303.0,
+      "B:R2-R3": 72.0,
+      "C:R1-R2": 183.0,
+      "C:R2-R3": 72.0,
+      "D:R1-R2": 87.0,
+      "D:R2-R3": 129.0,
+      "E:R1-R2": 96.0,
+      "E:R2-R3": 120.0,
+      "F:R1-R2": 72.0,
+      "F:R2-R3": 183.0,
+      "G:R1-R2": 96.0,
+      "G:R2-R3": 63.0,
+      "H:R1-R2": 87.0,
+      "H:R2-R3": 87.0,
+      "I:R1-R2": 87.0,
+      "I:R2-R3": 96.0,
+      "J:R1-R2": 96.0,
+      "J:R2-R3": 96.0,
+      "K:R1-R2": 81.0,
+      "K:R2-R3": 87.0,
+      "L:R1-R2": 231.0,
+      "L:R2-R3": 72.0
+    },
+    "group_round_minimum_gap_hours": 63.0,
+    "group_round_violation_count": 0,
+    "group_round_boundary_passed": true,
+    "venue_local_day_max_violation": 0,
+    "venue_total_violation": 0,
+    "broadcast_capacity_violation": 0,
+    "security_violation": 0,
+    "third_round_high_security_violation": 0,
+    "prime_range": 0,
+    "all_passed": true
+  },
+  "seed": 20260816,
+  "simulations": 20000,
+  "tie_method": "exact_equal_fractional_weights_without_team_id_tiebreak",
+  "advancement_probs": {
+    "Argentina": 1.0,
+    "France": 1.0,
+    "Spain": 1.0,
+    "England": 1.0,
+    "Brazil": 1.0,
+    "Portugal": 1.0,
+    "Netherlands": 1.0,
+    "Belgium": 1.0,
+    "Germany": 1.0,
+    "Croatia": 1.0,
+    "Uruguay": 0.9852416666666666,
+    "Colombia": 1.0,
+    "Switzerland": 1.0,
+    "Morocco": 0.9601375,
+    "United States": 1.0,
+    "Mexico": 1.0,
+    "Japan": 0.9349499999999998,
+    "Senegal": 0.887625,
+    "Austria": 0.5098,
+    "Ecuador": 0.9542024999999996,
+    "Sweden": 0.3160125,
+    "Norway": 1.0,
+    "Turkey": 1.0,
+    "South Korea": 0.5416649999999998,
+    "Paraguay": 0.3105666666666666,
+    "Ivory Coast": 1.0,
+    "Australia": 0.633825,
+    "Iran": 0.154975,
+    "Scotland": 0.07467916666666666,
+    "Canada": 0.35878333333333323,
+    "Algeria": 0.22220249999999997,
+    "Egypt": 0.805525,
+    "Ghana": 0.08993583333333334,
+    "Czechia": 1.0,
+    "Saudi Arabia": 0.9671166666666666,
+    "Tunisia": 0.0665875,
+    "Bosnia and Herzegovina": 0.6001708333333333,
+    "Qatar": 0.3206791666666666,
+    "Uzbekistan": 0.12366666666666667,
+    "South Africa": 0.22635000000000005,
+    "Cape Verde": 0.0211625,
+    "Jordan": 1.0,
+    "Iraq": 0.05389166666666667,
+    "DR Congo": 0.29117333333333334,
+    "Panama": 0.5856833333333332,
+    "New Zealand": 0.7863916666666667,
+    "Haiti": 0.2138291666666667,
+    "Curacao": 0.0031708333333333332
+  },
+  "advancement_probability_sum": 31.999999999999996,
+  "per_simulation_weight_sum_min": 31.999999999999996,
+  "per_simulation_weight_sum_max": 32.0,
+  "problem3_normalization_bounds": {
+    "ticket_value": [
+      2981226.4476686213,
+      6558212.82906691
+    ],
+    "broadcast_value": [
+      4726317.998873029,
+      8519872.166033944
+    ],
+    "attractiveness": [
+      0.3668961106245993,
+      0.6866168416254285
+    ],
+    "resource_cost": [
+      3.0,
+      23.0
+    ],
+    "risk": [
+      0.07991735510172542,
+      0.7458476401902504
+    ]
+  },
+  "problem3_static_pre_normalization_bounds": {
+    "ticket_value": [
+      3463169.6856079907,
+      7170080.169317511
+    ],
+    "broadcast_value": [
+      7284257.396,
+      11887256.20992
+    ],
+    "attractiveness": [
+      0.4963,
+      0.7894
+    ],
+    "resource_cost": [
+      3.0,
+      23.0
+    ],
+    "risk": [
+      0.20052225957446812,
+      0.35818273602795864
+    ]
+  },
+  "problem3_dynamic_total_net": 6.583848598592548,
+  "problem3_static_total_net": 6.5783676577377355,
+  "problem3_overall_improvement_rate": 0.0008331764261253036,
+  "problem3_static_decisions": {
+    "GA05": {
+      "broadcast": 3,
+      "security": 2,
+      "transport": 3,
+      "delta": 0.18583183092229114,
+      "selected_using": "pre_tournament_static_information_only"
+    },
+    "GA06": {
+      "broadcast": 3,
+      "security": 2,
+      "transport": 3,
+      "delta": 0.18583183092229114,
+      "selected_using": "pre_tournament_static_information_only"
+    },
+    "GB05": {
+      "broadcast": 3,
+      "security": 3,
+      "transport": 3,
+      "delta": 0.18583183092229094,
+      "selected_using": "pre_tournament_static_information_only"
+    },
+    "GB06": {
+      "broadcast": 3,
+      "security": 3,
+      "transport": 3,
+      "delta": 0.18583183092229094,
+      "selected_using": "pre_tournament_static_information_only"
+    },
+    "GC05": {
+      "broadcast": 3,
+      "security": 2,
+      "transport": 3,
+      "delta": 0.18583183092229114,
+      "selected_using": "pre_tournament_static_information_only"
+    },
+    "GC06": {
+      "broadcast": 3,
+      "security": 1,
+      "transport": 2,
+      "delta": 0.18583183092229094,
+      "selected_using": "pre_tournament_static_information_only"
+    },
+    "GD05": {
+      "broadcast": 3,
+      "security": 3,
+      "transport": 3,
+      "delta": 0.18583183092229094,
+      "selected_using": "pre_tournament_static_information_only"
+    },
+    "GD06": {
+      "broadcast": 3,
+      "security": 3,
+      "transport": 3,
+      "delta": 0.18583183092229094,
+      "selected_using": "pre_tournament_static_information_only"
+    },
+    "GE05": {
+      "broadcast": 3,
+      "security": 3,
+      "transport": 3,
+      "delta": 0.18583183092229114,
+      "selected_using": "pre_tournament_static_information_only"
+    },
+    "GE06": {
+      "broadcast": 3,
+      "security": 2,
+      "transport": 3,
+      "delta": 0.18583183092229094,
+      "selected_using": "pre_tournament_static_information_only"
+    },
+    "GF05": {
+      "broadcast": 2,
+      "security": 2,
+      "transport": 2,
+      "delta": 0.18583183092229094,
+      "selected_using": "pre_tournament_static_information_only"
+    },
+    "GF06": {
+      "broadcast": 3,
+      "security": 4,
+      "transport": 3,
+      "delta": 0.18583183092229114,
+      "selected_using": "pre_tournament_static_information_only"
+    },
+    "GG05": {
+      "broadcast": 3,
+      "security": 2,
+      "transport": 3,
+      "delta": 0.18583183092229114,
+      "selected_using": "pre_tournament_static_information_only"
+    },
+    "GG06": {
+      "broadcast": 3,
+      "security": 3,
+      "transport": 3,
+      "delta": 0.18583183092229094,
+      "selected_using": "pre_tournament_static_information_only"
+    },
+    "GH05": {
+      "broadcast": 3,
+      "security": 4,
+      "transport": 3,
+      "delta": 0.18583183092229094,
+      "selected_using": "pre_tournament_static_information_only"
+    },
+    "GH06": {
+      "broadcast": 3,
+      "security": 3,
+      "transport": 3,
+      "delta": 0.18583183092229094,
+      "selected_using": "pre_tournament_static_information_only"
+    },
+    "GI05": {
+      "broadcast": 3,
+      "security": 3,
+      "transport": 3,
+      "delta": 0.18583183092229094,
+      "selected_using": "pre_tournament_static_information_only"
+    },
+    "GI06": {
+      "broadcast": 2,
+      "security": 2,
+      "transport": 2,
+      "delta": 0.18583183092229094,
+      "selected_using": "pre_tournament_static_information_only"
+    },
+    "GJ05": {
+      "broadcast": 2,
+      "security": 1,
+      "transport": 2,
+      "delta": 0.18583183092229094,
+      "selected_using": "pre_tournament_static_information_only"
+    },
+    "GJ06": {
+      "broadcast": 3,
+      "security": 3,
+      "transport": 3,
+      "delta": 0.18583183092229094,
+      "selected_using": "pre_tournament_static_information_only"
+    },
+    "GK05": {
+      "broadcast": 3,
+      "security": 3,
+      "transport": 3,
+      "delta": 0.18583183092229094,
+      "selected_using": "pre_tournament_static_information_only"
+    },
+    "GK06": {
+      "broadcast": 3,
+      "security": 2,
+      "transport": 3,
+      "delta": 0.18583183092229114,
+      "selected_using": "pre_tournament_static_information_only"
+    },
+    "GL05": {
+      "broadcast": 2,
+      "security": 1,
+      "transport": 1,
+      "delta": 0.18583183092229114,
+      "selected_using": "pre_tournament_static_information_only"
+    },
+    "GL06": {
+      "broadcast": 3,
+      "security": 2,
+      "transport": 3,
+      "delta": 0.18583183092229114,
+      "selected_using": "pre_tournament_static_information_only"
+    }
+  },
+  "problem3_solver": {
+    "dynamic": {
+      "status_code": 0,
+      "solver_status": "optimal",
+      "status": "optimal_within_mip_tolerance",
+      "interpretation": "在设定 MIP 容差内求得最优解",
+      "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "runtime_seconds": 0.00793391100160079,
+      "best_bound": -6.583848598592548,
+      "mip_gap": 0.0,
+      "node_count": 1
+    },
+    "static_pre": {
+      "status_code": 0,
+      "solver_status": "optimal",
+      "status": "optimal_within_mip_tolerance",
+      "interpretation": "在设定 MIP 容差内求得最优解",
+      "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "runtime_seconds": 0.007194644000264816,
+      "best_bound": -6.139428883993752,
+      "mip_gap": 0.0,
+      "node_count": 1
+    }
+  },
+  "problem3_constraint_audit": {
+    "dynamic": {
+      "all_passed": true,
+      "violations": []
+    },
+    "static_fixed_in_updated_environment": {
+      "all_passed": true,
+      "violations": []
+    }
+  },
+  "problem3_robustness": {
+    "seeds": [
+      20260816,
+      20260817,
+      20260818,
+      20260819,
+      20260820
+    ],
+    "runs": [
+      {
+        "seed": 20260816,
+        "advancement_probs": {
+          "Argentina": 1.0,
+          "France": 1.0,
+          "Spain": 1.0,
+          "England": 1.0,
+          "Brazil": 1.0,
+          "Portugal": 1.0,
+          "Netherlands": 1.0,
+          "Belgium": 1.0,
+          "Germany": 1.0,
+          "Croatia": 1.0,
+          "Uruguay": 0.9852416666666666,
+          "Colombia": 1.0,
+          "Switzerland": 1.0,
+          "Morocco": 0.9601375,
+          "United States": 1.0,
+          "Mexico": 1.0,
+          "Japan": 0.9349499999999998,
+          "Senegal": 0.887625,
+          "Austria": 0.5098,
+          "Ecuador": 0.9542024999999996,
+          "Sweden": 0.3160125,
+          "Norway": 1.0,
+          "Turkey": 1.0,
+          "South Korea": 0.5416649999999998,
+          "Paraguay": 0.3105666666666666,
+          "Ivory Coast": 1.0,
+          "Australia": 0.633825,
+          "Iran": 0.154975,
+          "Scotland": 0.07467916666666666,
+          "Canada": 0.35878333333333323,
+          "Algeria": 0.22220249999999997,
+          "Egypt": 0.805525,
+          "Ghana": 0.08993583333333334,
+          "Czechia": 1.0,
+          "Saudi Arabia": 0.9671166666666666,
+          "Tunisia": 0.0665875,
+          "Bosnia and Herzegovina": 0.6001708333333333,
+          "Qatar": 0.3206791666666666,
+          "Uzbekistan": 0.12366666666666667,
+          "South Africa": 0.22635000000000005,
+          "Cape Verde": 0.0211625,
+          "Jordan": 1.0,
+          "Iraq": 0.05389166666666667,
+          "DR Congo": 0.29117333333333334,
+          "Panama": 0.5856833333333332,
+          "New Zealand": 0.7863916666666667,
+          "Haiti": 0.2138291666666667,
+          "Curacao": 0.0031708333333333332
+        },
+        "dynamic_total_net": 6.583848598592548,
+        "static_total_net": 6.5783676577377355,
+        "overall_improvement_rate": 0.0008331764261253036,
+        "decision_signature": {
+          "GA05": [
+            2,
+            2,
+            2,
+            0.18583183
+          ],
+          "GA06": [
+            3,
+            2,
+            3,
+            0.18583183
+          ],
+          "GB05": [
+            3,
+            3,
+            3,
+            0.18583183
+          ],
+          "GB06": [
+            3,
+            3,
+            3,
+            0.18583183
+          ],
+          "GC05": [
+            3,
+            2,
+            3,
+            0.18583183
+          ],
+          "GC06": [
+            3,
+            1,
+            2,
+            0.18583183
+          ],
+          "GD05": [
+            3,
+            3,
+            3,
+            0.18583183
+          ],
+          "GD06": [
+            3,
+            3,
+            3,
+            0.18583183
+          ],
+          "GE05": [
+            3,
+            3,
+            3,
+            0.18583183
+          ],
+          "GE06": [
+            3,
+            2,
+            3,
+            0.18583183
+          ],
+          "GF05": [
+            2,
+            2,
+            1,
+            0.18583183
+          ],
+          "GF06": [
+            3,
+            4,
+            3,
+            0.18583183
+          ],
+          "GG05": [
+            3,
+            2,
+            2,
+            0.18583183
+          ],
+          "GG06": [
+            3,
+            3,
+            3,
+            0.18583183
+          ],
+          "GH05": [
+            3,
+            4,
+            3,
+            0.18583183
+          ],
+          "GH06": [
+            3,
+            3,
+            3,
+            0.18583183
+          ],
+          "GI05": [
+            3,
+            3,
+            3,
+            0.18583183
+          ],
+          "GI06": [
+            2,
+            2,
+            2,
+            0.18583183
+          ],
+          "GJ05": [
+            2,
+            1,
+            1,
+            0.18583183
+          ],
+          "GJ06": [
+            3,
+            3,
+            3,
+            0.18583183
+          ],
+          "GK05": [
+            3,
+            3,
+            3,
+            0.18583183
+          ],
+          "GK06": [
+            3,
+            2,
+            3,
+            0.18583183
+          ],
+          "GL05": [
+            3,
+            1,
+            1,
+            0.18583183
+          ],
+          "GL06": [
+            3,
+            2,
+            3,
+            0.18583183
+          ]
+        }
+      },
+      {
+        "seed": 20260817,
+        "advancement_probs": {
+          "Argentina": 1.0,
+          "France": 1.0,
+          "Spain": 1.0,
+          "England": 1.0,
+          "Brazil": 1.0,
+          "Portugal": 1.0,
+          "Netherlands": 1.0,
+          "Belgium": 1.0,
+          "Germany": 1.0,
+          "Croatia": 1.0,
+          "Uruguay": 0.9837791666666666,
+          "Colombia": 1.0,
+          "Switzerland": 1.0,
+          "Morocco": 0.9620958333333333,
+          "United States": 1.0,
+          "Mexico": 1.0,
+          "Japan": 0.9336375,
+          "Senegal": 0.8886583333333334,
+          "Austria": 0.5125708333333333,
+          "Ecuador": 0.9531583333333334,
+          "Sweden": 0.3231166666666667,
+          "Norway": 1.0,
+          "Turkey": 1.0,
+          "South Korea": 0.5403583333333332,
+          "Paraguay": 0.3059125000000001,
+          "Ivory Coast": 1.0,
+          "Australia": 0.641325,
+          "Iran": 0.15705,
+          "Scotland": 0.07972499999999999,
+          "Canada": 0.3526458333333333,
+          "Algeria": 0.2217416666666667,
+          "Egypt": 0.8061166666666666,
+          "Ghana": 0.09245833333333335,
+          "Czechia": 1.0,
+          "Saudi Arabia": 0.965825,
+          "Tunisia": 0.069075,
+          "Bosnia and Herzegovina": 0.6016875,
+          "Qatar": 0.31751666666666667,
+          "Uzbekistan": 0.126725,
+          "South Africa": 0.224775,
+          "Cape Verde": 0.021841666666666665,
+          "Jordan": 1.0,
+          "Iraq": 0.054,
+          "DR Congo": 0.28875000000000006,
+          "Panama": 0.5777958333333332,
+          "New Zealand": 0.7819958333333333,
+          "Haiti": 0.213625,
+          "Curacao": 0.0020375
+        },
+        "dynamic_total_net": 6.644567344879467,
+        "static_total_net": 6.639228974186593,
+        "overall_improvement_rate": 0.0008040648565713652,
+        "decision_signature": {
+          "GA05": [
+            2,
+            2,
+            2,
+            0.18583183
+          ],
+          "GA06": [
+            3,
+            2,
+            3,
+            0.18583183
+          ],
+          "GB05": [
+            3,
+            3,
+            3,
+            0.18583183
+          ],
+          "GB06": [
+            3,
+            3,
+            3,
+            0.18583183
+          ],
+          "GC05": [
+            3,
+            2,
+            3,
+            0.18583183
+          ],
+          "GC06": [
+            3,
+            1,
+            2,
+            0.18583183
+          ],
+          "GD05": [
+            3,
+            3,
+            3,
+            0.18583183
+          ],
+          "GD06": [
+            3,
+            3,
+            3,
+            0.18583183
+          ],
+          "GE05": [
+            3,
+            3,
+            3,
+            0.18583183
+          ],
+          "GE06": [
+            3,
+            2,
+            3,
+            0.18583183
+          ],
+          "GF05": [
+            2,
+            2,
+            1,
+            0.18583183
+          ],
+          "GF06": [
+            3,
+            4,
+            3,
+            0.18583183
+          ],
+          "GG05": [
+            3,
+            2,
+            3,
+            0.18583183
+          ],
+          "GG06": [
+            3,
+            3,
+            3,
+            0.18583183
+          ],
+          "GH05": [
+            3,
+            4,
+            3,
+            0.18583183
+          ],
+          "GH06": [
+            3,
+            3,
+            3,
+            0.18583183
+          ],
+          "GI05": [
+            3,
+            3,
+            3,
+            0.18583183
+          ],
+          "GI06": [
+            2,
+            2,
+            2,
+            0.18583183
+          ],
+          "GJ05": [
+            2,
+            1,
+            1,
+            0.18583183
+          ],
+          "GJ06": [
+            3,
+            3,
+            3,
+            0.18583183
+          ],
+          "GK05": [
+            3,
+            3,
+            3,
+            0.18583183
+          ],
+          "GK06": [
+            3,
+            2,
+            3,
+            0.18583183
+          ],
+          "GL05": [
+            3,
+            1,
+            1,
+            0.18583183
+          ],
+          "GL06": [
+            3,
+            2,
+            3,
+            0.18583183
+          ]
+        }
+      },
+      {
+        "seed": 20260818,
+        "advancement_probs": {
+          "Argentina": 1.0,
+          "France": 1.0,
+          "Spain": 1.0,
+          "England": 1.0,
+          "Brazil": 1.0,
+          "Portugal": 1.0,
+          "Netherlands": 1.0,
+          "Belgium": 1.0,
+          "Germany": 1.0,
+          "Croatia": 1.0,
+          "Uruguay": 0.9832291666666666,
+          "Colombia": 1.0,
+          "Switzerland": 1.0,
+          "Morocco": 0.9605416666666667,
+          "United States": 1.0,
+          "Mexico": 1.0,
+          "Japan": 0.9363374999999998,
+          "Senegal": 0.8861666666666667,
+          "Austria": 0.5086166666666667,
+          "Ecuador": 0.9516124999999999,
+          "Sweden": 0.3164125,
+          "Norway": 1.0,
+          "Turkey": 1.0,
+          "South Korea": 0.5323166666666667,
+          "Paraguay": 0.3076416666666668,
+          "Ivory Coast": 1.0,
+          "Australia": 0.6379583333333334,
+          "Iran": 0.15544999999999995,
+          "Scotland": 0.08280833333333333,
+          "Canada": 0.3556541666666666,
+          "Algeria": 0.22169999999999995,
+          "Egypt": 0.8092999999999997,
+          "Ghana": 0.09434166666666667,
+          "Czechia": 1.0,
+          "Saudi Arabia": 0.9666375,
+          "Tunisia": 0.0675875,
+          "Bosnia and Herzegovina": 0.5976208333333333,
+          "Qatar": 0.32185,
+          "Uzbekistan": 0.12476666666666665,
+          "South Africa": 0.22874166666666665,
+          "Cape Verde": 0.02206666666666667,
+          "Jordan": 1.0,
+          "Iraq": 0.05765833333333334,
+          "DR Congo": 0.2849416666666666,
+          "Panama": 0.5863833333333331,
+          "New Zealand": 0.7831583333333332,
+          "Haiti": 0.21616666666666665,
+          "Curacao": 0.0023333333333333335
+        },
+        "dynamic_total_net": 6.627353166488108,
+        "static_total_net": 6.621982595250936,
+        "overall_improvement_rate": 0.000811021647961431,
+        "decision_signature": {
+          "GA05": [
+            2,
+            2,
+            2,
+            0.18583183
+          ],
+          "GA06": [
+            3,
+            2,
+            3,
+            0.18583183
+          ],
+          "GB05": [
+            3,
+            3,
+            3,
+            0.18583183
+          ],
+          "GB06": [
+            3,
+            3,
+            3,
+            0.18583183
+          ],
+          "GC05": [
+            3,
+            2,
+            3,
+            0.18583183
+          ],
+          "GC06": [
+            3,
+            1,
+            2,
+            0.18583183
+          ],
+          "GD05": [
+            3,
+            3,
+            3,
+            0.18583183
+          ],
+          "GD06": [
+            3,
+            3,
+            3,
+            0.18583183
+          ],
+          "GE05": [
+            3,
+            3,
+            3,
+            0.18583183
+          ],
+          "GE06": [
+            3,
+            2,
+            3,
+            0.18583183
+          ],
+          "GF05": [
+            2,
+            2,
+            1,
+            0.18583183
+          ],
+          "GF06": [
+            3,
+            4,
+            3,
+            0.18583183
+          ],
+          "GG05": [
+            3,
+            2,
+            2,
+            0.18583183
+          ],
+          "GG06": [
+            3,
+            3,
+            3,
+            0.18583183
+          ],
+          "GH05": [
+            3,
+            4,
+            3,
+            0.18583183
+          ],
+          "GH06": [
+            3,
+            3,
+            3,
+            0.18583183
+          ],
+          "GI05": [
+            3,
+            3,
+            3,
+            0.18583183
+          ],
+          "GI06": [
+            2,
+            2,
+            2,
+            0.18583183
+          ],
+          "GJ05": [
+            2,
+            1,
+            1,
+            0.18583183
+          ],
+          "GJ06": [
+            3,
+            3,
+            3,
+            0.18583183
+          ],
+          "GK05": [
+            3,
+            3,
+            3,
+            0.18583183
+          ],
+          "GK06": [
+            3,
+            2,
+            3,
+            0.18583183
+          ],
+          "GL05": [
+            3,
+            1,
+            1,
+            0.18583183
+          ],
+          "GL06": [
+            3,
+            2,
+            3,
+            0.18583183
+          ]
+        }
+      },
+      {
+        "seed": 20260819,
+        "advancement_probs": {
+          "Argentina": 1.0,
+          "France": 1.0,
+          "Spain": 1.0,
+          "England": 1.0,
+          "Brazil": 1.0,
+          "Portugal": 1.0,
+          "Netherlands": 1.0,
+          "Belgium": 1.0,
+          "Germany": 1.0,
+          "Croatia": 1.0,
+          "Uruguay": 0.9854562500000001,
+          "Colombia": 1.0,
+          "Switzerland": 1.0,
+          "Morocco": 0.9643666666666666,
+          "United States": 1.0,
+          "Mexico": 1.0,
+          "Japan": 0.9367333333333332,
+          "Senegal": 0.885375,
+          "Austria": 0.5114291666666667,
+          "Ecuador": 0.951383333333333,
+          "Sweden": 0.3144166666666667,
+          "Norway": 1.0,
+          "Turkey": 1.0,
+          "South Korea": 0.5348416666666667,
+          "Paraguay": 0.31442916666666676,
+          "Ivory Coast": 1.0,
+          "Australia": 0.62915,
+          "Iran": 0.15604166666666666,
+          "Scotland": 0.07773333333333332,
+          "Canada": 0.3529625,
+          "Algeria": 0.22187499999999996,
+          "Egypt": 0.8083916666666666,
+          "Ghana": 0.09751666666666667,
+          "Czechia": 1.0,
+          "Saudi Arabia": 0.9635104166666668,
+          "Tunisia": 0.068775,
+          "Bosnia and Herzegovina": 0.6043166666666667,
+          "Qatar": 0.3145458333333333,
+          "Uzbekistan": 0.1256,
+          "South Africa": 0.22845833333333335,
+          "Cape Verde": 0.0244875,
+          "Jordan": 1.0,
+          "Iraq": 0.058066666666666676,
+          "DR Congo": 0.28973333333333334,
+          "Panama": 0.5833541666666665,
+          "New Zealand": 0.7857208333333334,
+          "Haiti": 0.2085916666666667,
+          "Curacao": 0.0027375
+        },
+        "dynamic_total_net": 6.572416730952092,
+        "static_total_net": 6.566839943779078,
+        "overall_improvement_rate": 0.0008492345208287548,
+        "decision_signature": {
+          "GA05": [
+            2,
+            2,
+            2,
+            0.18583183
+          ],
+          "GA06": [
+            3,
+            2,
+            3,
+            0.18583183
+          ],
+          "GB05": [
+            3,
+            3,
+            3,
+            0.18583183
+          ],
+          "GB06": [
+            3,
+            3,
+            3,
+            0.18583183
+          ],
+          "GC05": [
+            3,
+            2,
+            3,
+            0.18583183
+          ],
+          "GC06": [
+            3,
+            1,
+            2,
+            0.18583183
+          ],
+          "GD05": [
+            3,
+            3,
+            3,
+            0.18583183
+          ],
+          "GD06": [
+            3,
+            3,
+            3,
+            0.18583183
+          ],
+          "GE05": [
+            3,
+            3,
+            3,
+            0.18583183
+          ],
+          "GE06": [
+            3,
+            2,
+            3,
+            0.18583183
+          ],
+          "GF05": [
+            2,
+            2,
+            1,
+            0.18583183
+          ],
+          "GF06": [
+            3,
+            4,
+            3,
+            0.18583183
+          ],
+          "GG05": [
+            3,
+            2,
+            2,
+            0.18583183
+          ],
+          "GG06": [
+            3,
+            3,
+            3,
+            0.18583183
+          ],
+          "GH05": [
+            3,
+            4,
+            3,
+            0.18583183
+          ],
+          "GH06": [
+            3,
+            3,
+            3,
+            0.18583183
+          ],
+          "GI05": [
+            3,
+            3,
+            3,
+            0.18583183
+          ],
+          "GI06": [
+            2,
+            2,
+            2,
+            0.18583183
+          ],
+          "GJ05": [
+            2,
+            1,
+            1,
+            0.18583183
+          ],
+          "GJ06": [
+            3,
+            3,
+            3,
+            0.18583183
+          ],
+          "GK05": [
+            3,
+            3,
+            3,
+            0.18583183
+          ],
+          "GK06": [
+            3,
+            2,
+            3,
+            0.18583183
+          ],
+          "GL05": [
+            3,
+            1,
+            1,
+            0.18583183
+          ],
+          "GL06": [
+            3,
+            2,
+            3,
+            0.18583183
+          ]
+        }
+      },
+      {
+        "seed": 20260820,
+        "advancement_probs": {
+          "Argentina": 1.0,
+          "France": 1.0,
+          "Spain": 1.0,
+          "England": 1.0,
+          "Brazil": 1.0,
+          "Portugal": 1.0,
+          "Netherlands": 1.0,
+          "Belgium": 1.0,
+          "Germany": 1.0,
+          "Croatia": 1.0,
+          "Uruguay": 0.9843416666666666,
+          "Colombia": 1.0,
+          "Switzerland": 1.0,
+          "Morocco": 0.9631875,
+          "United States": 1.0,
+          "Mexico": 1.0,
+          "Japan": 0.9375708333333334,
+          "Senegal": 0.8854333333333332,
+          "Austria": 0.508125,
+          "Ecuador": 0.9537458333333334,
+          "Sweden": 0.3181,
+          "Norway": 1.0,
+          "Turkey": 1.0,
+          "South Korea": 0.5390666666666665,
+          "Paraguay": 0.3095666666666667,
+          "Ivory Coast": 1.0,
+          "Australia": 0.63585,
+          "Iran": 0.15629166666666666,
+          "Scotland": 0.0806,
+          "Canada": 0.35750000000000004,
+          "Algeria": 0.2249,
+          "Egypt": 0.8070166666666667,
+          "Ghana": 0.09317500000000001,
+          "Czechia": 1.0,
+          "Saudi Arabia": 0.9645333333333332,
+          "Tunisia": 0.067975,
+          "Bosnia and Herzegovina": 0.6074041666666667,
+          "Qatar": 0.31120416666666667,
+          "Uzbekistan": 0.12235,
+          "South Africa": 0.22523333333333334,
+          "Cape Verde": 0.023941666666666667,
+          "Jordan": 1.0,
+          "Iraq": 0.056333333333333326,
+          "DR Congo": 0.2832875,
+          "Panama": 0.5838166666666667,
+          "New Zealand": 0.7847916666666666,
+          "Haiti": 0.2123833333333334,
+          "Curacao": 0.002275
+        },
+        "dynamic_total_net": 6.607730712638164,
+        "static_total_net": 6.602294016848727,
+        "overall_improvement_rate": 0.0008234555709821628,
+        "decision_signature": {
+          "GA05": [
+            2,
+            2,
+            2,
+            0.18583183
+          ],
+          "GA06": [
+            3,
+            2,
+            3,
+            0.18583183
+          ],
+          "GB05": [
+            3,
+            3,
+            3,
+            0.18583183
+          ],
+          "GB06": [
+            3,
+            3,
+            3,
+            0.18583183
+          ],
+          "GC05": [
+            3,
+            2,
+            3,
+            0.18583183
+          ],
+          "GC06": [
+            3,
+            1,
+            2,
+            0.18583183
+          ],
+          "GD05": [
+            3,
+            3,
+            3,
+            0.18583183
+          ],
+          "GD06": [
+            3,
+            3,
+            3,
+            0.18583183
+          ],
+          "GE05": [
+            3,
+            3,
+            3,
+            0.18583183
+          ],
+          "GE06": [
+            3,
+            2,
+            3,
+            0.18583183
+          ],
+          "GF05": [
+            2,
+            2,
+            1,
+            0.18583183
+          ],
+          "GF06": [
+            3,
+            4,
+            3,
+            0.18583183
+          ],
+          "GG05": [
+            3,
+            2,
+            2,
+            0.18583183
+          ],
+          "GG06": [
+            3,
+            3,
+            3,
+            0.18583183
+          ],
+          "GH05": [
+            3,
+            4,
+            3,
+            0.18583183
+          ],
+          "GH06": [
+            3,
+            3,
+            3,
+            0.18583183
+          ],
+          "GI05": [
+            3,
+            3,
+            3,
+            0.18583183
+          ],
+          "GI06": [
+            2,
+            2,
+            2,
+            0.18583183
+          ],
+          "GJ05": [
+            2,
+            1,
+            1,
+            0.18583183
+          ],
+          "GJ06": [
+            3,
+            3,
+            3,
+            0.18583183
+          ],
+          "GK05": [
+            3,
+            3,
+            3,
+            0.18583183
+          ],
+          "GK06": [
+            3,
+            2,
+            3,
+            0.18583183
+          ],
+          "GL05": [
+            3,
+            1,
+            1,
+            0.18583183
+          ],
+          "GL06": [
+            3,
+            2,
+            3,
+            0.18583183
+          ]
+        }
+      }
+    ],
+    "advancement_probability_by_team": {
+      "Algeria": {
+        "mean": 0.2224838333333333,
+        "std": 0.0013649994403743292,
+        "min": 0.22169999999999995,
+        "max": 0.2249
+      },
+      "Argentina": {
+        "mean": 1.0,
+        "std": 0.0,
+        "min": 1.0,
+        "max": 1.0
+      },
+      "Australia": {
+        "mean": 0.6356216666666666,
+        "std": 0.004559348607226965,
+        "min": 0.62915,
+        "max": 0.641325
+      },
+      "Austria": {
+        "mean": 0.5101083333333334,
+        "std": 0.0018749837962262555,
+        "min": 0.508125,
+        "max": 0.5125708333333333
+      },
+      "Belgium": {
+        "mean": 1.0,
+        "std": 0.0,
+        "min": 1.0,
+        "max": 1.0
+      },
+      "Bosnia and Herzegovina": {
+        "mean": 0.6022400000000001,
+        "std": 0.0037717558724169207,
+        "min": 0.5976208333333333,
+        "max": 0.6074041666666667
+      },
+      "Brazil": {
+        "mean": 1.0,
+        "std": 0.0,
+        "min": 1.0,
+        "max": 1.0
+      },
+      "Canada": {
+        "mean": 0.35550916666666665,
+        "std": 0.002710571831325937,
+        "min": 0.3526458333333333,
+        "max": 0.35878333333333323
+      },
+      "Cape Verde": {
+        "mean": 0.022699999999999998,
+        "std": 0.001435152068016951,
+        "min": 0.0211625,
+        "max": 0.0244875
+      },
+      "Colombia": {
+        "mean": 1.0,
+        "std": 0.0,
+        "min": 1.0,
+        "max": 1.0
+      },
+      "Croatia": {
+        "mean": 1.0,
+        "std": 0.0,
+        "min": 1.0,
+        "max": 1.0
+      },
+      "Curacao": {
+        "mean": 0.0025108333333333337,
+        "std": 0.00044669503952174497,
+        "min": 0.0020375,
+        "max": 0.0031708333333333332
+      },
+      "Czechia": {
+        "mean": 1.0,
+        "std": 0.0,
+        "min": 1.0,
+        "max": 1.0
+      },
+      "DR Congo": {
+        "mean": 0.2875771666666667,
+        "std": 0.003328066547478362,
+        "min": 0.2832875,
+        "max": 0.29117333333333334
+      },
+      "Ecuador": {
+        "mean": 0.9528205,
+        "std": 0.0012654059789912327,
+        "min": 0.951383333333333,
+        "max": 0.9542024999999996
+      },
+      "Egypt": {
+        "mean": 0.8072699999999999,
+        "std": 0.0015667176410145887,
+        "min": 0.805525,
+        "max": 0.8092999999999997
+      },
+      "England": {
+        "mean": 1.0,
+        "std": 0.0,
+        "min": 1.0,
+        "max": 1.0
+      },
+      "France": {
+        "mean": 1.0,
+        "std": 0.0,
+        "min": 1.0,
+        "max": 1.0
+      },
+      "Germany": {
+        "mean": 1.0,
+        "std": 0.0,
+        "min": 1.0,
+        "max": 1.0
+      },
+      "Ghana": {
+        "mean": 0.0934855,
+        "std": 0.0027719551363212503,
+        "min": 0.08993583333333334,
+        "max": 0.09751666666666667
+      },
+      "Haiti": {
+        "mean": 0.2129191666666667,
+        "std": 0.0027788005755881046,
+        "min": 0.2085916666666667,
+        "max": 0.21616666666666665
+      },
+      "Iran": {
+        "mean": 0.15596166666666664,
+        "std": 0.0007960972511781095,
+        "min": 0.154975,
+        "max": 0.15705
+      },
+      "Iraq": {
+        "mean": 0.055990000000000005,
+        "std": 0.0019733766183315815,
+        "min": 0.05389166666666667,
+        "max": 0.058066666666666676
+      },
+      "Ivory Coast": {
+        "mean": 1.0,
+        "std": 0.0,
+        "min": 1.0,
+        "max": 1.0
+      },
+      "Japan": {
+        "mean": 0.9358458333333333,
+        "std": 0.00155597805522228,
+        "min": 0.9336375,
+        "max": 0.9375708333333334
+      },
+      "Jordan": {
+        "mean": 1.0,
+        "std": 0.0,
+        "min": 1.0,
+        "max": 1.0
+      },
+      "Mexico": {
+        "mean": 1.0,
+        "std": 0.0,
+        "min": 1.0,
+        "max": 1.0
+      },
+      "Morocco": {
+        "mean": 0.9620658333333333,
+        "std": 0.0017744311490665526,
+        "min": 0.9601375,
+        "max": 0.9643666666666666
+      },
+      "Netherlands": {
+        "mean": 1.0,
+        "std": 0.0,
+        "min": 1.0,
+        "max": 1.0
+      },
+      "New Zealand": {
+        "mean": 0.7844116666666666,
+        "std": 0.0018156137047841913,
+        "min": 0.7819958333333333,
+        "max": 0.7863916666666667
+      },
+      "Norway": {
+        "mean": 1.0,
+        "std": 0.0,
+        "min": 1.0,
+        "max": 1.0
+      },
+      "Panama": {
+        "mean": 0.5834066666666665,
+        "std": 0.0033799431393146304,
+        "min": 0.5777958333333332,
+        "max": 0.5863833333333331
+      },
+      "Paraguay": {
+        "mean": 0.3096233333333334,
+        "std": 0.003228250676536046,
+        "min": 0.3059125000000001,
+        "max": 0.31442916666666676
+      },
+      "Portugal": {
+        "mean": 1.0,
+        "std": 0.0,
+        "min": 1.0,
+        "max": 1.0
+      },
+      "Qatar": {
+        "mean": 0.31715916666666666,
+        "std": 0.004382170116569595,
+        "min": 0.31120416666666667,
+        "max": 0.32185
+      },
+      "Saudi Arabia": {
+        "mean": 0.9655245833333334,
+        "std": 0.0014918953502545019,
+        "min": 0.9635104166666668,
+        "max": 0.9671166666666666
+      },
+      "Scotland": {
+        "mean": 0.07910916666666666,
+        "std": 0.003074226980523364,
+        "min": 0.07467916666666666,
+        "max": 0.08280833333333333
+      },
+      "Senegal": {
+        "mean": 0.8866516666666667,
+        "std": 0.0014425262370038987,
+        "min": 0.885375,
+        "max": 0.8886583333333334
+      },
+      "South Africa": {
+        "mean": 0.2267116666666667,
+        "std": 0.001819250837875604,
+        "min": 0.224775,
+        "max": 0.22874166666666665
+      },
+      "South Korea": {
+        "mean": 0.5376496666666666,
+        "std": 0.003930439507513322,
+        "min": 0.5323166666666667,
+        "max": 0.5416649999999998
+      },
+      "Spain": {
+        "mean": 1.0,
+        "std": 0.0,
+        "min": 1.0,
+        "max": 1.0
+      },
+      "Sweden": {
+        "mean": 0.3176116666666667,
+        "std": 0.003344654472687249,
+        "min": 0.3144166666666667,
+        "max": 0.3231166666666667
+      },
+      "Switzerland": {
+        "mean": 1.0,
+        "std": 0.0,
+        "min": 1.0,
+        "max": 1.0
+      },
+      "Tunisia": {
+        "mean": 0.06799999999999999,
+        "std": 0.0009902256687240566,
+        "min": 0.0665875,
+        "max": 0.069075
+      },
+      "Turkey": {
+        "mean": 1.0,
+        "std": 0.0,
+        "min": 1.0,
+        "max": 1.0
+      },
+      "United States": {
+        "mean": 1.0,
+        "std": 0.0,
+        "min": 1.0,
+        "max": 1.0
+      },
+      "Uruguay": {
+        "mean": 0.9844095833333333,
+        "std": 0.000946479680036665,
+        "min": 0.9832291666666666,
+        "max": 0.9854562500000001
+      },
+      "Uzbekistan": {
+        "mean": 0.12462166666666666,
+        "std": 0.0016937138680032885,
+        "min": 0.12235,
+        "max": 0.126725
+      }
+    },
+    "dynamic_decision_match_fraction_vs_primary": [
+      1.0,
+      0.9583333333333334,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "dynamic_total_net_range": [
+      6.572416730952092,
+      6.644567344879467
+    ],
+    "static_total_net_range": [
+      6.566839943779078,
+      6.639228974186593
+    ],
+    "overall_improvement_rate_range": [
+      0.0008040648565713652,
+      0.0008492345208287548
+    ]
+  },
+  "problem4_sources": {
+    "openfootball_commit": "516d3825c3bd23fdc298c4014e84bde78f2d4965",
+    "openfootball_file": "https://github.com/openfootball/worldcup.json/blob/516d3825c3bd23fdc298c4014e84bde78f2d4965/2022/worldcup.json",
+    "fifa_verification": "https://www.fifa.com/tournaments/mens/worldcup/qatar2022/match-center",
+    "fifa_stadium_capacities": "https://legal.fifa.com/tournament-organisation/world-cup-2022-in-numbers/fifa-world-cup-qatar-2022-at-a-glance"
+  },
+  "problem4_entity_mapping_file": "/mnt/d/projects/mathematical modeling/策联杯 c 题/C题/material/user_data/entity_mappings.json",
+  "problem4_mapping_method": "same-round nearest Elo mean/absolute-difference; venue by capacity; slot by circular UTC hour",
+  "problem4_first_neighbour_mapping": [
+    {
+      "actual_match_id": "WC2022_01",
+      "mapped_match_id": "GF02",
+      "mapped_venue_id": "V14",
+      "mapped_slot_id": "S131",
+      "match_mapping_distance": 0.365,
+      "venue_capacity_difference": 105.0,
+      "slot_hour_difference": 0.0
+    },
+    {
+      "actual_match_id": "WC2022_03",
+      "mapped_match_id": "GJ01",
+      "mapped_venue_id": "V15",
+      "mapped_slot_id": "S131",
+      "match_mapping_distance": 0.1225,
+      "venue_capacity_difference": 1100.0,
+      "slot_hour_difference": 0.0
+    },
+    {
+      "actual_match_id": "WC2022_18",
+      "mapped_match_id": "GD04",
+      "mapped_venue_id": "V09",
+      "mapped_slot_id": "S131",
+      "match_mapping_distance": 0.4325,
+      "venue_capacity_difference": 20367.0,
+      "slot_hour_difference": 3.0
+    },
+    {
+      "actual_match_id": "WC2022_19",
+      "mapped_match_id": "GJ03",
+      "mapped_venue_id": "V15",
+      "mapped_slot_id": "S131",
+      "match_mapping_distance": 0.24000000000000002,
+      "venue_capacity_difference": 357.0,
+      "slot_hour_difference": 0.0
+    },
+    {
+      "actual_match_id": "WC2022_33",
+      "mapped_match_id": "GJ06",
+      "mapped_venue_id": "V15",
+      "mapped_slot_id": "S131",
+      "match_mapping_distance": 0.2225,
+      "venue_capacity_difference": 357.0,
+      "slot_hour_difference": 1.0
+    },
+    {
+      "actual_match_id": "WC2022_34",
+      "mapped_match_id": "GC05",
+      "mapped_venue_id": "V14",
+      "mapped_slot_id": "S131",
+      "match_mapping_distance": 0.275,
+      "venue_capacity_difference": 105.0,
+      "slot_hour_difference": 1.0
+    },
+    {
+      "actual_match_id": "WC2022_02",
+      "mapped_match_id": "GF01",
+      "mapped_venue_id": "V15",
+      "mapped_slot_id": "S131",
+      "match_mapping_distance": 0.2475,
+      "venue_capacity_difference": 357.0,
+      "slot_hour_difference": 3.0
+    },
+    {
+      "actual_match_id": "WC2022_04",
+      "mapped_match_id": "GD01",
+      "mapped_venue_id": "V15",
+      "mapped_slot_id": "S202",
+      "match_mapping_distance": 0.4275,
+      "venue_capacity_difference": 468.0,
+      "slot_hour_difference": 0.0
+    },
+    {
+      "actual_match_id": "WC2022_17",
+      "mapped_match_id": "GA03",
+      "mapped_venue_id": "V15",
+      "mapped_slot_id": "S131",
+      "match_mapping_distance": 0.1525,
+      "venue_capacity_difference": 468.0,
+      "slot_hour_difference": 6.0
+    },
+    {
+      "actual_match_id": "WC2022_20",
+      "mapped_match_id": "GF03",
+      "mapped_venue_id": "V14",
+      "mapped_slot_id": "S202",
+      "match_mapping_distance": 0.22249999999999998,
+      "venue_capacity_difference": 105.0,
+      "slot_hour_difference": 0.0
+    },
+    {
+      "actual_match_id": "WC2022_35",
+      "mapped_match_id": "GE05",
+      "mapped_venue_id": "V15",
+      "mapped_slot_id": "S202",
+      "match_mapping_distance": 0.2425,
+      "venue_capacity_difference": 468.0,
+      "slot_hour_difference": 0.0
+    },
+    {
+      "actual_match_id": "WC2022_36",
+      "mapped_match_id": "GD05",
+      "mapped_venue_id": "V15",
+      "mapped_slot_id": "S202",
+      "match_mapping_distance": 0.29000000000000004,
+      "venue_capacity_difference": 1100.0,
+      "slot_hour_difference": 0.0
+    },
+    {
+      "actual_match_id": "WC2022_05",
+      "mapped_match_id": "GH01",
+      "mapped_venue_id": "V08",
+      "mapped_slot_id": "S131",
+      "match_mapping_distance": 0.5625,
+      "venue_capacity_difference": 1443.0,
+      "slot_hour_difference": 6.0
+    },
+    {
+      "actual_match_id": "WC2022_07",
+      "mapped_match_id": "GD01",
+      "mapped_venue_id": "V15",
+      "mapped_slot_id": "S131",
+      "match_mapping_distance": 0.38749999999999996,
+      "venue_capacity_difference": 1411.0,
+      "slot_hour_difference": 0.0
+    },
+    {
+      "actual_match_id": "WC2022_22",
+      "mapped_match_id": "GD03",
+      "mapped_venue_id": "V09",
+      "mapped_slot_id": "S131",
+      "match_mapping_distance": 0.4,
+      "venue_capacity_difference": 20100.0,
+      "slot_hour_difference": 3.0
+    },
+    {
+      "actual_match_id": "WC2022_24",
+      "mapped_match_id": "GL03",
+      "mapped_venue_id": "V08",
+      "mapped_slot_id": "S202",
+      "match_mapping_distance": 0.885,
+      "venue_capacity_difference": 1443.0,
+      "slot_hour_difference": 0.0
+    },
+    {
+      "actual_match_id": "WC2022_39",
+      "mapped_match_id": "GC05",
+      "mapped_venue_id": "V15",
+      "mapped_slot_id": "S202",
+      "match_mapping_distance": 0.7025,
+      "venue_capacity_difference": 1411.0,
+      "slot_hour_difference": 0.0
+    },
+    {
+      "actual_match_id": "WC2022_40",
+      "mapped_match_id": "GJ06",
+      "mapped_venue_id": "V08",
+      "mapped_slot_id": "S202",
+      "match_mapping_distance": 0.19499999999999998,
+      "venue_capacity_difference": 1443.0,
+      "slot_hour_difference": 0.0
+    },
+    {
+      "actual_match_id": "WC2022_06",
+      "mapped_match_id": "GG01",
+      "mapped_venue_id": "V15",
+      "mapped_slot_id": "S131",
+      "match_mapping_distance": 0.18,
+      "venue_capacity_difference": 833.0,
+      "slot_hour_difference": 3.0
+    },
+    {
+      "actual_match_id": "WC2022_08",
+      "mapped_match_id": "GG01",
+      "mapped_venue_id": "V15",
+      "mapped_slot_id": "S202",
+      "match_mapping_distance": 0.355,
+      "venue_capacity_difference": 1175.0,
+      "slot_hour_difference": 0.0
+    },
+    {
+      "actual_match_id": "WC2022_21",
+      "mapped_match_id": "GD04",
+      "mapped_venue_id": "V09",
+      "mapped_slot_id": "S131",
+      "match_mapping_distance": 0.46,
+      "venue_capacity_difference": 20442.0,
+      "slot_hour_difference": 6.0
+    },
+    {
+      "actual_match_id": "WC2022_23",
+      "mapped_match_id": "GJ03",
+      "mapped_venue_id": "V15",
+      "mapped_slot_id": "S131",
+      "match_mapping_distance": 0.885,
+      "venue_capacity_difference": 1411.0,
+      "slot_hour_difference": 0.0
+    },
+    {
+      "actual_match_id": "WC2022_37",
+      "mapped_match_id": "GI05",
+      "mapped_venue_id": "V15",
+      "mapped_slot_id": "S131",
+      "match_mapping_distance": 0.265,
+      "venue_capacity_difference": 1175.0,
+      "slot_hour_difference": 1.0
+    },
+    {
+      "actual_match_id": "WC2022_38",
+      "mapped_match_id": "GC05",
+      "mapped_venue_id": "V15",
+      "mapped_slot_id": "S131",
+      "match_mapping_distance": 0.10250000000000001,
+      "venue_capacity_difference": 833.0,
+      "slot_hour_difference": 1.0
+    },
+    {
+      "actual_match_id": "WC2022_10",
+      "mapped_match_id": "GI01",
+      "mapped_venue_id": "V15",
+      "mapped_slot_id": "S131",
+      "match_mapping_distance": 0.35750000000000004,
+      "venue_capacity_difference": 357.0,
+      "slot_hour_difference": 3.0
+    },
+    {
+      "actual_match_id": "WC2022_11",
+      "mapped_match_id": "GJ01",
+      "mapped_venue_id": "V15",
+      "mapped_slot_id": "S131",
+      "match_mapping_distance": 0.47,
+      "venue_capacity_difference": 1100.0,
+      "slot_hour_difference": 0.0
+    },
+    {
+      "actual_match_id": "WC2022_25",
+      "mapped_match_id": "GA03",
+      "mapped_venue_id": "V15",
+      "mapped_slot_id": "S131",
+      "match_mapping_distance": 0.2,
+      "venue_capacity_difference": 468.0,
+      "slot_hour_difference": 6.0
+    },
+    {
+      "actual_match_id": "WC2022_28",
+      "mapped_match_id": "GJ03",
+      "mapped_venue_id": "V14",
+      "mapped_slot_id": "S202",
+      "match_mapping_distance": 0.7025,
+      "venue_capacity_difference": 105.0,
+      "slot_hour_difference": 0.0
+    },
+    {
+      "actual_match_id": "WC2022_43",
+      "mapped_match_id": "GI05",
+      "mapped_venue_id": "V15",
+      "mapped_slot_id": "S202",
+      "match_mapping_distance": 0.2625,
+      "venue_capacity_difference": 357.0,
+      "slot_hour_difference": 0.0
+    },
+    {
+      "actual_match_id": "WC2022_44",
+      "mapped_match_id": "GI05",
+      "mapped_venue_id": "V14",
+      "mapped_slot_id": "S202",
+      "match_mapping_distance": 0.41000000000000003,
+      "venue_capacity_difference": 105.0,
+      "slot_hour_difference": 0.0
+    },
+    {
+      "actual_match_id": "WC2022_09",
+      "mapped_match_id": "GI01",
+      "mapped_venue_id": "V14",
+      "mapped_slot_id": "S131",
+      "match_mapping_distance": 0.53,
+      "venue_capacity_difference": 105.0,
+      "slot_hour_difference": 6.0
+    },
+    {
+      "actual_match_id": "WC2022_12",
+      "mapped_match_id": "GI01",
+      "mapped_venue_id": "V15",
+      "mapped_slot_id": "S202",
+      "match_mapping_distance": 0.49749999999999994,
+      "venue_capacity_difference": 468.0,
+      "slot_hour_difference": 0.0
+    },
+    {
+      "actual_match_id": "WC2022_26",
+      "mapped_match_id": "GE03",
+      "mapped_venue_id": "V15",
+      "mapped_slot_id": "S131",
+      "match_mapping_distance": 0.4375,
+      "venue_capacity_difference": 1100.0,
+      "slot_hour_difference": 3.0
+    },
+    {
+      "actual_match_id": "WC2022_27",
+      "mapped_match_id": "GF03",
+      "mapped_venue_id": "V15",
+      "mapped_slot_id": "S131",
+      "match_mapping_distance": 0.125,
+      "venue_capacity_difference": 357.0,
+      "slot_hour_difference": 0.0
+    },
+    {
+      "actual_match_id": "WC2022_41",
+      "mapped_match_id": "GH05",
+      "mapped_venue_id": "V09",
+      "mapped_slot_id": "S131",
+      "match_mapping_distance": 0.0625,
+      "venue_capacity_difference": 19735.0,
+      "slot_hour_difference": 1.0
+    },
+    {
+      "actual_match_id": "WC2022_42",
+      "mapped_match_id": "GD06",
+      "mapped_venue_id": "V15",
+      "mapped_slot_id": "S131",
+      "match_mapping_distance": 0.355,
+      "venue_capacity_difference": 1100.0,
+      "slot_hour_difference": 1.0
+    },
+    {
+      "actual_match_id": "WC2022_13",
+      "mapped_match_id": "GH02",
+      "mapped_venue_id": "V15",
+      "mapped_slot_id": "S131",
+      "match_mapping_distance": 0.065,
+      "venue_capacity_difference": 1175.0,
+      "slot_hour_difference": 6.0
+    },
+    {
+      "actual_match_id": "WC2022_16",
+      "mapped_match_id": "GI01",
+      "mapped_venue_id": "V08",
+      "mapped_slot_id": "S202",
+      "match_mapping_distance": 0.9750000000000001,
+      "venue_capacity_difference": 1443.0,
+      "slot_hour_difference": 0.0
+    },
+    {
+      "actual_match_id": "WC2022_29",
+      "mapped_match_id": "GF04",
+      "mapped_venue_id": "V15",
+      "mapped_slot_id": "S131",
+      "match_mapping_distance": 0.26749999999999996,
+      "venue_capacity_difference": 1175.0,
+      "slot_hour_difference": 6.0
+    },
+    {
+      "actual_match_id": "WC2022_31",
+      "mapped_match_id": "GJ03",
+      "mapped_venue_id": "V15",
+      "mapped_slot_id": "S131",
+      "match_mapping_distance": 0.9400000000000001,
+      "venue_capacity_difference": 1411.0,
+      "slot_hour_difference": 0.0
+    },
+    {
+      "actual_match_id": "WC2022_47",
+      "mapped_match_id": "GK05",
+      "mapped_venue_id": "V15",
+      "mapped_slot_id": "S202",
+      "match_mapping_distance": 0.215,
+      "venue_capacity_difference": 1411.0,
+      "slot_hour_difference": 0.0
+    },
+    {
+      "actual_match_id": "WC2022_48",
+      "mapped_match_id": "GJ05",
+      "mapped_venue_id": "V08",
+      "mapped_slot_id": "S202",
+      "match_mapping_distance": 0.93,
+      "venue_capacity_difference": 1443.0,
+      "slot_hour_difference": 0.0
+    },
+    {
+      "actual_match_id": "WC2022_14",
+      "mapped_match_id": "GI01",
+      "mapped_venue_id": "V15",
+      "mapped_slot_id": "S131",
+      "match_mapping_distance": 0.5075000000000001,
+      "venue_capacity_difference": 833.0,
+      "slot_hour_difference": 3.0
+    },
+    {
+      "actual_match_id": "WC2022_15",
+      "mapped_match_id": "GH01",
+      "mapped_venue_id": "V15",
+      "mapped_slot_id": "S131",
+      "match_mapping_distance": 0.2525,
+      "venue_capacity_difference": 1411.0,
+      "slot_hour_difference": 0.0
+    },
+    {
+      "actual_match_id": "WC2022_30",
+      "mapped_match_id": "GF04",
+      "mapped_venue_id": "V15",
+      "mapped_slot_id": "S131",
+      "match_mapping_distance": 0.395,
+      "venue_capacity_difference": 833.0,
+      "slot_hour_difference": 3.0
+    },
+    {
+      "actual_match_id": "WC2022_32",
+      "mapped_match_id": "GJ03",
+      "mapped_venue_id": "V08",
+      "mapped_slot_id": "S202",
+      "match_mapping_distance": 0.6275,
+      "venue_capacity_difference": 1443.0,
+      "slot_hour_difference": 0.0
+    },
+    {
+      "actual_match_id": "WC2022_45",
+      "mapped_match_id": "GC06",
+      "mapped_venue_id": "V15",
+      "mapped_slot_id": "S131",
+      "match_mapping_distance": 0.31,
+      "venue_capacity_difference": 1175.0,
+      "slot_hour_difference": 1.0
+    },
+    {
+      "actual_match_id": "WC2022_46",
+      "mapped_match_id": "GI05",
+      "mapped_venue_id": "V08",
+      "mapped_slot_id": "S131",
+      "match_mapping_distance": 0.27749999999999997,
+      "venue_capacity_difference": 1443.0,
+      "slot_hour_difference": 1.0
+    }
+  ],
+  "problem4_second_neighbour_mapping": [
+    {
+      "actual_match_id": "WC2022_01",
+      "mapped_match_id": "GA02",
+      "mapped_venue_id": "V13",
+      "mapped_slot_id": "S021",
+      "match_mapping_distance": 0.415,
+      "venue_capacity_difference": 395.0,
+      "slot_hour_difference": 0.0
+    },
+    {
+      "actual_match_id": "WC2022_03",
+      "mapped_match_id": "GG01",
+      "mapped_venue_id": "V04",
+      "mapped_slot_id": "S021",
+      "match_mapping_distance": 0.705,
+      "venue_capacity_difference": 3671.0,
+      "slot_hour_difference": 0.0
+    },
+    {
+      "actual_match_id": "WC2022_18",
+      "mapped_match_id": "GA04",
+      "mapped_venue_id": "V04",
+      "mapped_slot_id": "S021",
+      "match_mapping_distance": 0.45499999999999996,
+      "venue_capacity_difference": 3671.0,
+      "slot_hour_difference": 3.0
+    },
+    {
+      "actual_match_id": "WC2022_19",
+      "mapped_match_id": "GE03",
+      "mapped_venue_id": "V04",
+      "mapped_slot_id": "S021",
+      "match_mapping_distance": 0.5475,
+      "venue_capacity_difference": 2214.0,
+      "slot_hour_difference": 0.0
+    },
+    {
+      "actual_match_id": "WC2022_33",
+      "mapped_match_id": "GB05",
+      "mapped_venue_id": "V04",
+      "mapped_slot_id": "S021",
+      "match_mapping_distance": 0.255,
+      "venue_capacity_difference": 2214.0,
+      "slot_hour_difference": 1.0
+    },
+    {
+      "actual_match_id": "WC2022_34",
+      "mapped_match_id": "GF05",
+      "mapped_venue_id": "V13",
+      "mapped_slot_id": "S021",
+      "match_mapping_distance": 0.5475,
+      "venue_capacity_difference": 395.0,
+      "slot_hour_difference": 1.0
+    },
+    {
+      "actual_match_id": "WC2022_02",
+      "mapped_match_id": "GD01",
+      "mapped_venue_id": "V04",
+      "mapped_slot_id": "S021",
+      "match_mapping_distance": 0.42,
+      "venue_capacity_difference": 2214.0,
+      "slot_hour_difference": 3.0
+    },
+    {
+      "actual_match_id": "WC2022_04",
+      "mapped_match_id": "GE02",
+      "mapped_venue_id": "V04",
+      "mapped_slot_id": "S042",
+      "match_mapping_distance": 0.46499999999999997,
+      "venue_capacity_difference": 3039.0,
+      "slot_hour_difference": 0.0
+    },
+    {
+      "actual_match_id": "WC2022_17",
+      "mapped_match_id": "GD04",
+      "mapped_venue_id": "V07",
+      "mapped_slot_id": "S021",
+      "match_mapping_distance": 0.27749999999999997,
+      "venue_capacity_difference": 25208.0,
+      "slot_hour_difference": 6.0
+    },
+    {
+      "actual_match_id": "WC2022_20",
+      "mapped_match_id": "GD03",
+      "mapped_venue_id": "V09",
+      "mapped_slot_id": "S042",
+      "match_mapping_distance": 0.5075,
+      "venue_capacity_difference": 4128.0,
+      "slot_hour_difference": 0.0
+    },
+    {
+      "actual_match_id": "WC2022_35",
+      "mapped_match_id": "GF06",
+      "mapped_venue_id": "V07",
+      "mapped_slot_id": "S042",
+      "match_mapping_distance": 0.4575,
+      "venue_capacity_difference": 25208.0,
+      "slot_hour_difference": 0.0
+    },
+    {
+      "actual_match_id": "WC2022_36",
+      "mapped_match_id": "GF06",
+      "mapped_venue_id": "V07",
+      "mapped_slot_id": "S042",
+      "match_mapping_distance": 0.335,
+      "venue_capacity_difference": 25840.0,
+      "slot_hour_difference": 0.0
+    },
+    {
+      "actual_match_id": "WC2022_05",
+      "mapped_match_id": "GE01",
+      "mapped_venue_id": "V03",
+      "mapped_slot_id": "S021",
+      "match_mapping_distance": 0.9125,
+      "venue_capacity_difference": 5034.0,
+      "slot_hour_difference": 6.0
+    },
+    {
+      "actual_match_id": "WC2022_07",
+      "mapped_match_id": "GE02",
+      "mapped_venue_id": "V04",
+      "mapped_slot_id": "S021",
+      "match_mapping_distance": 0.55,
+      "venue_capacity_difference": 3982.0,
+      "slot_hour_difference": 0.0
+    },
+    {
+      "actual_match_id": "WC2022_22",
+      "mapped_match_id": "GF04",
+      "mapped_venue_id": "V04",
+      "mapped_slot_id": "S021",
+      "match_mapping_distance": 0.4325,
+      "venue_capacity_difference": 3404.0,
+      "slot_hour_difference": 3.0
+    },
+    {
+      "actual_match_id": "WC2022_24",
+      "mapped_match_id": "GJ03",
+      "mapped_venue_id": "V03",
+      "mapped_slot_id": "S042",
+      "match_mapping_distance": 1.0,
+      "venue_capacity_difference": 5034.0,
+      "slot_hour_difference": 0.0
+    },
+    {
+      "actual_match_id": "WC2022_39",
+      "mapped_match_id": "GI05",
+      "mapped_venue_id": "V04",
+      "mapped_slot_id": "S042",
+      "match_mapping_distance": 0.785,
+      "venue_capacity_difference": 3982.0,
+      "slot_hour_difference": 0.0
+    },
+    {
+      "actual_match_id": "WC2022_40",
+      "mapped_match_id": "GA06",
+      "mapped_venue_id": "V03",
+      "mapped_slot_id": "S042",
+      "match_mapping_distance": 0.2575,
+      "venue_capacity_difference": 5034.0,
+      "slot_hour_difference": 0.0
+    },
+    {
+      "actual_match_id": "WC2022_06",
+      "mapped_match_id": "GK02",
+      "mapped_venue_id": "V04",
+      "mapped_slot_id": "S021",
+      "match_mapping_distance": 0.345,
+      "venue_capacity_difference": 3404.0,
+      "slot_hour_difference": 3.0
+    },
+    {
+      "actual_match_id": "WC2022_08",
+      "mapped_match_id": "GJ01",
+      "mapped_venue_id": "V04",
+      "mapped_slot_id": "S042",
+      "match_mapping_distance": 0.3825,
+      "venue_capacity_difference": 3746.0,
+      "slot_hour_difference": 0.0
+    },
+    {
+      "actual_match_id": "WC2022_21",
+      "mapped_match_id": "GB03",
+      "mapped_venue_id": "V04",
+      "mapped_slot_id": "S021",
+      "match_mapping_distance": 0.49,
+      "venue_capacity_difference": 3746.0,
+      "slot_hour_difference": 6.0
+    },
+    {
+      "actual_match_id": "WC2022_23",
+      "mapped_match_id": "GA03",
+      "mapped_venue_id": "V04",
+      "mapped_slot_id": "S021",
+      "match_mapping_distance": 0.985,
+      "venue_capacity_difference": 3982.0,
+      "slot_hour_difference": 0.0
+    },
+    {
+      "actual_match_id": "WC2022_37",
+      "mapped_match_id": "GC05",
+      "mapped_venue_id": "V04",
+      "mapped_slot_id": "S021",
+      "match_mapping_distance": 0.3475,
+      "venue_capacity_difference": 3746.0,
+      "slot_hour_difference": 1.0
+    },
+    {
+      "actual_match_id": "WC2022_38",
+      "mapped_match_id": "GF05",
+      "mapped_venue_id": "V04",
+      "mapped_slot_id": "S021",
+      "match_mapping_distance": 0.38,
+      "venue_capacity_difference": 3404.0,
+      "slot_hour_difference": 1.0
+    },
+    {
+      "actual_match_id": "WC2022_10",
+      "mapped_match_id": "GF01",
+      "mapped_venue_id": "V04",
+      "mapped_slot_id": "S021",
+      "match_mapping_distance": 0.49,
+      "venue_capacity_difference": 2214.0,
+      "slot_hour_difference": 3.0
+    },
+    {
+      "actual_match_id": "WC2022_11",
+      "mapped_match_id": "GG01",
+      "mapped_venue_id": "V04",
+      "mapped_slot_id": "S021",
+      "match_mapping_distance": 0.5925,
+      "venue_capacity_difference": 3671.0,
+      "slot_hour_difference": 0.0
+    },
+    {
+      "actual_match_id": "WC2022_25",
+      "mapped_match_id": "GI04",
+      "mapped_venue_id": "V04",
+      "mapped_slot_id": "S021",
+      "match_mapping_distance": 0.2075,
+      "venue_capacity_difference": 3039.0,
+      "slot_hour_difference": 6.0
+    },
+    {
+      "actual_match_id": "WC2022_28",
+      "mapped_match_id": "GF03",
+      "mapped_venue_id": "V13",
+      "mapped_slot_id": "S042",
+      "match_mapping_distance": 1.03,
+      "venue_capacity_difference": 395.0,
+      "slot_hour_difference": 0.0
+    },
+    {
+      "actual_match_id": "WC2022_43",
+      "mapped_match_id": "GC05",
+      "mapped_venue_id": "V04",
+      "mapped_slot_id": "S042",
+      "match_mapping_distance": 0.63,
+      "venue_capacity_difference": 2214.0,
+      "slot_hour_difference": 0.0
+    },
+    {
+      "actual_match_id": "WC2022_44",
+      "mapped_match_id": "GC05",
+      "mapped_venue_id": "V13",
+      "mapped_slot_id": "S042",
+      "match_mapping_distance": 0.49250000000000005,
+      "venue_capacity_difference": 395.0,
+      "slot_hour_difference": 0.0
+    },
+    {
+      "actual_match_id": "WC2022_09",
+      "mapped_match_id": "GD01",
+      "mapped_venue_id": "V13",
+      "mapped_slot_id": "S021",
+      "match_mapping_distance": 0.595,
+      "venue_capacity_difference": 395.0,
+      "slot_hour_difference": 6.0
+    },
+    {
+      "actual_match_id": "WC2022_12",
+      "mapped_match_id": "GG01",
+      "mapped_venue_id": "V04",
+      "mapped_slot_id": "S042",
+      "match_mapping_distance": 0.51,
+      "venue_capacity_difference": 3039.0,
+      "slot_hour_difference": 0.0
+    },
+    {
+      "actual_match_id": "WC2022_26",
+      "mapped_match_id": "GG03",
+      "mapped_venue_id": "V04",
+      "mapped_slot_id": "S021",
+      "match_mapping_distance": 0.54,
+      "venue_capacity_difference": 3671.0,
+      "slot_hour_difference": 3.0
+    },
+    {
+      "actual_match_id": "WC2022_27",
+      "mapped_match_id": "GE03",
+      "mapped_venue_id": "V04",
+      "mapped_slot_id": "S021",
+      "match_mapping_distance": 0.365,
+      "venue_capacity_difference": 2214.0,
+      "slot_hour_difference": 0.0
+    },
+    {
+      "actual_match_id": "WC2022_41",
+      "mapped_match_id": "GK05",
+      "mapped_venue_id": "V04",
+      "mapped_slot_id": "S021",
+      "match_mapping_distance": 0.43000000000000005,
+      "venue_capacity_difference": 3039.0,
+      "slot_hour_difference": 1.0
+    },
+    {
+      "actual_match_id": "WC2022_42",
+      "mapped_match_id": "GG06",
+      "mapped_venue_id": "V04",
+      "mapped_slot_id": "S021",
+      "match_mapping_distance": 0.51,
+      "venue_capacity_difference": 3671.0,
+      "slot_hour_difference": 1.0
+    },
+    {
+      "actual_match_id": "WC2022_13",
+      "mapped_match_id": "GK02",
+      "mapped_venue_id": "V04",
+      "mapped_slot_id": "S021",
+      "match_mapping_distance": 0.135,
+      "venue_capacity_difference": 3746.0,
+      "slot_hour_difference": 6.0
+    },
+    {
+      "actual_match_id": "WC2022_16",
+      "mapped_match_id": "GG01",
+      "mapped_venue_id": "V03",
+      "mapped_slot_id": "S042",
+      "match_mapping_distance": 1.1524999999999999,
+      "venue_capacity_difference": 5034.0,
+      "slot_hour_difference": 0.0
+    },
+    {
+      "actual_match_id": "WC2022_29",
+      "mapped_match_id": "GB04",
+      "mapped_venue_id": "V04",
+      "mapped_slot_id": "S021",
+      "match_mapping_distance": 0.275,
+      "venue_capacity_difference": 3746.0,
+      "slot_hour_difference": 6.0
+    },
+    {
+      "actual_match_id": "WC2022_31",
+      "mapped_match_id": "GE03",
+      "mapped_venue_id": "V04",
+      "mapped_slot_id": "S021",
+      "match_mapping_distance": 1.0775,
+      "venue_capacity_difference": 3982.0,
+      "slot_hour_difference": 0.0
+    },
+    {
+      "actual_match_id": "WC2022_47",
+      "mapped_match_id": "GF06",
+      "mapped_venue_id": "V07",
+      "mapped_slot_id": "S042",
+      "match_mapping_distance": 0.59,
+      "venue_capacity_difference": 26151.0,
+      "slot_hour_difference": 0.0
+    },
+    {
+      "actual_match_id": "WC2022_48",
+      "mapped_match_id": "GL05",
+      "mapped_venue_id": "V03",
+      "mapped_slot_id": "S042",
+      "match_mapping_distance": 1.23,
+      "venue_capacity_difference": 5034.0,
+      "slot_hour_difference": 0.0
+    },
+    {
+      "actual_match_id": "WC2022_14",
+      "mapped_match_id": "GF01",
+      "mapped_venue_id": "V04",
+      "mapped_slot_id": "S021",
+      "match_mapping_distance": 0.52,
+      "venue_capacity_difference": 3404.0,
+      "slot_hour_difference": 3.0
+    },
+    {
+      "actual_match_id": "WC2022_15",
+      "mapped_match_id": "GK01",
+      "mapped_venue_id": "V04",
+      "mapped_slot_id": "S021",
+      "match_mapping_distance": 0.325,
+      "venue_capacity_difference": 3982.0,
+      "slot_hour_difference": 0.0
+    },
+    {
+      "actual_match_id": "WC2022_30",
+      "mapped_match_id": "GB04",
+      "mapped_venue_id": "V04",
+      "mapped_slot_id": "S021",
+      "match_mapping_distance": 0.5675,
+      "venue_capacity_difference": 3404.0,
+      "slot_hour_difference": 3.0
+    },
+    {
+      "actual_match_id": "WC2022_32",
+      "mapped_match_id": "GA03",
+      "mapped_venue_id": "V03",
+      "mapped_slot_id": "S042",
+      "match_mapping_distance": 0.8775,
+      "venue_capacity_difference": 5034.0,
+      "slot_hour_difference": 0.0
+    },
+    {
+      "actual_match_id": "WC2022_45",
+      "mapped_match_id": "GL05",
+      "mapped_venue_id": "V04",
+      "mapped_slot_id": "S021",
+      "match_mapping_distance": 0.345,
+      "venue_capacity_difference": 3746.0,
+      "slot_hour_difference": 1.0
+    },
+    {
+      "actual_match_id": "WC2022_46",
+      "mapped_match_id": "GE05",
+      "mapped_venue_id": "V03",
+      "mapped_slot_id": "S021",
+      "match_mapping_distance": 0.38999999999999996,
+      "venue_capacity_difference": 5034.0,
+      "slot_hour_difference": 1.0
+    }
+  ],
+  "problem4_structure": {
+    "actual": {
+      "match_count": 48.0,
+      "team_count": 32.0,
+      "venue_count": 8.0,
+      "schedule_span_days": 13.0,
+      "total_travel_km": 1214.8657121713907,
+      "avg_travel_per_team_km": 37.96455350535596,
+      "avg_travel_per_match_km": 25.30970233690397,
+      "cross_timezone_transitions": 0.0,
+      "average_rest_hours": 97.8125,
+      "minimum_rest_hours": 87.0,
+      "rest_hours_std": 5.917085833575913,
+      "matches_per_venue": 6.0,
+      "matches_per_active_venue_day": 1.0212765957446808,
+      "venue_active_day_utilization": 0.4519230769230769,
+      "prime_time_share": 0.6666666666666666,
+      "prime_matches_per_team": 2.0,
+      "prime_count_range": 3.0,
+      "capacity_match_ratio": 0.8323257762940396,
+      "expected_attendance_per_match": 42051.0
+    },
+    "optimized": {
+      "match_count": 72.0,
+      "team_count": 48.0,
+      "venue_count": 16.0,
+      "schedule_span_days": 19.0,
+      "total_travel_km": 178361.78500218384,
+      "avg_travel_per_team_km": 3715.87052087883,
+      "avg_travel_per_match_km": 2477.24701391922,
+      "cross_timezone_transitions": 78.0,
+      "average_rest_hours": 128.5625,
+      "minimum_rest_hours": 63.0,
+      "rest_hours_std": 63.90697392139197,
+      "matches_per_venue": 4.5,
+      "matches_per_active_venue_day": 1.0434782608695652,
+      "venue_active_day_utilization": 0.22697368421052633,
+      "prime_time_share": 0.6666666666666666,
+      "prime_matches_per_team": 2.0,
+      "prime_count_range": 0.0,
+      "capacity_match_ratio": 0.6016765522292802,
+      "expected_attendance_per_match": 41746.416666666664
+    }
+  },
+  "problem4_proxy": {
+    "actual_nearest": {
+      "raw": {
+        "T": 196970865.0,
+        "B": 210123082.9456385,
+        "U": 0.47323750000000003,
+        "H": 0.6738145833333333,
+        "C": 34.5,
+        "D": 0.20822895025117014,
+        "F": 0.8333333333333333,
+        "R": 0.4838990467270518
+      },
+      "per_match": {
+        "T": 4103559.6875,
+        "B": 4377564.228034136,
+        "C": 0.71875
+      },
+      "bounds": {
+        "T": [
+          120149760.0,
+          308230560.0
+        ],
+        "B": [
+          57630322.7892,
+          409091431.56710404
+        ],
+        "U": [
+          0,
+          1
+        ],
+        "H": [
+          0,
+          1
+        ],
+        "C": [
+          18.0,
+          40.08
+        ],
+        "D": [
+          0,
+          1
+        ],
+        "F": [
+          0,
+          1
+        ],
+        "R": [
+          0.22470909090909091,
+          0.6004015934040483
+        ]
+      },
+      "normalized": {
+        "T": 0.408447353477867,
+        "B": 0.43388231684206635,
+        "U": 0.47323750000000003,
+        "H": 0.6738145833333333,
+        "C": 0.7472826086956522,
+        "D": 0.20822895025117014,
+        "F": 0.8333333333333333,
+        "R": 0.6898991970739149
+      },
+      "weighted_contributions": {
+        "T": 0.10211183836946675,
+        "B": 0.10847057921051659,
+        "U": 0.070985625,
+        "H": 0.06738145833333334,
+        "C": -0.059782608695652176,
+        "D": -0.01457602651758191,
+        "F": -0.049999999999999996,
+        "R": -0.027595967882956596
+      },
+      "Z2": 0.19699489781712598,
+      "fairness_detail": {
+        "prime_counts": {
+          "Argentina": 1,
+          "Australia": 2,
+          "Belgium": 2,
+          "Brazil": 1,
+          "Cameroon": 2,
+          "Canada": 2,
+          "Costa Rica": 2,
+          "Croatia": 3,
+          "Denmark": 3,
+          "Ecuador": 3,
+          "England": 1,
+          "France": 2,
+          "Germany": 1,
+          "Ghana": 3,
+          "Iran": 2,
+          "Japan": 2,
+          "Mexico": 1,
+          "Morocco": 3,
+          "Netherlands": 3,
+          "Poland": 2,
+          "Portugal": 2,
+          "Qatar": 3,
+          "Saudi Arabia": 2,
+          "Senegal": 3,
+          "Serbia": 1,
+          "South Korea": 3,
+          "Spain": 1,
+          "Switzerland": 2,
+          "Tunisia": 3,
+          "United States": 0,
+          "Uruguay": 2,
+          "Wales": 1
+        },
+        "large_venue_counts": {
+          "Argentina": 2,
+          "Australia": 0,
+          "Belgium": 0,
+          "Brazil": 2,
+          "Cameroon": 1,
+          "Canada": 0,
+          "Costa Rica": 0,
+          "Croatia": 0,
+          "Denmark": 0,
+          "Ecuador": 0,
+          "England": 0,
+          "France": 0,
+          "Germany": 0,
+          "Ghana": 0,
+          "Iran": 0,
+          "Japan": 0,
+          "Mexico": 2,
+          "Morocco": 0,
+          "Netherlands": 0,
+          "Poland": 0,
+          "Portugal": 2,
+          "Qatar": 0,
+          "Saudi Arabia": 2,
+          "Senegal": 0,
+          "Serbia": 1,
+          "South Korea": 1,
+          "Spain": 0,
+          "Switzerland": 0,
+          "Tunisia": 0,
+          "United States": 0,
+          "Uruguay": 1,
+          "Wales": 0
+        },
+        "prime_range": 3,
+        "large_venue_range": 2
+      },
+      "detail": [
+        {
+          "actual_match_id": "WC2022_01",
+          "team_a": "Qatar",
+          "team_b": "Ecuador",
+          "T": 3330000.0,
+          "B": 3333644.2420400004,
+          "U": 0.4965,
+          "H": 0.6417,
+          "C_match": 0.5800000000000001,
+          "D": 0.6253577175185483,
+          "R": 0.4043115942028985,
+          "mapped_venue_id": "V14",
+          "mapped_slot_id": "S131"
+        },
+        {
+          "actual_match_id": "WC2022_03",
+          "team_a": "Senegal",
+          "team_b": "Netherlands",
+          "T": 3379920.0,
+          "B": 3683994.2531,
+          "U": 0.364,
+          "H": 0.595,
+          "C_match": 0.605,
+          "D": 0.5012783227881531,
+          "R": 0.48189816849816847,
+          "mapped_venue_id": "V15",
+          "mapped_slot_id": "S131"
+        },
+        {
+          "actual_match_id": "WC2022_18",
+          "team_a": "Qatar",
+          "team_b": "Senegal",
+          "T": 5327885.0,
+          "B": 4668221.073240001,
+          "U": 0.6447,
+          "H": 0.7827,
+          "C_match": 0.675,
+          "D": 0.07227764498341112,
+          "R": 0.5897758117559868,
+          "mapped_venue_id": "V09",
+          "mapped_slot_id": "S131"
+        },
+        {
+          "actual_match_id": "WC2022_19",
+          "team_a": "Netherlands",
+          "team_b": "Ecuador",
+          "T": 4322500.0,
+          "B": 5015732.78736,
+          "U": 0.5059,
+          "H": 0.7118000000000001,
+          "C_match": 0.7050000000000001,
+          "D": 0.05562356367143738,
+          "R": 0.5700000000000001,
+          "mapped_venue_id": "V15",
+          "mapped_slot_id": "S131"
+        },
+        {
+          "actual_match_id": "WC2022_33",
+          "team_a": "Ecuador",
+          "team_b": "Senegal",
+          "T": 4761680.0,
+          "B": 7243689.201892,
+          "U": 0.4864,
+          "H": 0.6970000000000001,
+          "C_match": 0.7050000000000001,
+          "D": 0.05941299517789035,
+          "R": 0.5554153846153846,
+          "mapped_venue_id": "V15",
+          "mapped_slot_id": "S131"
+        },
+        {
+          "actual_match_id": "WC2022_34",
+          "team_a": "Netherlands",
+          "team_b": "Qatar",
+          "T": 4161300.0,
+          "B": 7069219.731288,
+          "U": 0.39,
+          "H": 0.6177,
+          "C_match": 0.5800000000000001,
+          "D": 0.111563292058464,
+          "R": 0.38781159420289857,
+          "mapped_venue_id": "V14",
+          "mapped_slot_id": "S131"
+        },
+        {
+          "actual_match_id": "WC2022_02",
+          "team_a": "England",
+          "team_b": "Iran",
+          "T": 3640000.0,
+          "B": 4329677.7668200005,
+          "U": 0.5711,
+          "H": 0.7886,
+          "C_match": 0.7050000000000001,
+          "D": 0.6114013414588096,
+          "R": 0.5700000000000001,
+          "mapped_venue_id": "V15",
+          "mapped_slot_id": "S131"
+        },
+        {
+          "actual_match_id": "WC2022_04",
+          "team_a": "United States",
+          "team_b": "Wales",
+          "T": 3628640.0,
+          "B": 2146057.18362,
+          "U": 0.5773,
+          "H": 0.7145,
+          "C_match": 0.7050000000000001,
+          "D": 0.21129604821683814,
+          "R": 0.5690637362637363,
+          "mapped_venue_id": "V15",
+          "mapped_slot_id": "S202"
+        },
+        {
+          "actual_match_id": "WC2022_17",
+          "team_a": "Wales",
+          "team_b": "Iran",
+          "T": 4180760.0,
+          "B": 4328122.94712,
+          "U": 0.6034,
+          "H": 0.7276,
+          "C_match": 0.7050000000000001,
+          "D": 0.05751827942466388,
+          "R": 0.5601626373626374,
+          "mapped_venue_id": "V15",
+          "mapped_slot_id": "S131"
+        },
+        {
+          "actual_match_id": "WC2022_20",
+          "team_a": "England",
+          "team_b": "United States",
+          "T": 4377600.0,
+          "B": 2709980.9603999997,
+          "U": 0.5102,
+          "H": 0.7153,
+          "C_match": 0.675,
+          "D": 0.111563292058464,
+          "R": 0.4903478260869566,
+          "mapped_venue_id": "V14",
+          "mapped_slot_id": "S202"
+        },
+        {
+          "actual_match_id": "WC2022_35",
+          "team_a": "Wales",
+          "team_b": "England",
+          "T": 5005000.0,
+          "B": 4552530.630647999,
+          "U": 0.5189,
+          "H": 0.7418,
+          "C_match": 0.7050000000000001,
+          "D": 0.05562356367143738,
+          "R": 0.5700000000000001,
+          "mapped_venue_id": "V15",
+          "mapped_slot_id": "S202"
+        },
+        {
+          "actual_match_id": "WC2022_36",
+          "team_a": "Iran",
+          "team_b": "United States",
+          "T": 5005000.0,
+          "B": 4378334.1201599995,
+          "U": 0.5827,
+          "H": 0.7464,
+          "C_match": 0.7050000000000001,
+          "D": 0.06672824654595925,
+          "R": 0.5700000000000001,
+          "mapped_venue_id": "V15",
+          "mapped_slot_id": "S202"
+        },
+        {
+          "actual_match_id": "WC2022_05",
+          "team_a": "Argentina",
+          "team_b": "Saudi Arabia",
+          "T": 3041920.0,
+          "B": 3326919.9176675,
+          "U": 0.2743,
+          "H": 0.523,
+          "C_match": 0.47,
+          "D": 0.5783829267452612,
+          "R": 0.30533374084526355,
+          "mapped_venue_id": "V08",
+          "mapped_slot_id": "S131"
+        },
+        {
+          "actual_match_id": "WC2022_07",
+          "team_a": "Mexico",
+          "team_b": "Poland",
+          "T": 3628640.0,
+          "B": 3730051.77153,
+          "U": 0.5773,
+          "H": 0.7145,
+          "C_match": 0.7050000000000001,
+          "D": 0.21129604821683814,
+          "R": 0.5690637362637363,
+          "mapped_venue_id": "V15",
+          "mapped_slot_id": "S131"
+        },
+        {
+          "actual_match_id": "WC2022_22",
+          "team_a": "Poland",
+          "team_b": "Saudi Arabia",
+          "T": 4984935.0,
+          "B": 4452338.49444,
+          "U": 0.5241,
+          "H": 0.6851,
+          "C_match": 0.675,
+          "D": 0.07227764498341112,
+          "R": 0.5730543332252536,
+          "mapped_venue_id": "V09",
+          "mapped_slot_id": "S131"
+        },
+        {
+          "actual_match_id": "WC2022_24",
+          "team_a": "Argentina",
+          "team_b": "Mexico",
+          "T": 4020305.0,
+          "B": 2440949.68152,
+          "U": 0.3768,
+          "H": 0.5997,
+          "C_match": 0.47,
+          "D": 0.06893909468134335,
+          "R": 0.3200555853889835,
+          "mapped_venue_id": "V08",
+          "mapped_slot_id": "S202"
+        },
+        {
+          "actual_match_id": "WC2022_39",
+          "team_a": "Poland",
+          "team_b": "Argentina",
+          "T": 4161300.0,
+          "B": 4067222.3111519995,
+          "U": 0.39,
+          "H": 0.6177,
+          "C_match": 0.605,
+          "D": 0.05751827942466388,
+          "R": 0.4527619047619047,
+          "mapped_venue_id": "V15",
+          "mapped_slot_id": "S202"
+        },
+        {
+          "actual_match_id": "WC2022_40",
+          "team_a": "Saudi Arabia",
+          "team_b": "Mexico",
+          "T": 4761680.0,
+          "B": 4167602.0065679997,
+          "U": 0.4864,
+          "H": 0.6970000000000001,
+          "C_match": 0.5549999999999999,
+          "D": 0.06938293721274848,
+          "R": 0.37337699804622787,
+          "mapped_venue_id": "V08",
+          "mapped_slot_id": "S202"
+        },
+        {
+          "actual_match_id": "WC2022_06",
+          "team_a": "Denmark",
+          "team_b": "Tunisia",
+          "T": 3153920.0,
+          "B": 3587952.0624325,
+          "U": 0.417,
+          "H": 0.6213000000000001,
+          "C_match": 0.605,
+          "D": 0.524172438855572,
+          "R": 0.4632717948717948,
+          "mapped_venue_id": "V15",
+          "mapped_slot_id": "S131"
+        },
+        {
+          "actual_match_id": "WC2022_08",
+          "team_a": "France",
+          "team_b": "Australia",
+          "T": 3153920.0,
+          "B": 2064301.186605,
+          "U": 0.417,
+          "H": 0.6213000000000001,
+          "C_match": 0.605,
+          "D": 0.524172438855572,
+          "R": 0.4632717948717948,
+          "mapped_venue_id": "V15",
+          "mapped_slot_id": "S202"
+        },
+        {
+          "actual_match_id": "WC2022_21",
+          "team_a": "Tunisia",
+          "team_b": "Australia",
+          "T": 5327885.0,
+          "B": 4668221.073240001,
+          "U": 0.6447,
+          "H": 0.7827,
+          "C_match": 0.675,
+          "D": 0.07227764498341112,
+          "R": 0.5897758117559868,
+          "mapped_venue_id": "V09",
+          "mapped_slot_id": "S131"
+        },
+        {
+          "actual_match_id": "WC2022_23",
+          "team_a": "France",
+          "team_b": "Denmark",
+          "T": 4322500.0,
+          "B": 5015732.78736,
+          "U": 0.5059,
+          "H": 0.7118000000000001,
+          "C_match": 0.7050000000000001,
+          "D": 0.05562356367143738,
+          "R": 0.5700000000000001,
+          "mapped_venue_id": "V15",
+          "mapped_slot_id": "S131"
+        },
+        {
+          "actual_match_id": "WC2022_37",
+          "team_a": "Australia",
+          "team_b": "Denmark",
+          "T": 4634520.0,
+          "B": 7124209.627392,
+          "U": 0.4231,
+          "H": 0.6479,
+          "C_match": 0.7050000000000001,
+          "D": 0.05751827942466388,
+          "R": 0.5477934065934067,
+          "mapped_venue_id": "V15",
+          "mapped_slot_id": "S131"
+        },
+        {
+          "actual_match_id": "WC2022_38",
+          "team_a": "Tunisia",
+          "team_b": "France",
+          "T": 4161300.0,
+          "B": 7069219.731288,
+          "U": 0.39,
+          "H": 0.6177,
+          "C_match": 0.605,
+          "D": 0.05751827942466388,
+          "R": 0.4527619047619047,
+          "mapped_venue_id": "V15",
+          "mapped_slot_id": "S131"
+        },
+        {
+          "actual_match_id": "WC2022_10",
+          "team_a": "Germany",
+          "team_b": "Japan",
+          "T": 3247840.0,
+          "B": 3845361.576175,
+          "U": 0.483,
+          "H": 0.6923999999999999,
+          "C_match": 0.605,
+          "D": 0.4094787770228129,
+          "R": 0.4710124542124542,
+          "mapped_venue_id": "V15",
+          "mapped_slot_id": "S131"
+        },
+        {
+          "actual_match_id": "WC2022_11",
+          "team_a": "Spain",
+          "team_b": "Costa Rica",
+          "T": 3379920.0,
+          "B": 3683994.2531,
+          "U": 0.364,
+          "H": 0.595,
+          "C_match": 0.605,
+          "D": 0.5012783227881531,
+          "R": 0.48189816849816847,
+          "mapped_venue_id": "V15",
+          "mapped_slot_id": "S131"
+        },
+        {
+          "actual_match_id": "WC2022_25",
+          "team_a": "Japan",
+          "team_b": "Costa Rica",
+          "T": 4180760.0,
+          "B": 4328122.94712,
+          "U": 0.6034,
+          "H": 0.7276,
+          "C_match": 0.7050000000000001,
+          "D": 0.05751827942466388,
+          "R": 0.5601626373626374,
+          "mapped_venue_id": "V15",
+          "mapped_slot_id": "S131"
+        },
+        {
+          "actual_match_id": "WC2022_28",
+          "team_a": "Spain",
+          "team_b": "Germany",
+          "T": 4461295.0,
+          "B": 2885764.06944,
+          "U": 0.5059,
+          "H": 0.7118000000000001,
+          "C_match": 0.675,
+          "D": 0.11089150951461177,
+          "R": 0.4941782608695653,
+          "mapped_venue_id": "V14",
+          "mapped_slot_id": "S202"
+        },
+        {
+          "actual_match_id": "WC2022_43",
+          "team_a": "Japan",
+          "team_b": "Spain",
+          "T": 4634520.0,
+          "B": 4098860.333568,
+          "U": 0.4231,
+          "H": 0.6479,
+          "C_match": 0.7050000000000001,
+          "D": 0.05751827942466388,
+          "R": 0.5477934065934067,
+          "mapped_venue_id": "V15",
+          "mapped_slot_id": "S202"
+        },
+        {
+          "actual_match_id": "WC2022_44",
+          "team_a": "Costa Rica",
+          "team_b": "Germany",
+          "T": 4634520.0,
+          "B": 4098860.333568,
+          "U": 0.4231,
+          "H": 0.6479,
+          "C_match": 0.675,
+          "D": 0.111563292058464,
+          "R": 0.4731826086956522,
+          "mapped_venue_id": "V14",
+          "mapped_slot_id": "S202"
+        },
+        {
+          "actual_match_id": "WC2022_09",
+          "team_a": "Morocco",
+          "team_b": "Croatia",
+          "T": 3247840.0,
+          "B": 3845361.576175,
+          "U": 0.483,
+          "H": 0.6923999999999999,
+          "C_match": 0.5800000000000001,
+          "D": 0.6354015275814198,
+          "R": 0.3998463768115942,
+          "mapped_venue_id": "V14",
+          "mapped_slot_id": "S131"
+        },
+        {
+          "actual_match_id": "WC2022_12",
+          "team_a": "Belgium",
+          "team_b": "Canada",
+          "T": 3247840.0,
+          "B": 2212399.81095,
+          "U": 0.483,
+          "H": 0.6923999999999999,
+          "C_match": 0.605,
+          "D": 0.4094787770228129,
+          "R": 0.4710124542124542,
+          "mapped_venue_id": "V15",
+          "mapped_slot_id": "S202"
+        },
+        {
+          "actual_match_id": "WC2022_26",
+          "team_a": "Belgium",
+          "team_b": "Morocco",
+          "T": 3845315.0,
+          "B": 4772928.267,
+          "U": 0.4519,
+          "H": 0.6884,
+          "C_match": 0.605,
+          "D": 0.05751827942466388,
+          "R": 0.47021465201465207,
+          "mapped_venue_id": "V15",
+          "mapped_slot_id": "S131"
+        },
+        {
+          "actual_match_id": "WC2022_27",
+          "team_a": "Croatia",
+          "team_b": "Canada",
+          "T": 4322500.0,
+          "B": 4710205.0026,
+          "U": 0.5102,
+          "H": 0.7153,
+          "C_match": 0.7050000000000001,
+          "D": 0.05751827942466388,
+          "R": 0.5700000000000001,
+          "mapped_venue_id": "V15",
+          "mapped_slot_id": "S131"
+        },
+        {
+          "actual_match_id": "WC2022_41",
+          "team_a": "Croatia",
+          "team_b": "Belgium",
+          "T": 6421470.0,
+          "B": 8522738.157648,
+          "U": 0.5497,
+          "H": 0.7894,
+          "C_match": 0.675,
+          "D": 0.07044981867944741,
+          "R": 0.6004015934040483,
+          "mapped_venue_id": "V09",
+          "mapped_slot_id": "S131"
+        },
+        {
+          "actual_match_id": "WC2022_42",
+          "team_a": "Canada",
+          "team_b": "Morocco",
+          "T": 5005000.0,
+          "B": 7078053.171332,
+          "U": 0.5962,
+          "H": 0.7425,
+          "C_match": 0.7050000000000001,
+          "D": 0.06672824654595925,
+          "R": 0.5700000000000001,
+          "mapped_venue_id": "V15",
+          "mapped_slot_id": "S131"
+        },
+        {
+          "actual_match_id": "WC2022_13",
+          "team_a": "Switzerland",
+          "team_b": "Cameroon",
+          "T": 2833840.0,
+          "B": 3425509.1367350006,
+          "U": 0.3893,
+          "H": 0.5943999999999999,
+          "C_match": 0.605,
+          "D": 0.66276550076774,
+          "R": 0.43689157509157506,
+          "mapped_venue_id": "V15",
+          "mapped_slot_id": "S131"
+        },
+        {
+          "actual_match_id": "WC2022_16",
+          "team_a": "Brazil",
+          "team_b": "Serbia",
+          "T": 3247840.0,
+          "B": 2212399.81095,
+          "U": 0.483,
+          "H": 0.6923999999999999,
+          "C_match": 0.47,
+          "D": 0.6108191878866135,
+          "R": 0.3141565645601727,
+          "mapped_venue_id": "V08",
+          "mapped_slot_id": "S202"
+        },
+        {
+          "actual_match_id": "WC2022_29",
+          "team_a": "Cameroon",
+          "team_b": "Serbia",
+          "T": 3955325.0,
+          "B": 4328290.21932,
+          "U": 0.4401,
+          "H": 0.6426000000000001,
+          "C_match": 0.605,
+          "D": 0.05751827942466388,
+          "R": 0.47784981684981687,
+          "mapped_venue_id": "V15",
+          "mapped_slot_id": "S131"
+        },
+        {
+          "actual_match_id": "WC2022_31",
+          "team_a": "Brazil",
+          "team_b": "Switzerland",
+          "T": 4322500.0,
+          "B": 5015732.78736,
+          "U": 0.5059,
+          "H": 0.7118000000000001,
+          "C_match": 0.7050000000000001,
+          "D": 0.05562356367143738,
+          "R": 0.5700000000000001,
+          "mapped_venue_id": "V15",
+          "mapped_slot_id": "S131"
+        },
+        {
+          "actual_match_id": "WC2022_47",
+          "team_a": "Serbia",
+          "team_b": "Switzerland",
+          "T": 5005000.0,
+          "B": 4577735.386224,
+          "U": 0.6061,
+          "H": 0.7857999999999999,
+          "C_match": 0.7050000000000001,
+          "D": 0.05562356367143738,
+          "R": 0.5700000000000001,
+          "mapped_venue_id": "V15",
+          "mapped_slot_id": "S202"
+        },
+        {
+          "actual_match_id": "WC2022_48",
+          "team_a": "Cameroon",
+          "team_b": "Brazil",
+          "T": 3477760.0,
+          "B": 3692556.980112,
+          "U": 0.2833,
+          "H": 0.5138,
+          "C_match": 0.385,
+          "D": 0.06938293721274848,
+          "R": 0.23336922865989512,
+          "mapped_venue_id": "V08",
+          "mapped_slot_id": "S202"
+        },
+        {
+          "actual_match_id": "WC2022_14",
+          "team_a": "Uruguay",
+          "team_b": "South Korea",
+          "T": 3247840.0,
+          "B": 3845361.576175,
+          "U": 0.483,
+          "H": 0.6923999999999999,
+          "C_match": 0.605,
+          "D": 0.4094787770228129,
+          "R": 0.4710124542124542,
+          "mapped_venue_id": "V15",
+          "mapped_slot_id": "S131"
+        },
+        {
+          "actual_match_id": "WC2022_15",
+          "team_a": "Portugal",
+          "team_b": "Ghana",
+          "T": 3041920.0,
+          "B": 3326919.9176675,
+          "U": 0.2743,
+          "H": 0.523,
+          "C_match": 0.605,
+          "D": 0.387239623752102,
+          "R": 0.45404102564102566,
+          "mapped_venue_id": "V15",
+          "mapped_slot_id": "S131"
+        },
+        {
+          "actual_match_id": "WC2022_30",
+          "team_a": "South Korea",
+          "team_b": "Ghana",
+          "T": 3955325.0,
+          "B": 4328290.21932,
+          "U": 0.4401,
+          "H": 0.6426000000000001,
+          "C_match": 0.605,
+          "D": 0.05751827942466388,
+          "R": 0.47784981684981687,
+          "mapped_venue_id": "V15",
+          "mapped_slot_id": "S131"
+        },
+        {
+          "actual_match_id": "WC2022_32",
+          "team_a": "Portugal",
+          "team_b": "Uruguay",
+          "T": 4461295.0,
+          "B": 2885764.06944,
+          "U": 0.5059,
+          "H": 0.7118000000000001,
+          "C_match": 0.5549999999999999,
+          "D": 0.06849525214993823,
+          "R": 0.3859668315757001,
+          "mapped_venue_id": "V08",
+          "mapped_slot_id": "S202"
+        },
+        {
+          "actual_match_id": "WC2022_45",
+          "team_a": "Ghana",
+          "team_b": "Uruguay",
+          "T": 3685770.0,
+          "B": 6103738.167384,
+          "U": 0.3271,
+          "H": 0.5218,
+          "C_match": 0.505,
+          "D": 0.05751827942466388,
+          "R": 0.3575919413919414,
+          "mapped_venue_id": "V15",
+          "mapped_slot_id": "S131"
+        },
+        {
+          "actual_match_id": "WC2022_46",
+          "team_a": "South Korea",
+          "team_b": "Portugal",
+          "T": 4634520.0,
+          "B": 7124209.627392,
+          "U": 0.4231,
+          "H": 0.6479,
+          "C_match": 0.5549999999999999,
+          "D": 0.06893909468134335,
+          "R": 0.36941461101653283,
+          "mapped_venue_id": "V08",
+          "mapped_slot_id": "S131"
+        }
+      ]
+    },
+    "actual_second_nearest": {
+      "raw": {
+        "T": 194041825.0,
+        "B": 197692916.81141,
+        "U": 0.47973125,
+        "H": 0.66715625,
+        "C": 29.235000000000007,
+        "D": 0.24995918123937097,
+        "F": 0.8333333333333333,
+        "R": 0.4498096335646819
+      },
+      "per_match": {
+        "T": 4042538.0208333335,
+        "B": 4118602.433571042,
+        "C": 0.6090625000000002
+      },
+      "bounds": {
+        "T": [
+          120149760.0,
+          308230560.0
+        ],
+        "B": [
+          57630322.7892,
+          409091431.56710404
+        ],
+        "U": [
+          0,
+          1
+        ],
+        "H": [
+          0,
+          1
+        ],
+        "C": [
+          19.650000000000002,
+          41.73
+        ],
+        "D": [
+          0,
+          1
+        ],
+        "F": [
+          0,
+          1
+        ],
+        "R": [
+          0.22470909090909091,
+          0.6004015934040483
+        ]
+      },
+      "normalized": {
+        "T": 0.3928740466863178,
+        "B": 0.3985151999014452,
+        "U": 0.47973125,
+        "H": 0.66715625,
+        "C": 0.4341032608695655,
+        "D": 0.24995918123937097,
+        "F": 0.8333333333333333,
+        "R": 0.5991616579002993
+      },
+      "weighted_contributions": {
+        "T": 0.09821851167157945,
+        "B": 0.0996287999753613,
+        "U": 0.0719596875,
+        "H": 0.066715625,
+        "C": -0.03472826086956524,
+        "D": -0.01749714268675597,
+        "F": -0.049999999999999996,
+        "R": -0.023966466316011972
+      },
+      "Z2": 0.21033075427460757,
+      "fairness_detail": {
+        "prime_counts": {
+          "Argentina": 1,
+          "Australia": 2,
+          "Belgium": 2,
+          "Brazil": 1,
+          "Cameroon": 2,
+          "Canada": 2,
+          "Costa Rica": 2,
+          "Croatia": 3,
+          "Denmark": 3,
+          "Ecuador": 3,
+          "England": 1,
+          "France": 2,
+          "Germany": 1,
+          "Ghana": 3,
+          "Iran": 2,
+          "Japan": 2,
+          "Mexico": 1,
+          "Morocco": 3,
+          "Netherlands": 3,
+          "Poland": 2,
+          "Portugal": 2,
+          "Qatar": 3,
+          "Saudi Arabia": 2,
+          "Senegal": 3,
+          "Serbia": 1,
+          "South Korea": 3,
+          "Spain": 1,
+          "Switzerland": 2,
+          "Tunisia": 3,
+          "United States": 0,
+          "Uruguay": 2,
+          "Wales": 1
+        },
+        "large_venue_counts": {
+          "Argentina": 2,
+          "Australia": 0,
+          "Belgium": 0,
+          "Brazil": 2,
+          "Cameroon": 1,
+          "Canada": 0,
+          "Costa Rica": 0,
+          "Croatia": 0,
+          "Denmark": 0,
+          "Ecuador": 0,
+          "England": 0,
+          "France": 0,
+          "Germany": 0,
+          "Ghana": 0,
+          "Iran": 0,
+          "Japan": 0,
+          "Mexico": 2,
+          "Morocco": 0,
+          "Netherlands": 0,
+          "Poland": 0,
+          "Portugal": 2,
+          "Qatar": 0,
+          "Saudi Arabia": 2,
+          "Senegal": 0,
+          "Serbia": 1,
+          "South Korea": 1,
+          "Spain": 0,
+          "Switzerland": 0,
+          "Tunisia": 0,
+          "United States": 0,
+          "Uruguay": 1,
+          "Wales": 0
+        },
+        "prime_range": 3,
+        "large_venue_range": 2
+      },
+      "detail": [
+        {
+          "actual_match_id": "WC2022_01",
+          "team_a": "Qatar",
+          "team_b": "Ecuador",
+          "T": 3608240.0,
+          "B": 3322060.324485,
+          "U": 0.4948,
+          "H": 0.6524,
+          "C_match": 0.645,
+          "D": 0.7247289375394916,
+          "R": 0.4475313868613139,
+          "mapped_venue_id": "V13",
+          "mapped_slot_id": "S021"
+        },
+        {
+          "actual_match_id": "WC2022_03",
+          "team_a": "Senegal",
+          "team_b": "Netherlands",
+          "T": 3153920.0,
+          "B": 3489652.0059275,
+          "U": 0.417,
+          "H": 0.6213000000000001,
+          "C_match": 0.41000000000000003,
+          "D": 0.7865318664573313,
+          "R": 0.4343694049773599,
+          "mapped_venue_id": "V04",
+          "mapped_slot_id": "S021"
+        },
+        {
+          "actual_match_id": "WC2022_18",
+          "team_a": "Qatar",
+          "team_b": "Senegal",
+          "T": 4381020.0,
+          "B": 3598047.40968,
+          "U": 0.6366,
+          "H": 0.6887000000000001,
+          "C_match": 0.495,
+          "D": 0.06858842176561934,
+          "R": 0.5427992968733748,
+          "mapped_venue_id": "V04",
+          "mapped_slot_id": "S021"
+        },
+        {
+          "actual_match_id": "WC2022_19",
+          "team_a": "Netherlands",
+          "team_b": "Ecuador",
+          "T": 3845315.0,
+          "B": 4642163.109,
+          "U": 0.4519,
+          "H": 0.6884,
+          "C_match": 0.41000000000000003,
+          "D": 0.06858842176561934,
+          "R": 0.4409409345898081,
+          "mapped_venue_id": "V04",
+          "mapped_slot_id": "S021"
+        },
+        {
+          "actual_match_id": "WC2022_33",
+          "team_a": "Ecuador",
+          "team_b": "Senegal",
+          "T": 5033380.0,
+          "B": 7166136.364816,
+          "U": 0.4957,
+          "H": 0.6833,
+          "C_match": 0.495,
+          "D": 0.06858842176561934,
+          "R": 0.5405651016205196,
+          "mapped_venue_id": "V04",
+          "mapped_slot_id": "S021"
+        },
+        {
+          "actual_match_id": "WC2022_34",
+          "team_a": "Netherlands",
+          "team_b": "Qatar",
+          "T": 3701280.0,
+          "B": 6380798.119124,
+          "U": 0.3755,
+          "H": 0.5847,
+          "C_match": 0.555,
+          "D": 0.10015454030991121,
+          "R": 0.33069683698296837,
+          "mapped_venue_id": "V13",
+          "mapped_slot_id": "S021"
+        },
+        {
+          "actual_match_id": "WC2022_02",
+          "team_a": "England",
+          "team_b": "Iran",
+          "T": 3628640.0,
+          "B": 3627858.5723099997,
+          "U": 0.5773,
+          "H": 0.7145,
+          "C_match": 0.495,
+          "D": 0.29806555440133486,
+          "R": 0.5380687940754301,
+          "mapped_venue_id": "V04",
+          "mapped_slot_id": "S021"
+        },
+        {
+          "actual_match_id": "WC2022_04",
+          "team_a": "United States",
+          "team_b": "Wales",
+          "T": 3845680.0,
+          "B": 2162747.4715000005,
+          "U": 0.5782,
+          "H": 0.7506999999999999,
+          "C_match": 0.495,
+          "D": 0.46201094115796804,
+          "R": 0.555,
+          "mapped_venue_id": "V04",
+          "mapped_slot_id": "S042"
+        },
+        {
+          "actual_match_id": "WC2022_17",
+          "team_a": "Wales",
+          "team_b": "Iran",
+          "T": 5327885.0,
+          "B": 4540324.60548,
+          "U": 0.6447,
+          "H": 0.7827,
+          "C_match": 0.685,
+          "D": 0.08622298899673778,
+          "R": 0.49953445330296126,
+          "mapped_venue_id": "V07",
+          "mapped_slot_id": "S021"
+        },
+        {
+          "actual_match_id": "WC2022_20",
+          "team_a": "England",
+          "team_b": "United States",
+          "T": 4984935.0,
+          "B": 2439637.5312,
+          "U": 0.5241,
+          "H": 0.6851,
+          "C_match": 0.675,
+          "D": 0.07227764498341112,
+          "R": 0.5730543332252536,
+          "mapped_venue_id": "V09",
+          "mapped_slot_id": "S042"
+        },
+        {
+          "actual_match_id": "WC2022_35",
+          "team_a": "Wales",
+          "team_b": "England",
+          "T": 5602300.0,
+          "B": 4268414.069920001,
+          "U": 0.5881,
+          "H": 0.7781999999999999,
+          "C_match": 0.685,
+          "D": 0.08567018337033935,
+          "R": 0.4775256264236902,
+          "mapped_venue_id": "V07",
+          "mapped_slot_id": "S042"
+        },
+        {
+          "actual_match_id": "WC2022_36",
+          "team_a": "Iran",
+          "team_b": "United States",
+          "T": 5602300.0,
+          "B": 4268414.069920001,
+          "U": 0.5881,
+          "H": 0.7781999999999999,
+          "C_match": 0.685,
+          "D": 0.08567018337033935,
+          "R": 0.4775256264236902,
+          "mapped_venue_id": "V07",
+          "mapped_slot_id": "S042"
+        },
+        {
+          "actual_match_id": "WC2022_05",
+          "team_a": "Argentina",
+          "team_b": "Saudi Arabia",
+          "T": 2576800.0,
+          "B": 3058891.6117725,
+          "U": 0.2773,
+          "H": 0.496,
+          "C_match": 0.325,
+          "D": 0.38643198488169206,
+          "R": 0.25279787234042556,
+          "mapped_venue_id": "V03",
+          "mapped_slot_id": "S021"
+        },
+        {
+          "actual_match_id": "WC2022_07",
+          "team_a": "Mexico",
+          "team_b": "Poland",
+          "T": 3845680.0,
+          "B": 3838876.7619125005,
+          "U": 0.5782,
+          "H": 0.7506999999999999,
+          "C_match": 0.495,
+          "D": 0.46201094115796804,
+          "R": 0.555,
+          "mapped_venue_id": "V04",
+          "mapped_slot_id": "S021"
+        },
+        {
+          "actual_match_id": "WC2022_22",
+          "team_a": "Poland",
+          "team_b": "Saudi Arabia",
+          "T": 3955325.0,
+          "B": 4209706.92564,
+          "U": 0.4401,
+          "H": 0.6426000000000001,
+          "C_match": 0.41000000000000003,
+          "D": 0.06858842176561934,
+          "R": 0.4481677449328424,
+          "mapped_venue_id": "V04",
+          "mapped_slot_id": "S021"
+        },
+        {
+          "actual_match_id": "WC2022_24",
+          "team_a": "Argentina",
+          "team_b": "Mexico",
+          "T": 4461295.0,
+          "B": 2748346.7328000003,
+          "U": 0.5059,
+          "H": 0.7118000000000001,
+          "C_match": 0.525,
+          "D": 0.0192939402715176,
+          "R": 0.39987553191489367,
+          "mapped_venue_id": "V03",
+          "mapped_slot_id": "S042"
+        },
+        {
+          "actual_match_id": "WC2022_39",
+          "team_a": "Poland",
+          "team_b": "Argentina",
+          "T": 4634520.0,
+          "B": 3903676.50816,
+          "U": 0.4231,
+          "H": 0.6479,
+          "C_match": 0.495,
+          "D": 0.06858842176561934,
+          "R": 0.5179360737242829,
+          "mapped_venue_id": "V04",
+          "mapped_slot_id": "S042"
+        },
+        {
+          "actual_match_id": "WC2022_40",
+          "team_a": "Saudi Arabia",
+          "team_b": "Mexico",
+          "T": 4543880.0,
+          "B": 3336289.4364800006,
+          "U": 0.4822,
+          "H": 0.6182,
+          "C_match": 0.42500000000000004,
+          "D": 0.024272650897081405,
+          "R": 0.3318340425531915,
+          "mapped_venue_id": "V03",
+          "mapped_slot_id": "S042"
+        },
+        {
+          "actual_match_id": "WC2022_06",
+          "team_a": "Denmark",
+          "team_b": "Tunisia",
+          "T": 3387600.0,
+          "B": 3401134.3887500004,
+          "U": 0.4008,
+          "H": 0.6174000000000001,
+          "C_match": 0.41000000000000003,
+          "D": 0.5805804305210306,
+          "R": 0.4525986908253763,
+          "mapped_venue_id": "V04",
+          "mapped_slot_id": "S021"
+        },
+        {
+          "actual_match_id": "WC2022_08",
+          "team_a": "France",
+          "team_b": "Australia",
+          "T": 3379920.0,
+          "B": 2018626.9880000001,
+          "U": 0.364,
+          "H": 0.595,
+          "C_match": 0.41000000000000003,
+          "D": 0.5961494562866615,
+          "R": 0.45199957701455484,
+          "mapped_venue_id": "V04",
+          "mapped_slot_id": "S042"
+        },
+        {
+          "actual_match_id": "WC2022_21",
+          "team_a": "Tunisia",
+          "team_b": "Australia",
+          "T": 4495115.0,
+          "B": 3967686.2890799996,
+          "U": 0.5765,
+          "H": 0.6907,
+          "C_match": 0.495,
+          "D": 0.06858842176561934,
+          "R": 0.5502944602775063,
+          "mapped_venue_id": "V04",
+          "mapped_slot_id": "S021"
+        },
+        {
+          "actual_match_id": "WC2022_23",
+          "team_a": "France",
+          "team_b": "Denmark",
+          "T": 4180760.0,
+          "B": 4209544.2362399995,
+          "U": 0.6034,
+          "H": 0.7276,
+          "C_match": 0.495,
+          "D": 0.06858842176561934,
+          "R": 0.5296437561107529,
+          "mapped_venue_id": "V04",
+          "mapped_slot_id": "S021"
+        },
+        {
+          "actual_match_id": "WC2022_37",
+          "team_a": "Australia",
+          "team_b": "Denmark",
+          "T": 4161300.0,
+          "B": 6875542.478375999,
+          "U": 0.39,
+          "H": 0.6177,
+          "C_match": 0.41000000000000003,
+          "D": 0.06858842176561934,
+          "R": 0.424421619410178,
+          "mapped_venue_id": "V04",
+          "mapped_slot_id": "S021"
+        },
+        {
+          "actual_match_id": "WC2022_38",
+          "team_a": "Tunisia",
+          "team_b": "France",
+          "T": 3701280.0,
+          "B": 6380798.119124,
+          "U": 0.3755,
+          "H": 0.5847,
+          "C_match": 0.41000000000000003,
+          "D": 0.06858842176561934,
+          "R": 0.3983227240262667,
+          "mapped_venue_id": "V04",
+          "mapped_slot_id": "S021"
+        },
+        {
+          "actual_match_id": "WC2022_10",
+          "team_a": "Germany",
+          "team_b": "Japan",
+          "T": 3845680.0,
+          "B": 4211056.45814,
+          "U": 0.5711,
+          "H": 0.7886,
+          "C_match": 0.495,
+          "D": 0.7714150975557991,
+          "R": 0.555,
+          "mapped_venue_id": "V04",
+          "mapped_slot_id": "S021"
+        },
+        {
+          "actual_match_id": "WC2022_11",
+          "team_a": "Spain",
+          "team_b": "Costa Rica",
+          "T": 3153920.0,
+          "B": 3489652.0059275,
+          "U": 0.417,
+          "H": 0.6213000000000001,
+          "C_match": 0.41000000000000003,
+          "D": 0.7865318664573313,
+          "R": 0.4343694049773599,
+          "mapped_venue_id": "V04",
+          "mapped_slot_id": "S021"
+        },
+        {
+          "actual_match_id": "WC2022_25",
+          "team_a": "Japan",
+          "team_b": "Costa Rica",
+          "T": 4116730.0,
+          "B": 4407078.561840001,
+          "U": 0.5827,
+          "H": 0.7415999999999999,
+          "C_match": 0.495,
+          "D": 0.06824681258268528,
+          "R": 0.5254374778972769,
+          "mapped_venue_id": "V04",
+          "mapped_slot_id": "S021"
+        },
+        {
+          "actual_match_id": "WC2022_28",
+          "team_a": "Spain",
+          "team_b": "Germany",
+          "T": 4377600.0,
+          "B": 2580934.248,
+          "U": 0.5102,
+          "H": 0.7153,
+          "C_match": 0.645,
+          "D": 0.10015454030991121,
+          "R": 0.45181021897810225,
+          "mapped_venue_id": "V13",
+          "mapped_slot_id": "S042"
+        },
+        {
+          "actual_match_id": "WC2022_43",
+          "team_a": "Japan",
+          "team_b": "Spain",
+          "T": 4161300.0,
+          "B": 3873545.05824,
+          "U": 0.39,
+          "H": 0.6177,
+          "C_match": 0.41000000000000003,
+          "D": 0.06858842176561934,
+          "R": 0.424421619410178,
+          "mapped_venue_id": "V04",
+          "mapped_slot_id": "S042"
+        },
+        {
+          "actual_match_id": "WC2022_44",
+          "team_a": "Costa Rica",
+          "team_b": "Germany",
+          "T": 4161300.0,
+          "B": 3873545.05824,
+          "U": 0.39,
+          "H": 0.6177,
+          "C_match": 0.555,
+          "D": 0.10015454030991121,
+          "R": 0.3490121654501217,
+          "mapped_venue_id": "V13",
+          "mapped_slot_id": "S042"
+        },
+        {
+          "actual_match_id": "WC2022_09",
+          "team_a": "Morocco",
+          "team_b": "Croatia",
+          "T": 3628640.0,
+          "B": 3627858.5723099997,
+          "U": 0.5773,
+          "H": 0.7145,
+          "C_match": 0.645,
+          "D": 0.4270754568663062,
+          "R": 0.4486481751824818,
+          "mapped_venue_id": "V13",
+          "mapped_slot_id": "S021"
+        },
+        {
+          "actual_match_id": "WC2022_12",
+          "team_a": "Belgium",
+          "team_b": "Canada",
+          "T": 3153920.0,
+          "B": 1966001.1301000004,
+          "U": 0.417,
+          "H": 0.6213000000000001,
+          "C_match": 0.41000000000000003,
+          "D": 0.7865318664573313,
+          "R": 0.4343694049773599,
+          "mapped_venue_id": "V04",
+          "mapped_slot_id": "S042"
+        },
+        {
+          "actual_match_id": "WC2022_26",
+          "team_a": "Belgium",
+          "team_b": "Morocco",
+          "T": 4199285.0,
+          "B": 4357917.96588,
+          "U": 0.4543,
+          "H": 0.6511,
+          "C_match": 0.495,
+          "D": 0.06824681258268528,
+          "R": 0.530860706038984,
+          "mapped_venue_id": "V04",
+          "mapped_slot_id": "S021"
+        },
+        {
+          "actual_match_id": "WC2022_27",
+          "team_a": "Croatia",
+          "team_b": "Canada",
+          "T": 3845315.0,
+          "B": 4642163.109,
+          "U": 0.4519,
+          "H": 0.6884,
+          "C_match": 0.41000000000000003,
+          "D": 0.06858842176561934,
+          "R": 0.4409409345898081,
+          "mapped_venue_id": "V04",
+          "mapped_slot_id": "S021"
+        },
+        {
+          "actual_match_id": "WC2022_41",
+          "team_a": "Croatia",
+          "team_b": "Belgium",
+          "T": 5287810.0,
+          "B": 7738552.676711999,
+          "U": 0.6061,
+          "H": 0.7857999999999999,
+          "C_match": 0.495,
+          "D": 0.06824681258268528,
+          "R": 0.555,
+          "mapped_venue_id": "V04",
+          "mapped_slot_id": "S021"
+        },
+        {
+          "actual_match_id": "WC2022_42",
+          "team_a": "Canada",
+          "team_b": "Morocco",
+          "T": 5287810.0,
+          "B": 6570949.879207999,
+          "U": 0.607,
+          "H": 0.72,
+          "C_match": 0.495,
+          "D": 0.06858842176561934,
+          "R": 0.555,
+          "mapped_venue_id": "V04",
+          "mapped_slot_id": "S021"
+        },
+        {
+          "actual_match_id": "WC2022_13",
+          "team_a": "Switzerland",
+          "team_b": "Cameroon",
+          "T": 3387600.0,
+          "B": 3401134.3887500004,
+          "U": 0.4008,
+          "H": 0.6174000000000001,
+          "C_match": 0.41000000000000003,
+          "D": 0.5805804305210306,
+          "R": 0.4525986908253763,
+          "mapped_venue_id": "V04",
+          "mapped_slot_id": "S021"
+        },
+        {
+          "actual_match_id": "WC2022_16",
+          "team_a": "Brazil",
+          "team_b": "Serbia",
+          "T": 3153920.0,
+          "B": 1966001.1301000004,
+          "U": 0.417,
+          "H": 0.6213000000000001,
+          "C_match": 0.42500000000000004,
+          "D": 0.6792914316754104,
+          "R": 0.32582127659574467,
+          "mapped_venue_id": "V03",
+          "mapped_slot_id": "S042"
+        },
+        {
+          "actual_match_id": "WC2022_29",
+          "team_a": "Cameroon",
+          "team_b": "Serbia",
+          "T": 3216320.0,
+          "B": 4003985.3741999995,
+          "U": 0.3929,
+          "H": 0.5881000000000001,
+          "C_match": 0.41000000000000003,
+          "D": 0.06858842176561934,
+          "R": 0.3996208039497132,
+          "mapped_venue_id": "V04",
+          "mapped_slot_id": "S021"
+        },
+        {
+          "actual_match_id": "WC2022_31",
+          "team_a": "Brazil",
+          "team_b": "Switzerland",
+          "T": 3845315.0,
+          "B": 4642163.109,
+          "U": 0.4519,
+          "H": 0.6884,
+          "C_match": 0.41000000000000003,
+          "D": 0.06858842176561934,
+          "R": 0.4409409345898081,
+          "mapped_venue_id": "V04",
+          "mapped_slot_id": "S021"
+        },
+        {
+          "actual_match_id": "WC2022_47",
+          "team_a": "Serbia",
+          "team_b": "Switzerland",
+          "T": 5602300.0,
+          "B": 4268414.069920001,
+          "U": 0.5881,
+          "H": 0.7781999999999999,
+          "C_match": 0.685,
+          "D": 0.08567018337033935,
+          "R": 0.4775256264236902,
+          "mapped_venue_id": "V07",
+          "mapped_slot_id": "S042"
+        },
+        {
+          "actual_match_id": "WC2022_48",
+          "team_a": "Cameroon",
+          "team_b": "Brazil",
+          "T": 3318700.0,
+          "B": 3205073.25424,
+          "U": 0.3,
+          "H": 0.4963,
+          "C_match": 0.325,
+          "D": 0.0192939402715176,
+          "R": 0.2462872340425532,
+          "mapped_venue_id": "V03",
+          "mapped_slot_id": "S042"
+        },
+        {
+          "actual_match_id": "WC2022_14",
+          "team_a": "Uruguay",
+          "team_b": "South Korea",
+          "T": 3845680.0,
+          "B": 4211056.45814,
+          "U": 0.5711,
+          "H": 0.7886,
+          "C_match": 0.495,
+          "D": 0.7714150975557991,
+          "R": 0.555,
+          "mapped_venue_id": "V04",
+          "mapped_slot_id": "S021"
+        },
+        {
+          "actual_match_id": "WC2022_15",
+          "team_a": "Portugal",
+          "team_b": "Ghana",
+          "T": 2503120.0,
+          "B": 3039950.9181649997,
+          "U": 0.3265,
+          "H": 0.4996,
+          "C_match": 0.325,
+          "D": 0.7769631908654558,
+          "R": 0.31693408361243436,
+          "mapped_venue_id": "V04",
+          "mapped_slot_id": "S021"
+        },
+        {
+          "actual_match_id": "WC2022_30",
+          "team_a": "South Korea",
+          "team_b": "Ghana",
+          "T": 3216320.0,
+          "B": 4003985.3741999995,
+          "U": 0.3929,
+          "H": 0.5881000000000001,
+          "C_match": 0.41000000000000003,
+          "D": 0.06858842176561934,
+          "R": 0.3996208039497132,
+          "mapped_venue_id": "V04",
+          "mapped_slot_id": "S021"
+        },
+        {
+          "actual_match_id": "WC2022_32",
+          "team_a": "Portugal",
+          "team_b": "Uruguay",
+          "T": 4180760.0,
+          "B": 2371574.2176,
+          "U": 0.6034,
+          "H": 0.7276,
+          "C_match": 0.525,
+          "D": 0.021783295584299506,
+          "R": 0.3904510638297872,
+          "mapped_venue_id": "V03",
+          "mapped_slot_id": "S042"
+        },
+        {
+          "actual_match_id": "WC2022_45",
+          "team_a": "Ghana",
+          "team_b": "Uruguay",
+          "T": 3318700.0,
+          "B": 5689005.026276,
+          "U": 0.3,
+          "H": 0.4963,
+          "C_match": 0.325,
+          "D": 0.06824681258268528,
+          "R": 0.30995066325504633,
+          "mapped_venue_id": "V04",
+          "mapped_slot_id": "S021"
+        },
+        {
+          "actual_match_id": "WC2022_46",
+          "team_a": "South Korea",
+          "team_b": "Portugal",
+          "T": 5195410.0,
+          "B": 7695944.637523999,
+          "U": 0.5189,
+          "H": 0.7418,
+          "C_match": 0.525,
+          "D": 0.0192939402715176,
+          "R": 0.40073723404255324,
+          "mapped_venue_id": "V03",
+          "mapped_slot_id": "S021"
+        }
+      ]
+    },
+    "optimized": {
+      "raw": {
+        "T": 285910470.0,
+        "B": 326546865.536447,
+        "U": 0.4614361111111111,
+        "H": 0.6396986111111111,
+        "C": 53.05500000000001,
+        "D": 0.18924710028406608,
+        "F": 0.0,
+        "R": 0.4103640767798951
+      },
+      "bounds": {
+        "T": [
+          180224640.0,
+          462345840.0
+        ],
+        "B": [
+          86445484.1838,
+          613637147.350656
+        ],
+        "U": [
+          0.0,
+          1.0
+        ],
+        "H": [
+          0.0,
+          1.0
+        ],
+        "C": [
+          38.470000000000006,
+          71.59
+        ],
+        "D": [
+          0.0,
+          1.0
+        ],
+        "F": [
+          0.0,
+          1.0
+        ],
+        "R": [
+          0.22470909090909091,
+          0.6004015934040483
+        ]
+      },
+      "normalized": {
+        "T": 0.3746114435923284,
+        "B": 0.455434708338047,
+        "U": 0.4614361111111111,
+        "H": 0.6396986111111111,
+        "C": 0.44036835748792275,
+        "D": 0.18924710028406608,
+        "F": 0.0,
+        "R": 0.49416739657533115
+      },
+      "weighted_contributions": {
+        "T": 0.0936528608980821,
+        "B": 0.11385867708451175,
+        "U": 0.06921541666666667,
+        "H": 0.06396986111111112,
+        "C": -0.03522946859903382,
+        "D": -0.013247297019884627,
+        "F": -0.0,
+        "R": -0.019766695863013245
+      },
+      "Z2": 0.27245335427844,
+      "fairness_detail": {
+        "prime_counts": {
+          "Algeria": 2,
+          "Argentina": 2,
+          "Australia": 2,
+          "Austria": 2,
+          "Belgium": 2,
+          "Bosnia and Herzegovina": 2,
+          "Brazil": 2,
+          "Canada": 2,
+          "Cape Verde": 2,
+          "Colombia": 2,
+          "Croatia": 2,
+          "Curacao": 2,
+          "Czechia": 2,
+          "DR Congo": 2,
+          "Ecuador": 2,
+          "Egypt": 2,
+          "England": 2,
+          "France": 2,
+          "Germany": 2,
+          "Ghana": 2,
+          "Haiti": 2,
+          "Iran": 2,
+          "Iraq": 2,
+          "Ivory Coast": 2,
+          "Japan": 2,
+          "Jordan": 2,
+          "Mexico": 2,
+          "Morocco": 2,
+          "Netherlands": 2,
+          "New Zealand": 2,
+          "Norway": 2,
+          "Panama": 2,
+          "Paraguay": 2,
+          "Portugal": 2,
+          "Qatar": 2,
+          "Saudi Arabia": 2,
+          "Scotland": 2,
+          "Senegal": 2,
+          "South Africa": 2,
+          "South Korea": 2,
+          "Spain": 2,
+          "Sweden": 2,
+          "Switzerland": 2,
+          "Tunisia": 2,
+          "Turkey": 2,
+          "United States": 2,
+          "Uruguay": 2,
+          "Uzbekistan": 2
+        },
+        "large_venue_counts": {
+          "Algeria": 1,
+          "Argentina": 1,
+          "Australia": 1,
+          "Austria": 1,
+          "Belgium": 1,
+          "Bosnia and Herzegovina": 1,
+          "Brazil": 1,
+          "Canada": 1,
+          "Cape Verde": 1,
+          "Colombia": 1,
+          "Croatia": 1,
+          "Curacao": 1,
+          "Czechia": 1,
+          "DR Congo": 1,
+          "Ecuador": 1,
+          "Egypt": 1,
+          "England": 1,
+          "France": 1,
+          "Germany": 1,
+          "Ghana": 1,
+          "Haiti": 1,
+          "Iran": 1,
+          "Iraq": 1,
+          "Ivory Coast": 1,
+          "Japan": 1,
+          "Jordan": 1,
+          "Mexico": 1,
+          "Morocco": 1,
+          "Netherlands": 1,
+          "New Zealand": 1,
+          "Norway": 1,
+          "Panama": 1,
+          "Paraguay": 1,
+          "Portugal": 1,
+          "Qatar": 1,
+          "Saudi Arabia": 1,
+          "Scotland": 1,
+          "Senegal": 1,
+          "South Africa": 1,
+          "South Korea": 1,
+          "Spain": 1,
+          "Sweden": 1,
+          "Switzerland": 1,
+          "Tunisia": 1,
+          "Turkey": 1,
+          "United States": 1,
+          "Uruguay": 1,
+          "Uzbekistan": 1
+        },
+        "prime_range": 0,
+        "large_venue_range": 0
+      },
+      "setup_cost_musd": 17.950000000000003
+    },
+    "direction_reversal": false
+  },
+  "problem4_scale_basis": {
+    "T_B_C": "per_match_for_cross_size_display; each schedule normalized with the same candidate bounds",
+    "travel": "within-tournament venue-to-venue transitions, excluding travel to first match",
+    "rest": "per-team consecutive-match UTC differences"
+  }
+}
